@@ -1,36 +1,52 @@
-# ConSole-Application Laptop list
+# Console Application: Laptop List
 
-Target Audience : Customer ( can be any human being)
+## Target Audience
+Customer (can be any human being)
 
-Member : 1
+## Team Members
+1
 
-### Features :
- 1. List of Laptops Shown
- 2. list of user selected laptops Processor's varient
- 3. list of user selected laptops  equilant ram varient
- 4. shown list of laptops according to User given choices 
- 5. show the selected Laptops price
- 6. If User don't need this Laptop can Leave also additionaly
- 7. User can change or go back to previous menu with a help stack operation 
-	    implemented in the Code.
+## Features
+- List of laptops shown
+- List of user-selected laptops' processor variants
+- List of user-selected laptops' equivalent RAM variants
+- Show a list of laptops according to user-given choices
+- Show the selected laptop's price
+- Option for the user to leave if they don't need the selected laptop
+- Ability for the user to change or go back to the previous menu using a stack operation
 
-Model Classes :
-	
-LaptopList :
-		
-	1) + ourLaptops : String [] 
-	2) - stage	: int
-	3) - option 	: String
-	4) - LaptopName : String
+## Model Classes
 
-SamLaptopShowroom :
+### 1. StackImplementation
+- This class acts as a view.
+- It is used to get input from the user.
 
-	1) + SHOP_NAME	        : String
-	2) + jsonRetreiver	: JSONObject
-	3) + brandCollection	: JSONArray
-	4) + processorsVarient  : JSONArray
-	5) + ramVarient		: JSONArray
-	6) + stage		: int
-	7) + traverse		: Stack <LaptopList>
- 
-	
+### 2. LaptopViewModel
+- `gettingJSONObject()`: Method to get the JSON Object.
+- `listOutUserChoices()`: Method to observe the input from the user and give a response based on it.
+- `getInputFromUser(int minimum, int maximum)`: Method used to go through each menu listed in the project.
+
+### 3. LaptopModel
+- `brandNames()`: Method to show the list of laptops from LaptopRepository Singleton class.
+- `processorType()`: Method to show the list of processors available for the user-selected laptop from LaptopRepository Singleton class.
+- `ramType()`: Method to show the list of RAM variants available for the user-selected laptop from LaptopRepository Singleton class.
+- `listOfLaptops()`: Method to show the list of available laptops based on the user selection features.
+
+### 4. LaptopList
+- This class acts as a Data Transfer Object.
+- `ourLaptops`: String[]
+- `stage`: int
+- `option`: String
+- `name`: String
+
+### 5. LaptopRepository
+- This class is a Singleton class.
+- It is used to access JSON data and also saves the user-given option by stack.
+- `LAPTOP_OBJECT`: LaptopRepository
+- `jsonRetriever`: JSONObject
+- `brandCollection`: JSONArray
+- `processorsVariant`: JSONArray
+- `ramVariant`: JSONArray
+- `stage`: int
+- `traverse`: Stack
+
