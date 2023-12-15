@@ -109,10 +109,12 @@
 			"MacBook Pro with Retina Display",
 			"MacBook Pro with Touch Bar"
 		],
+		"Apple M3 16GB": [
+			"MacBook Pro 15-inch"
+		],
 		"Apple M3 32GB": [
 			"MacBook Pro with M3 Pro",
-			"MacBook Pro with M3 Max",
-			"MacBook Pro 15-inch"
+			"MacBook Pro with M3 Max"
 		],
 		"SamSung Intel i3 4GB": [
 			"Galaxy Book Flex"
@@ -211,6 +213,8 @@
 		"MacBook Pro with M2": "₹1,30,000",
 		"MacBook Pro 14-inch": "₹1,60,000",
 		"MacBook Pro 15-inch": "₹2,00,000",
+		"MacBook Pro with M3 Pro": "₹3,30,000",
+		"MacBook Pro with M3 Max" : "₹4,29,999",
 		"Galaxy Book Flex": "₹70,000",
 		"Notebook 9": "₹80,000",
 		"Notebook Odyssey": "₹90,000",
