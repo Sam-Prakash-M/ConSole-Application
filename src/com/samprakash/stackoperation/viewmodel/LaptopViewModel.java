@@ -12,7 +12,7 @@ import org.json.simple.parser.JSONParser;
 import com.samprakash.stackoperation.model.LaptopModel;
 import com.samprakash.stackoperation.repository.LaptopRepository;
 
-public class LaptopViewModel {
+public class LaptopViewModel  {
 
 	public void gettingJSONObject() {
 		String path;
