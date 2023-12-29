@@ -32,6 +32,10 @@ public class ModifyBooksViewModel {
 		modifyBooksView.showStocks(currBook);
 		int newCount = modifyBooksView.getnewBookCount();
 		FileWriter fileWriter;
+		if((long)currBook.get("stock") == newCount) {
+			modifyBooksView.showError("Current Stock count and new Stock Count is Same");
+			return;
+		}
 		currBook.put("stock", newCount);
 			try {
 				fileWriter = new FileWriter("src/com/samprakash/onlinebookshopapplication/Online Book Store/App's Data.json");
@@ -42,7 +46,7 @@ public class ModifyBooksViewModel {
 				
 				e.printStackTrace();
 			}
-		
+			modifyBooksView.showSuccess("Stock Count Changed SuccessFully to "+newCount);
 		
 	}
 
@@ -55,9 +59,13 @@ public class ModifyBooksViewModel {
 
 	public void modifyTheCurrentBookPrice(JSONObject currBook) {
 		modifyBooksView.showPrice(currBook);
-		long newCount = modifyBooksView.getNewPrice();
+		long newPrice = modifyBooksView.getNewPrice();
+		if((long)currBook.get("price") == newPrice) {
+			modifyBooksView.showError("Current Price and new Price is Same");
+			return;
+		}
 		FileWriter fileWriter;
-		currBook.put("price", newCount);
+		currBook.put("price", newPrice);
 			try {
 				fileWriter = new FileWriter("src/com/samprakash/onlinebookshopapplication/Online Book Store/App's Data.json");
 				fileWriter.write(OnlineBookPurchaseRepository.getInstance().getJsonRetreiver().toJSONString());
@@ -68,7 +76,7 @@ public class ModifyBooksViewModel {
 				e.printStackTrace();
 			}
 		
-		
+			modifyBooksView.showSuccess("Price Changed SuccessFully to "+newPrice);
 		
 	}
 

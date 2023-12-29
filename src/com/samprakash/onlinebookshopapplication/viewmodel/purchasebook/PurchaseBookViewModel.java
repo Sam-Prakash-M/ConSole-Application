@@ -34,8 +34,9 @@ public class PurchaseBookViewModel {
 		double receivedMoney = purchaseBookView.initiatePayment(price*noOfBooks);
 		purchaseBookView.SuccessStatus("Payment Successfully Completed");
 		purchaseBookView.SuccessStatus("SuccessFully all the Books are Purchased");
-		  if((int)(receivedMoney - price) > 0) {
-			  purchaseBookView.SuccessStatus("Take your Balance : "+(receivedMoney - (price*noOfBooks)));
+	    double 	balance  = receivedMoney - (price*noOfBooks);
+		  if(balance > 0.0) {
+			  purchaseBookView.SuccessStatus("Take your Balance : "+balance);
 		  }
 		  JSONObject currBook = (JSONObject) allBooks.get(choice);
 		  FileWriter fileWriter;

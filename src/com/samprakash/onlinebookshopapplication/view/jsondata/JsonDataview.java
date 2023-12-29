@@ -52,7 +52,7 @@ public class JsonDataview extends Colors {
 				}
 				case 2 : {
 					//userValidationView = new UserValidationView();
-					//userValidationView.userVerify();
+					//userValidationView.showUserUI();
 					ShowUserMenu();
 				}
 				case 3 : {

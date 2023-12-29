@@ -61,7 +61,7 @@ public class ModifyBooksView extends Colors{
 		
 		
 	}
-	private void showError(String error) {
+	public void showError(String error) {
 		
 		System.err.println(error);
 	}
@@ -199,6 +199,15 @@ public class ModifyBooksView extends Colors{
 			
 		}
 		while(true);
+		
+	}
+
+	public void showSuccess(String success) {
+		System.out.println(ANSI_GREEN+"+---------------------------------------------------+"
+				+"\n   "+ANSI_ITALIC+ANSI_BG_PURPLE+success+
+				ANSI_RESET+ANSI_GREEN
+				+"\n+---------------------------------------------------+\n\n"+ANSI_RESET);
+		
 		
 	}
 
