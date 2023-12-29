@@ -23,8 +23,8 @@ public class ModifyBooksView extends Colors{
 		int choice = 0;
 		do {
 			System.out.println(ANSI_GREEN + "+---------------------------------------------------+" +
-	                   "\n|   " + "  " + ANSI_ITALIC + ANSI_BG_BLUE + ANSI_YELLOW + "1) Modify Books Stocks" + ANSI_RESET + ANSI_GREEN + "                           |" +
-	                   "\n" + ANSI_RESET + ANSI_GREEN + "|" + "     " + ANSI_ITALIC + ANSI_BG_BLUE + ANSI_YELLOW + "2) Modify Books Price" + ANSI_RESET + ANSI_GREEN + "                       |" +
+	                   "\n|   " + "  " + ANSI_ITALIC + ANSI_BG_BLUE + ANSI_YELLOW + "1) Modify Books Stocks" + ANSI_RESET + ANSI_GREEN + "                        |" +
+	                   "\n" + ANSI_RESET + ANSI_GREEN + "|" + "     " + ANSI_ITALIC + ANSI_BG_BLUE + ANSI_YELLOW + "2) Modify Books Price" + ANSI_RESET + ANSI_GREEN + "                         |" +
 	                   "\n" + ANSI_RESET + ANSI_GREEN + "|" + "     " + ANSI_ITALIC + ANSI_BG_BLUE + ANSI_YELLOW + "3) Exit" + ANSI_RESET + ANSI_GREEN + "                                       |" +
 	                   "\n+---------------------------------------------------+" + ANSI_RESET);
 
@@ -70,20 +70,24 @@ public class ModifyBooksView extends Colors{
 		
 		int choice ;
 		do {
-		System.out.println("+---------------------------------------------------+");
+		System.out.println(ANSI_GREEN +"+---------------------------------------------------+");
 		for(int i = 0 ; i < allBooks.size() ; i++) {
 			System.out.println(ANSI_PURPLE);
 			System.out.printf("%3d ) Book Name : %s "
 					,(i+1),((JSONObject) allBooks.get(i)).get("title")+"\n\n");
 			
 		}
-		System.out.println(ANSI_RESET);
-		System.out.println("+---------------------------------------------------+");	
+		
+		System.out.printf(ANSI_RESET+ANSI_BG_RED+ANSI_BOLD+"\n%3d Exit <-- ",21);
+		System.out.println(ANSI_RESET+ANSI_GREEN +"\n+---------------------------------------------------+"+ANSI_RESET);	
 			 try {
 				 choice = scanner.nextInt();
 				 if(choice >= 1 && choice <= 20) {
 					 modifyBooksViewModel.modifyTheCurrentBookStock((JSONObject)allBooks.get(choice-1));
 					 break;
+				 }
+				 else if(choice == 21) {
+					 return;
 				 }
 				 else {
 					 showError("Enter a Number Between 1 to 20");
@@ -133,20 +137,24 @@ public class ModifyBooksView extends Colors{
 
 		int choice ;
 		do {
-		System.out.println("+---------------------------------------------------+");
+		System.out.println(ANSI_GREEN +"+---------------------------------------------------+");
 		for(int i = 0 ; i < allBooks.size() ; i++) {
 			System.out.println(ANSI_PURPLE);
 			System.out.printf("%3d ) Book Name : %s "
 					,(i+1),((JSONObject) allBooks.get(i)).get("title")+"\n\n");
 			
 		}
-		System.out.println(ANSI_RESET);
-		System.out.println("+---------------------------------------------------+");	
+		System.out.printf(ANSI_RESET+ANSI_BG_RED+ANSI_BOLD+"\n%3d Exit <-- ",21);
+
+		System.out.println(ANSI_RESET+ANSI_GREEN +"\n+---------------------------------------------------+"+ANSI_RESET);	
 			 try {
 				 choice = scanner.nextInt();
 				 if(choice >= 1 && choice <= 20) {
 					 modifyBooksViewModel.modifyTheCurrentBookPrice((JSONObject)allBooks.get(choice-1));
 					 break;
+				 }
+				 else if(choice == 21) {
+					 return;
 				 }
 				 else {
 					 showError("Enter a Number Between 1 to 20");

@@ -49,8 +49,7 @@ public class PurchaseBookView extends Colors {
 				
 
 			}
-			System.out.println(ANSI_BG_RED+ANSI_BOLD);
-			System.out.printf("\n%3d Exit <-- ",21);
+			System.out.printf(ANSI_BG_RED+ANSI_BOLD+"\n%3d Exit <-- ",21);
 			System.out.println("\n"+ANSI_RESET+ANSI_GREEN+"+--------------------------"
 					+ "----------------------------------+"+ANSI_RESET);
 			try {
@@ -95,6 +94,10 @@ public class PurchaseBookView extends Colors {
 						+ "--------------------------------------+"+ANSI_RESET);
 			 try {
 				 choice = scanner.nextInt();
+				 if(choice <= 0) {
+					 showError("Enter a Valid Input : ");
+					 continue;
+				 }
 				 return choice;
 			 }
 			 catch(InputMismatchException ime) {
@@ -145,8 +148,8 @@ public class PurchaseBookView extends Colors {
 
 	public void SuccessStatus(String success) {
 		System.out.println(ANSI_GREEN+"+---------------------------------------------------+"
-				+"\n|   "+ANSI_ITALIC+ANSI_BG_PURPLE+success+
-				ANSI_RESET+ANSI_GREEN+"   |"
+				+"\n   "+ANSI_ITALIC+ANSI_BG_PURPLE+success+
+				ANSI_RESET+ANSI_GREEN
 				+"\n+---------------------------------------------------+\n\n"+ANSI_RESET);
 		
 	}
