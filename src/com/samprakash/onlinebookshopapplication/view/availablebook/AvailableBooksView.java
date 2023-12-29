@@ -88,7 +88,7 @@ public class AvailableBooksView extends Colors {
 		
 		
 	}
-	private void showError(String error) {
+	public void showError(String error) {
 		
 		System.err.println(error);
 		

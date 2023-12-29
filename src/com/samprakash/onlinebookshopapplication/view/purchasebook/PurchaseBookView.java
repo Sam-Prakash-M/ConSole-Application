@@ -55,11 +55,12 @@ public class PurchaseBookView extends Colors {
 					+ "----------------------------------+"+ANSI_RESET);
 			try {
 				choice = scanner.nextInt();
-				if (choice >= 1 && choice <= 21) {
+				if (choice >= 1 && choice <= 20) {
 					   int noOfBooks = getNumberOfBooks();
 					   if(purchaseBookViewModel.bookHasNoOfBooks(choice-1,noOfBooks)) {
 						   purchaseBookViewModel.purchaseCurrentBooks(choice-1,noOfBooks);
 					   }
+					  
 					   else {
 						   showError(ANSI_RESET+"Stocks are Low you can't by "+noOfBooks+" books\n"+ANSI_PURPLE);
 						   continue;

@@ -19,38 +19,50 @@ public class AvailableBooksViewModel {
 	}
 	public void findRelatedBookByTitle(String key) {
 		JSONArray allBooks  = getJsonArray();
-		
+		boolean isAtleastoneBookPresent = false;
 		for(int i = 0 ; i < allBooks.size() ; i++) {
 			JSONObject eachBook = (JSONObject) allBooks.get(i);
 			boolean isHas = ((String)eachBook.get("title")).toLowerCase().contains(key.toLowerCase());
 			if(isHas) {
+				isAtleastoneBookPresent = true;
 				availableBooksView.showTheMatchingTitle((String)eachBook.get("title"));
 			}
+		}
+		if(!isAtleastoneBookPresent) {
+			availableBooksView.showError("No Books Available");
 		}
 		
 	}
 	public void findRelatedBookByAuthor(String key) {
 		
            JSONArray allBooks  = getJsonArray();
-		
+           boolean isAtleastoneBookPresent = false;
 		for(int i = 0 ; i < allBooks.size() ; i++) {
 			JSONObject eachBook = (JSONObject) allBooks.get(i);
 			boolean isHas = ((String)eachBook.get("author")).toLowerCase().contains(key.toLowerCase());
 			if(isHas) {
+				isAtleastoneBookPresent = true;
 				availableBooksView.showTheMatchingAuthor((String)eachBook.get("author"));
 			}
+		}
+		if(!isAtleastoneBookPresent) {
+			availableBooksView.showError("No Books Available");
 		}
 		
 	}
 	public void findRelatedBookByGenre(String key) {
 		 JSONArray allBooks  = getJsonArray();
-			
+		 boolean isAtleastoneBookPresent = false;
 			for(int i = 0 ; i < allBooks.size() ; i++) {
 				JSONObject eachBook = (JSONObject) allBooks.get(i);
 				boolean isHas = ((String)eachBook.get("genre")).toLowerCase().contains(key.toLowerCase());
 				if(isHas) {
+					isAtleastoneBookPresent = true;
 					availableBooksView.showTheMatchingGenre((String)eachBook.get("genre"));
 				}
+			}
+			if(!isAtleastoneBookPresent) {
+				availableBooksView.showError("No Books Available");
 			}
 		
 	}

@@ -22,11 +22,13 @@ public class ModifyBooksView extends Colors{
 		ModifyBooksView modifyBooksView = new ModifyBooksView();
 		int choice = 0;
 		do {
-			System.out.println(ANSI_GREEN+"+---------------------------------------------------+"
-					+"\n|   "+"  "+ANSI_ITALIC+ANSI_BG_BLUE+ANSI_YELLOW+"1) Modify Books Stocks"+ANSI_RESET+ANSI_GREEN+"                           |\n"
-					+ANSI_RESET+ANSI_GREEN+"|"+"     "+ANSI_ITALIC+ANSI_BG_BLUE+ANSI_YELLOW+"2) Modify Books Price"+ANSI_RESET+ANSI_GREEN+"                       |\n"
-					+ANSI_RESET+ANSI_GREEN+"|"+"     "+ANSI_ITALIC+ANSI_BG_BLUE+ANSI_YELLOW+"3) Exit"+ANSI_RESET+ANSI_GREEN+"                                       "+"|\n"
-					+"+---------------------------------------------------+"+ANSI_RESET);
+			System.out.println(ANSI_GREEN + "+---------------------------------------------------+" +
+	                   "\n|   " + "  " + ANSI_ITALIC + ANSI_BG_BLUE + ANSI_YELLOW + "1) Modify Books Stocks" + ANSI_RESET + ANSI_GREEN + "                           |" +
+	                   "\n" + ANSI_RESET + ANSI_GREEN + "|" + "     " + ANSI_ITALIC + ANSI_BG_BLUE + ANSI_YELLOW + "2) Modify Books Price" + ANSI_RESET + ANSI_GREEN + "                       |" +
+	                   "\n" + ANSI_RESET + ANSI_GREEN + "|" + "     " + ANSI_ITALIC + ANSI_BG_BLUE + ANSI_YELLOW + "3) Exit" + ANSI_RESET + ANSI_GREEN + "                                       |" +
+	                   "\n+---------------------------------------------------+" + ANSI_RESET);
+
+
 			try {
 				choice = scanner.nextInt();
 				switch(choice) {

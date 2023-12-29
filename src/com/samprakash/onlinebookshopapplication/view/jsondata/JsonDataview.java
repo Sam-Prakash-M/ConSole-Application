@@ -8,18 +8,20 @@ import com.samprakash.onlinebookshopapplication.dto.Admin;
 import com.samprakash.onlinebookshopapplication.view.availablebook.AvailableBooksView;
 import com.samprakash.onlinebookshopapplication.view.modifybooks.ModifyBooksView;
 import com.samprakash.onlinebookshopapplication.view.purchasebook.PurchaseBookView;
+import com.samprakash.onlinebookshopapplication.view.userValidation.UserValidationView;
 import com.samprakash.onlinebookshopapplication.viewmodel.jsondata.JsonDataViewModel;
 
 public class JsonDataview extends Colors {
 	private   JsonDataViewModel jsonDataViewModel ;
 	private AvailableBooksView availableBooksView;
 	private PurchaseBookView purchaseBookView;
-	
+	private UserValidationView userValidationView;
+	private  Scanner scanner =  new Scanner(System.in);
 	public JsonDataview() {
 		jsonDataViewModel = new JsonDataViewModel(this);
 	}
-	private ModifyBooksView modifyBooksView = new ModifyBooksView();
-	private  Scanner scanner =  new Scanner(System.in);
+	private ModifyBooksView modifyBooksView;
+	
 	
 	public void startTheApp() {
 		jsonDataViewModel.assignJsonobject();
@@ -43,12 +45,15 @@ public class JsonDataview extends Colors {
 				switch(choice) {
 				            
 				case 1 : {
+					modifyBooksView = new ModifyBooksView();
 					jsonDataViewModel.adminVerify();
 					modifyBooksView.showAdminAccess();
 					break;
 				}
 				case 2 : {
-					this.ShowUserMenu();
+					//userValidationView = new UserValidationView();
+					//userValidationView.userVerify();
+					ShowUserMenu();
 				}
 				case 3 : {
 					break;
@@ -130,5 +135,6 @@ public class JsonDataview extends Colors {
 		
 		
 	}
+	
 
 }
