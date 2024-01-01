@@ -56,7 +56,7 @@ public class PurchaseBookView extends Colors {
 				choice = scanner.nextInt();
 				scanner.nextLine();
 				if (choice >= 1 && choice <= 20) {
-					   int noOfBooks = getNumberOfBooks();
+					   long noOfBooks = getNumberOfBooks();
 					   if(purchaseBookViewModel.bookHasNoOfBooks(choice-1,noOfBooks)) {
 						   purchaseBookViewModel.purchaseCurrentBooks(choice-1,noOfBooks , userName);
 					   }

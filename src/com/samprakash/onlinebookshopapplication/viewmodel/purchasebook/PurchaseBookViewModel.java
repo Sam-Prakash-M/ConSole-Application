@@ -13,7 +13,7 @@ public class PurchaseBookViewModel extends FileHandling{
 	public PurchaseBookViewModel(PurchaseBookView purchaseBookView) {
 		this.purchaseBookView = purchaseBookView;
 	}
-	public boolean bookHasNoOfBooks(int choice ,int noOfBooks) {
+	public boolean bookHasNoOfBooks(int choice ,long noOfBooks) {
 		JSONArray allBooks = getJsonArray();
 		       
 		return (long)((JSONObject)allBooks.get(choice)).get("stock") >= noOfBooks ;
@@ -26,7 +26,7 @@ public class PurchaseBookViewModel extends FileHandling{
 		return allBooks;
 		
 	}
-	public void purchaseCurrentBooks(int choice, int noOfBooks , String userName) {
+	public void purchaseCurrentBooks(int choice, long noOfBooks , String userName) {
 		JSONArray allBooks = getJsonArray();
 		double price = (long) ((JSONObject)allBooks.get(choice)).get("price");
 		double receivedMoney = purchaseBookView.initiatePayment(price*noOfBooks);

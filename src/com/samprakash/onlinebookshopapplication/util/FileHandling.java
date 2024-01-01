@@ -153,7 +153,7 @@ public class FileHandling {
 
 	}
 
-	protected void addUserStatsInFile(JSONObject currBook, int noOfBooks, double receivedMoney, String userName) {
+	protected void addUserStatsInFile(JSONObject currBook, long noOfBooks, double receivedMoney, String userName) {
 		long bookPrice = (long) currBook.get("price");
 		String bookName = (String) currBook.get("title");
 
@@ -213,7 +213,7 @@ public class FileHandling {
 		for (int i = 0; i < eachUser.size(); i++) {
 			JSONObject currUser = (JSONObject) eachUser.get(i);
 			if (((String) currUser.get("UserName")).equals(userName)) {
-				if ((Long) currUser.get("ActiveStatus") == 0) {
+				if ((Integer) currUser.get("ActiveStatus") == 0) {
 					if (choice == 4 || choice == 1) {
 						return true;
 					}
@@ -242,7 +242,7 @@ public class FileHandling {
 			JSONObject currUser = (JSONObject) eachUser.get(i);
 			if (((String) currUser.get("UserName")).equals(userName)) {
 				
-				if ((Long) currUser.get("ActiveStatus") == 0) {
+				if ((Integer) currUser.get("ActiveStatus") == 0) {
 					if (choice == 4 || choice == 1) {
 						System.out.println("Admin presents");
 						return true;
