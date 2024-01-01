@@ -29,6 +29,8 @@ public class JsonDataview extends Colors {
 		
 	}
 	private void showMenu() {
+		userValidationView = new UserValidationView();
+		String userName;
 		System.out.println(ANSI_GREEN+"+---------------------------------------------------+"
 				+"\n|   "+ANSI_ITALIC+ANSI_BG_PURPLE+"Welcome to  "+Admin.OWNER
 				+"'s Online Shopping App"+ANSI_RESET+ANSI_GREEN+"   |"
@@ -42,18 +44,24 @@ public class JsonDataview extends Colors {
 					+"+---------------------------------------------------+"+ANSI_RESET);
 			try {
 				choice = scanner.nextInt();
+				scanner.nextLine();
 				switch(choice) {
 				            
 				case 1 : {
 					modifyBooksView = new ModifyBooksView();
-					jsonDataViewModel.adminVerify();
-					modifyBooksView.showAdminAccess();
+					 userName = userValidationView.showAdminUI();
+					 if(userName != null) {
+						 modifyBooksView.showAdminAccess(userName);
+					 }
 					break;
 				}
 				case 2 : {
-					//userValidationView = new UserValidationView();
-					//userValidationView.showUserUI();
-					ShowUserMenu();
+					
+					userName = userValidationView.showUserUI();
+					if(userName != null) {
+						ShowUserMenu(userName);
+					}
+					break;
 				}
 				case 3 : {
 					break;
@@ -66,7 +74,7 @@ public class JsonDataview extends Colors {
 			}
 			catch(InputMismatchException ime ) {
 				showError("Enter a Valid Input <--");
-				scanner.next();
+				scanner.nextLine();
 				continue;
 			}
 				
@@ -74,17 +82,20 @@ public class JsonDataview extends Colors {
 		while(choice != 3);
 		
 	}
-	private void ShowUserMenu() {
+	private void ShowUserMenu(String userName) {
 		availableBooksView = new AvailableBooksView();
 		int choice = 0;
 		do {
 			System.out.println(ANSI_GREEN+"+---------------------------------------------------+"
 					+"\n|   "+ANSI_ITALIC+ANSI_YELLOW+"  1) Search Book"+ANSI_RESET+ANSI_GREEN+"                                |\n"
 					+ANSI_RESET+ANSI_GREEN+"|"+ANSI_ITALIC+ANSI_YELLOW+"     2) Purchase Book"+ANSI_RESET+ANSI_GREEN+"                              |\n"
-					+ANSI_RESET+ANSI_GREEN+"|"+ANSI_ITALIC+ANSI_YELLOW+"     3) Exit                                       "+ANSI_RESET+ANSI_GREEN+"|\n"
+					+"|"+ANSI_ITALIC+ANSI_YELLOW+"     3) Show History"+ANSI_RESET+ANSI_GREEN+"                               |\n"+ANSI_RESET+ANSI_GREEN+"|"+ANSI_ITALIC+ANSI_YELLOW
+					+"     4) Logout                                     "
+							+ANSI_RESET+ANSI_GREEN+"|\n"
 					+"+---------------------------------------------------+"+ANSI_RESET);
 			try {
 				choice = scanner.nextInt();
+				scanner.nextLine();
 				switch(choice) {
 				
 				case 1 : {
@@ -93,10 +104,14 @@ public class JsonDataview extends Colors {
 				}
 				case 2 : {
 					purchaseBookView = new PurchaseBookView();
-					purchaseBookView.purchaseBook();
+					purchaseBookView.purchaseBook(userName);
 					break;
 				}
 				case 3 : {
+					userValidationView.showHistoryOfUser(userName);
+					break;
+				}
+				case 4 : {
 					break;
 				}
 				default : {
@@ -106,35 +121,18 @@ public class JsonDataview extends Colors {
 			}
 			catch(InputMismatchException ime) {
 				showError("Enter a valid Input : ");
-				scanner.next();
+				scanner.nextLine();
 				continue;
 			}
 		}
-		while(choice != 3);
+		while(choice != 4);
 		
 	}
 	public void showError(String error) {
 		
 		System.err.println(error);
 	}
-	public void getAdminCredential() {
-		
-		String userName , passWord;
-		boolean isCorrect;
-		do {
-			System.out.println(ANSI_CYAN+"Enter a UserName --> "+ANSI_RESET);
-			userName = scanner.next();
-			System.out.println(ANSI_CYAN+"Enter a PassWord --> "+ANSI_RESET);
-			scanner.nextLine();
-			passWord = scanner.nextLine();
-			isCorrect = jsonDataViewModel.UserNameAndPaswordValidation(userName,passWord);
-			
-		}
-		while(!isCorrect);
-		System.out.println(ANSI_BG_WHITE+ANSI_PURPLE+"Password Verified Successfully "+ANSI_RESET);
-		
-		
-	}
+	
 	
 
 }

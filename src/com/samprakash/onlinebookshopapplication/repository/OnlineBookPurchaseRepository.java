@@ -5,19 +5,35 @@ import org.json.simple.JSONObject;
 public class OnlineBookPurchaseRepository {
 
 	private static final OnlineBookPurchaseRepository REPOSITORY = new OnlineBookPurchaseRepository();
-	private  JSONObject jsonRetreiver ;
+	private  JSONObject jsonMainFileRetreiver , jsonPersonalDetailsRetreiver , jsonUserStatsRetreiver;
 	
 	private OnlineBookPurchaseRepository() {
 		
 	}
 	
+	public JSONObject getJsonPersonalDetailsRetreiver() {
+		return jsonPersonalDetailsRetreiver;
+	}
+
+	public void setJsonPersonalDetailsRetreiver(JSONObject jsonPersonalDetailsRetreiver) {
+		this.jsonPersonalDetailsRetreiver = jsonPersonalDetailsRetreiver;
+	}
+
+	public JSONObject getJsonUserStatsRetreiver() {
+		return jsonUserStatsRetreiver;
+	}
+
+	public void setJsonUserStatsRetreiver(JSONObject jsonUserStatsRetreiver) {
+		this.jsonUserStatsRetreiver = jsonUserStatsRetreiver;
+	}
+
 	public  JSONObject getJsonRetreiver() {
-		return jsonRetreiver;
+		return jsonMainFileRetreiver;
 	}
 
 
-	public void setJsonRetreiver(JSONObject jsonRetreiver) {
-		this.jsonRetreiver = jsonRetreiver;
+	public void setJsonRetreiver(JSONObject jsonMainFileRetreiver) {
+		this.jsonMainFileRetreiver = jsonMainFileRetreiver;
 	}
 
 

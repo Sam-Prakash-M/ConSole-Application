@@ -1,0 +1,69 @@
+{
+	"AdminID": 5,
+	"UserID": 4,
+	"Users": [
+		{
+			"UserName": "Sam_22",
+			"ID": 1,
+			"JoinedDate": "31\/Dec\/2023 08:24:18 pm",
+			"PassWord": "SamPrakash@2001",
+			"ActiveStatus": 1
+		},
+		{
+			"UserName": "Joel_2003",
+			"Joined Date": "31\/Dec\/2023 08:25:23 pm",
+			"reJoinedDate": "01\/Jan\/2024 10:18:46 am",
+			"ID": 2,
+			"PassWord": "Joel@2003",
+			"ActiveStatus": 1
+		},
+		{
+			"UserName": "Hello_2024",
+			"LeftDate": "01\/Jan\/2024 11:06:46 am",
+			"ID": 3,
+			"JoinedDate": "01\/Jan\/2024 10:22:20 am",
+			"PassWord": "Hello_#2024",
+			"ActiveStatus": 0
+		},
+		{
+			"UserName": "Anonymous-22",
+			"LeftDate": "01\/Jan\/2024 04:09:52 pm",
+			"ID": 4,
+			"JoinedDate": "01\/Jan\/2024 03:51:43 pm",
+			"PassWord": "Anonymous@2024",
+			"ActiveStatus": 0
+		}
+	],
+	"Admins": [
+		{
+			"UserName": "Sam_2295",
+			"ID": 1,
+			"JoinedDate": "31\/Dec\/2023 08:26:07 pm",
+			"PassWord": "SamPrakash@2001",
+			"ActiveStatus": 1
+		},
+		{
+			"UserName": "Rachel_99",
+			"ID": 2,
+			"JoinedDate": "31\/Dec\/2023 08:26:25 pm",
+			"PassWord": "Rachel@1999",
+			"ActiveStatus": 1
+		},
+		{
+			"UserName": "Marshal_2002",
+			"reJoinedDate": "01\/Jan\/2024 04:05:39 pm",
+			"ID": 3,
+			"JoinedDate": "31\/Dec\/2023 08:53:01 pm",
+			"PassWord": "MarshalJ@2002",
+			"ActiveStatus": 1
+		},
+		{
+			"UserName": "Edwin@22",
+			"reJoinedDate": "01\/Jan\/2024 07:03:40 pm",
+			"ID": 5,
+			"JoinedDate": "01\/Jan\/2024 07:01:15 pm",
+			"PassWord": "Edwin@2001",
+			"ActiveStatus": 1
+		}
+	]
+}

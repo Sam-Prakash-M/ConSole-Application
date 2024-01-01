@@ -27,6 +27,7 @@ public class AvailableBooksView extends Colors {
 					+"+---------------------------------------------------+"+ANSI_RESET);
 			try {
 				choice = scanner.nextInt();
+				scanner.nextLine();
 				switch(choice) {
 				case 1 : {
 					
@@ -51,7 +52,7 @@ public class AvailableBooksView extends Colors {
 			}
 			catch(InputMismatchException ime) {
 				showError("Enter a Valid Input : ");
-				scanner.next();
+				scanner.nextLine();
 				continue;
 			}
 			
@@ -60,7 +61,7 @@ public class AvailableBooksView extends Colors {
 		
 	}
 	private void searchByGenre() {
-		scanner.nextLine();
+		
 		System.out.println(ANSI_GREEN+"+---------------------------------------------------+\n"
 				+"Enter a Genre Name : ");
 		String key = scanner.nextLine();
@@ -69,7 +70,6 @@ public class AvailableBooksView extends Colors {
 		
 	}
 	private void searchByAuthor() {
-		scanner.nextLine();
 		System.out.println(ANSI_GREEN+"+---------------------------------------------------+\n"
 				+"Enter a Author Name : ");
 		String key = scanner.nextLine();
@@ -79,7 +79,6 @@ public class AvailableBooksView extends Colors {
 		
 	}
 	private void searchByTitle() {
-		scanner.nextLine();
 		System.out.println(ANSI_GREEN+"+---------------------------------------------------+\n"
 				+"Enter a title Name : ");
 		String key = scanner.nextLine();

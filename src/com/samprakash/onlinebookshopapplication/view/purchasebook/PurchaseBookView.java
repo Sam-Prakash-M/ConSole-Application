@@ -20,13 +20,13 @@ public class PurchaseBookView extends Colors {
 		purchaseBookViewModel = new PurchaseBookViewModel(this);
 	}
 
-	public void purchaseBook() {
+	public void purchaseBook(String userName) {
 		JSONArray allBooks = purchaseBookViewModel.getJsonArray();
-		showAllBooksFullDetails(allBooks);
+		showAllBooksFullDetails(allBooks , userName);
 	}
 	
 
-	public void showAllBooksFullDetails(JSONArray allBooks) {
+	public void showAllBooksFullDetails(JSONArray allBooks , String userName) {
 
 		int choice;
 		do {
@@ -54,10 +54,11 @@ public class PurchaseBookView extends Colors {
 					+ "----------------------------------+"+ANSI_RESET);
 			try {
 				choice = scanner.nextInt();
+				scanner.nextLine();
 				if (choice >= 1 && choice <= 20) {
 					   int noOfBooks = getNumberOfBooks();
 					   if(purchaseBookViewModel.bookHasNoOfBooks(choice-1,noOfBooks)) {
-						   purchaseBookViewModel.purchaseCurrentBooks(choice-1,noOfBooks);
+						   purchaseBookViewModel.purchaseCurrentBooks(choice-1,noOfBooks , userName);
 					   }
 					  
 					   else {
@@ -76,7 +77,7 @@ public class PurchaseBookView extends Colors {
 				
 			} catch (InputMismatchException ime) {
 				showError("Enter a Valid Input");
-				scanner.next();
+				scanner.nextLine();
 				continue;
 			}
 
@@ -94,6 +95,7 @@ public class PurchaseBookView extends Colors {
 						+ "--------------------------------------+"+ANSI_RESET);
 			 try {
 				 choice = scanner.nextInt();
+				 scanner.nextLine();
 				 if(choice <= 0) {
 					 showError("Enter a Valid Input : ");
 					 continue;
@@ -102,7 +104,7 @@ public class PurchaseBookView extends Colors {
 			 }
 			 catch(InputMismatchException ime) {
 				    showError("Enter a Valid Input : ");
-				    scanner.next();
+				    scanner.nextLine();
 				    continue;
 			 }
 		 }
@@ -127,6 +129,7 @@ public class PurchaseBookView extends Colors {
 					+ "----------------------------------+"+ANSI_RESET);
 			try {
 				choice = scanner.nextDouble();
+				scanner.nextLine();
 				if(choice < money) {
 					showError("The amount you given is not enough to buy these books !!!");
 				}
@@ -137,7 +140,7 @@ public class PurchaseBookView extends Colors {
 			}
 			catch(InputMismatchException ime) {
 				showError("Enter a Valid Input : ");
-				scanner.next();
+				scanner.nextLine();
 				continue;
 			}
 			

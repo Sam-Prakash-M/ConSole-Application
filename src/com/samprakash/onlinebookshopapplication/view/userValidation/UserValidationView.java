@@ -3,72 +3,181 @@ package com.samprakash.onlinebookshopapplication.view.userValidation;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
+import org.json.simple.JSONArray;
+import org.json.simple.JSONObject;
+
 import com.samprakash.onlinebookshopapplication.colors.Colors;
 import com.samprakash.onlinebookshopapplication.viewmodel.uservalidation.UserValidationViewModel;
 
 public class UserValidationView extends Colors {
-  
-	private UserValidationViewModel userValidatiobViewModel;
+
+	private UserValidationViewModel userValidationViewModel;
 	private Scanner scanner = new Scanner(System.in);
+
 	public UserValidationView() {
-		userValidatiobViewModel = new UserValidationViewModel(this);
+		userValidationViewModel = new UserValidationViewModel(this);
 	}
-	public void userVerify() {
-		
-		
-	}
-	public void showUserUI() {
-		int choice;
-		do {
-			System.out.println(ANSI_GREEN+"+---------------------------------------------------+"
-					+"\n|   "+ANSI_ITALIC+ANSI_YELLOW+"  1) Sign up"+ANSI_RESET+ANSI_GREEN+"                                      |\n"
-					+ANSI_RESET+ANSI_GREEN+"|"+ANSI_ITALIC+ANSI_YELLOW+"     2) Sign in"+ANSI_RESET+ANSI_GREEN+"                                       |\n"
-					+ANSI_RESET+ANSI_GREEN+"|"+ANSI_ITALIC+ANSI_YELLOW+"     3) Exit                                       "+ANSI_RESET+ANSI_GREEN+"|\n"
-					+"+---------------------------------------------------+"+ANSI_RESET);
+
+	public String showUserUI() {
+		int choice = 0;
+		String userName = null;
+		outer: do {
+			System.out.println(ANSI_GREEN + "+---------------------------------------------------+" + "\n|   "
+					+ ANSI_ITALIC + ANSI_YELLOW + "  1) Sign up" + ANSI_RESET + ANSI_GREEN
+					+ "                                    |\n" + ANSI_RESET + ANSI_GREEN + "|" + ANSI_ITALIC
+					+ ANSI_YELLOW + "     2) Sign in" + ANSI_RESET + ANSI_GREEN + "                                   "
+					+ " |\n" + "|" + ANSI_ITALIC + ANSI_YELLOW + "     3) delete Account" + ANSI_RESET + ANSI_GREEN
+					+ "                             " + "|\n" + ANSI_RESET + ANSI_GREEN + "|" + ANSI_ITALIC
+					+ ANSI_YELLOW + "     4) Recover Deleted Account" + ANSI_RESET + ANSI_GREEN
+					+ "                    |\n" + ANSI_RESET + ANSI_GREEN + "|" + ANSI_ITALIC + ANSI_YELLOW
+					+ "     5) Exit                                       " + ANSI_RESET + ANSI_GREEN + "|\n"
+					+ "+---------------------------------------------------+" + ANSI_RESET);
 			try {
 				choice = scanner.nextInt();
-				switch(choice) {
-				case 1 : {
-					userValidatiobViewModel.createUserNameAndPassword();
+				scanner.nextLine();
+				switch (choice) {
+				case 1: {
+					userName = userValidationViewModel.createUserNameAndPasswordForUser(choice);
+					break outer;
+				}
+				case 2: {
+					userName = userValidationViewModel.userVerify(choice);
+					break outer;
+				}
+				case 3: {
+					userValidationViewModel.deleteUserAccount(choice);
+					break outer;
+				}
+				case 4: {
+					userValidationViewModel.recoverDeletedUserAccount(choice);
+					break outer;
+				}
+				case 5: {
 					break;
 				}
-				case 2 : {
-					userValidatiobViewModel.userVerify();
-					break;
-				}
-				case 3 : {
-					break;
+				default: {
+					showError("Enter number between 1 to 3 !!!");
 				}
 				}
-			}
-			catch(InputMismatchException ime) {
+			} catch (InputMismatchException ime) {
 				showError("Enter a Valid Input !!!");
-				scanner.next();
+				scanner.nextLine();
 				continue;
 			}
-		}
-		while(true);
-		
-		
-		
+		} while (choice != 5);
+
+		return userName;
+
 	}
+
 	public void showError(String error) {
-		
+
 		System.err.println(error);
 	}
+
 	public String[] getUserNameAndPassWord() {
-		String userName , passWord;
-		boolean isCorrect;
+		String userName, passWord;
+		boolean isCorrect = false;
 		do {
-			System.out.println(ANSI_CYAN+"Enter a UserName --> "+ANSI_RESET);
-			userName = scanner.next();
-			System.out.println(ANSI_CYAN+"Enter a PassWord --> "+ANSI_RESET);
-			scanner.nextLine();
+			System.out.println(ANSI_CYAN + "Enter a UserName --> " + ANSI_RESET);
+			userName = scanner.nextLine();
+			System.out.println(ANSI_CYAN + "Enter a PassWord --> " + ANSI_RESET);
 			passWord = scanner.nextLine();
-			isCorrect = userValidatiobViewModel.UserNameAndPasswordValidation(userName,passWord);
-		}
-		while(true);
-		//return null;
+			isCorrect = userValidationViewModel.UserNameAndPasswordValidation(userName, passWord);
+		} while (!isCorrect);
+		showSuccess("PassWord Verifies Successfully ");
+		return new String[] { userName, passWord };
+	}
+
+	public void showSuccess(String success) {
+		System.out.println(ANSI_GREEN + "+---------------------------------------------------+" + "\n   " + ANSI_ITALIC
+				+ ANSI_BG_PURPLE + success + ANSI_RESET + ANSI_GREEN
+				+ "\n+---------------------------------------------------+\n\n" + ANSI_RESET);
+	}
+
+	public String showAdminUI() {
+		int choice = 0;
+		String userName = null;
+		Outer: do {
+			System.out.println(ANSI_GREEN + "+---------------------------------------------------+" + "\n|   "
+					+ ANSI_ITALIC + ANSI_YELLOW + "  1) Sign up" + ANSI_RESET + ANSI_GREEN
+					+ "                                    |\n" + ANSI_RESET + ANSI_GREEN + "|" + ANSI_ITALIC
+					+ ANSI_YELLOW + "     2) Sign in" + ANSI_RESET + ANSI_GREEN + "                                   "
+					+ " |\n" + "|" + ANSI_ITALIC + ANSI_YELLOW + "     3) delete Account" + ANSI_RESET + ANSI_GREEN
+					+ "                             " + "|\n" + ANSI_RESET + ANSI_GREEN + "|" + ANSI_ITALIC
+					+ ANSI_YELLOW + "     4) Recover Deleted Account" + ANSI_RESET + ANSI_GREEN
+					+ "                    |\n" + ANSI_RESET + ANSI_GREEN + "|" + ANSI_ITALIC + ANSI_YELLOW
+					+ "     5) Exit                                       " + ANSI_RESET + ANSI_GREEN + "|\n"
+					+ "+---------------------------------------------------+" + ANSI_RESET);
+			try {
+				choice = scanner.nextInt();
+				scanner.nextLine();
+				switch (choice) {
+				case 1: {
+					userName = userValidationViewModel.createUserNameAndPasswordForAdmin(choice);
+					break Outer;
+				}
+				case 2: {
+					userName = userValidationViewModel.adminVerify(choice);
+					break Outer;
+				}
+				case 3: {
+					userValidationViewModel.deteteAdminAccount(choice);
+					break Outer;
+				}
+				case 4: {
+					userValidationViewModel.recoverDeletedAdminAccount(choice);
+					break Outer;
+				}
+				case 5: {
+					break;
+				}
+				default: {
+					showError("Enter number between 1 to 3 !!!");
+				}
+				}
+			} catch (InputMismatchException ime) {
+				showError("Enter a Valid Input !!!");
+				scanner.nextLine();
+				continue;
+			}
+		} while (choice != 5);
+		return userName;
+
+	}
+
+	public void showHistoryOfUser(String userName) {
+		JSONArray userJSONArray = userValidationViewModel.getUsersPersonalJsonArray();
+		JSONObject userAndAdminPeronsalDetails = userValidationViewModel.getUserStatsJsonObject();
+		userValidationViewModel.findAllHistories(userJSONArray,userAndAdminPeronsalDetails,userName);
+
+		
+
+	}
+
+	public void prinTheCurrentUserHistory(JSONObject currDateHistory) {
+		System.out.println(ANSI_GREEN+"-----------------------"
+				+ "--------------------------------------+"+ANSI_RESET);
+	
+			System.out.println(ANSI_PURPLE);
+			System.out.printf("%3s  -> Purchase Time : %s"," "
+					,(String) currDateHistory.get("PurchasedTime") + "\n\n");
+			System.out.printf("%3s  -> Book Title : %s"," "
+					,(String) currDateHistory.get("BooksName") + "\n\n");
+			System.out.printf("%3s  -> Author Name : %s"," "
+					,(String) currDateHistory.get("BooksAuthor") + "\n\n");
+			System.out.printf("%3s  -> Genre Name : %s"," "
+					,(String) currDateHistory.get("BooksGenre")+ "\n\n");
+			System.out.printf("%3s  -> Book Price : %s"," "
+					,((Long) currDateHistory.get("BooksPrice")+"") + "\n\n");
+			System.out.printf("%3s  -> Amount Payed : %s"," "
+					,((Double) currDateHistory.get("TotalPayment")+"") + "\n\n");
+			System.out.printf("%3s  -> No of Books Bought : %s"," "
+					,((Long) currDateHistory.get("NoOfBooksBought")+"") + "\n\n"+ANSI_RESET);
+		
+		System.out.println("\n"+ANSI_GREEN+"+--------------------------"
+				+ "----------------------------------+"+ANSI_RESET);
+		
 	}
 
 }
