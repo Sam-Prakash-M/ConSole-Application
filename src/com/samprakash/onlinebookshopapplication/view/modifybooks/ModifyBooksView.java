@@ -28,7 +28,7 @@ public class ModifyBooksView extends Colors{
 	                   + "                         |" +
 	                   "\n" + ANSI_RESET + ANSI_GREEN +"|     "+ ANSI_ITALIC + ANSI_BG_BLUE+ ANSI_YELLOW +"3) Show History"+ANSI_RESET + ANSI_GREEN +"                               "
 	                   		+ "|\n" + ANSI_RESET + ANSI_GREEN + "|" 
-	                   + "     " + ANSI_ITALIC + ANSI_BG_BLUE + ANSI_YELLOW + "4) LogOut" + ANSI_RESET + ANSI_GREEN + "                                       |" +
+	                   + "     " + ANSI_ITALIC + ANSI_BG_BLUE + ANSI_YELLOW + "4) LogOut" + ANSI_RESET + ANSI_GREEN + "                                     |" +
 	                   "\n+---------------------------------------------------+" + ANSI_RESET);
 
 
@@ -48,8 +48,11 @@ public class ModifyBooksView extends Colors{
 					modifyBooksViewModel.showHistory(userName);
 					break;
 				}
+				case 4 : {
+					break;
+				}
 				default : {
-					showError("Enter a number Between 1 - 3");
+					showError("Enter a number Between 1 - 4");
 				}
 				}
 				
@@ -62,13 +65,13 @@ public class ModifyBooksView extends Colors{
 			
 			
 		}
-		while(choice != 3);
+		while(choice != 4);
 		
 		
 	}
 	public void showError(String error) {
 		
-		System.err.println(error);
+		System.out.println(ANSI_BG_RED+ANSI_WHITE+ANSI_BOLD+error+ANSI_RESET);
 	}
 
 	public void showAllBooksToAddStockCount(JSONArray allBooks ,String userName) {
@@ -83,7 +86,7 @@ public class ModifyBooksView extends Colors{
 			
 		}
 		
-		System.out.printf(ANSI_RESET+ANSI_BG_RED+ANSI_BOLD+"\n%3d Exit <-- ",21);
+		System.out.printf(ANSI_RESET+ANSI_BG_RED+ANSI_BOLD+"\n%3d Exit <-- ",0);
 		System.out.println(ANSI_RESET+ANSI_GREEN +"\n+---------------------------------------------------+"+ANSI_RESET);	
 			 try {
 				 choice = scanner.nextInt();
@@ -92,11 +95,11 @@ public class ModifyBooksView extends Colors{
 					 modifyBooksViewModel.modifyTheCurrentBookStock((JSONObject)allBooks.get(choice-1) , userName);
 					 break;
 				 }
-				 else if(choice == 21) {
+				 else if(choice == 0) {
 					 return;
 				 }
 				 else {
-					 showError("Enter a Number Between 1 to 20");
+					 showError("Enter a Number Between 0 to 20");
 				 }
 			 }
 		     catch(InputMismatchException ime) {
@@ -112,7 +115,7 @@ public class ModifyBooksView extends Colors{
 
 	public void showStocks(JSONObject currBook) {
 		System.out.println(ANSI_GREEN+"+---------------------------------------------------+\n"+ANSI_RESET
-				+ANSI_BLUE+currBook.get("title")+" Book Current Stock Count is : "
+				+ANSI_CYAN+currBook.get("title")+" Book Current Stock Count is : "
 				+currBook.get("stock")
 				+ANSI_BLUE+ANSI_GREEN+"\n+---------------------------------------------------+"+ANSI_RESET);	
 		
@@ -122,7 +125,7 @@ public class ModifyBooksView extends Colors{
 		int choice;
 		do {
 			System.out.println(ANSI_GREEN+"+---------------------------------------------------+\n"+ANSI_RESET
-					+ANSI_BLUE+"\n Enter a Book Count  -> "
+					+ANSI_CYAN+"\n Enter a Book Count  -> "
 							+ANSI_RESET+ANSI_GREEN+"\n+---------------------------------------------------+"+ANSI_RESET);	
 			try {
 				choice = scanner.nextInt();
@@ -151,7 +154,7 @@ public class ModifyBooksView extends Colors{
 					,(i+1),((JSONObject) allBooks.get(i)).get("title")+"\n\n");
 			
 		}
-		System.out.printf(ANSI_RESET+ANSI_BG_RED+ANSI_BOLD+"\n%3d Exit <-- ",21);
+		System.out.printf(ANSI_RESET+ANSI_BG_RED+ANSI_BOLD+"\n%3d Exit <-- ",0);
 
 		System.out.println(ANSI_RESET+ANSI_GREEN +"\n+---------------------------------------------------+"+ANSI_RESET);	
 			 try {
@@ -161,11 +164,11 @@ public class ModifyBooksView extends Colors{
 					 modifyBooksViewModel.modifyTheCurrentBookPrice((JSONObject)allBooks.get(choice-1) , userName);
 					 break;
 				 }
-				 else if(choice == 21) {
+				 else if(choice == 0) {
 					 return;
 				 }
 				 else {
-					 showError("Enter a Number Between 1 to 20");
+					 showError("Enter a Number Between 0 to 20");
 				 }
 			 }
 		     catch(InputMismatchException ime) {
@@ -189,14 +192,14 @@ public class ModifyBooksView extends Colors{
 		
 	}
 
-	public long getNewPrice() {
-		long choice;
+	public int getNewPrice() {
+		int choice;
 		do {
 			System.out.println(ANSI_GREEN+"+---------------------------------------------------+\n"+ANSI_RESET
 					+ANSI_BLUE+"\n Enter a New Price  -> "
 							+ANSI_RESET+ANSI_GREEN+"\n+---------------------------------------------------+"+ANSI_RESET);	
 			try {
-				choice = scanner.nextLong();
+				choice = scanner.nextInt();
 				scanner.nextLine();
 				return choice;
 			}
@@ -231,19 +234,19 @@ public class ModifyBooksView extends Colors{
 					,(String) currDateHistory.get("BookName") + "\n\n");
 			if(currDateHistory.containsKey("oldCount")) {
 				System.out.printf("%3s  -> Old Books Count  : %s"," "
-						,((Long) currDateHistory.get("oldCount")+"") + "\n\n");
+						,(String.valueOf(currDateHistory.get("oldCount")+"")) + "\n\n");
 			}
 			if(currDateHistory.containsKey("newCount")) {
 				System.out.printf("%3s  -> New Books Count : %s"," "
-						,((Long) currDateHistory.get("newCount")+"") + "\n\n");
+						,(String.valueOf( currDateHistory.get("newCount")+"")) + "\n\n");
 			}
 			if(currDateHistory.containsKey("oldPrice")) {
 				System.out.printf("%3s  -> Old Price  : %s"," "
-						,((Long) currDateHistory.get("oldPrice")+"") + "\n\n");
+						,(String.valueOf(currDateHistory.get("oldPrice")+"")) + "\n\n");
 			}
 			if(currDateHistory.containsKey("newPrice")) {
 				System.out.printf("%3s  -> New Price : %s"," "
-						,((Long) currDateHistory.get("newPrice")+"") + "\n\n");
+						,(String.valueOf(currDateHistory.get("newPrice")+"")) + "\n\n");
 			}
 			
 			System.out.print(ANSI_RESET);

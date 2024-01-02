@@ -7,8 +7,6 @@ import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 
 import com.samprakash.onlinebookshopapplication.colors.Colors;
-import com.samprakash.onlinebookshopapplication.dto.Admin;
-import com.samprakash.onlinebookshopapplication.repository.OnlineBookPurchaseRepository;
 import com.samprakash.onlinebookshopapplication.viewmodel.purchasebook.PurchaseBookViewModel;
 
 public class PurchaseBookView extends Colors {
@@ -49,7 +47,7 @@ public class PurchaseBookView extends Colors {
 				
 
 			}
-			System.out.printf(ANSI_BG_RED+ANSI_BOLD+"\n%3d Exit <-- ",21);
+			System.out.printf(ANSI_BG_RED+ANSI_BOLD+"\n%3d Exit <-- ",0);
 			System.out.println("\n"+ANSI_RESET+ANSI_GREEN+"+--------------------------"
 					+ "----------------------------------+"+ANSI_RESET);
 			try {
@@ -68,11 +66,11 @@ public class PurchaseBookView extends Colors {
 					   break;
 					
 				} 
-				else if(choice == 21) {
+				else if(choice == 0) {
 					return;
 				}
 				else {
-					showError("Enter a Number Between 1 to 21");
+					showError("Enter a Number Between 0 to 20");
 				}
 				
 			} catch (InputMismatchException ime) {
@@ -86,7 +84,7 @@ public class PurchaseBookView extends Colors {
 	}
 
 	private int getNumberOfBooks() {
-		int choice;
+		int noOfBooks;
 		 while(true) {
 			 System.out.println(ANSI_GREEN+"-----------------------"
 						+ "--------------------------------------+\n"+ANSI_RESET
@@ -94,13 +92,13 @@ public class PurchaseBookView extends Colors {
 			 ANSI_GREEN+"-----------------------"
 						+ "--------------------------------------+"+ANSI_RESET);
 			 try {
-				 choice = scanner.nextInt();
+				 noOfBooks = scanner.nextInt();
 				 scanner.nextLine();
-				 if(choice <= 0) {
-					 showError("Enter a Valid Input : ");
+				 if(noOfBooks <= 0) {
+					 showError("Enter a Number Greater Than Input : ");
 					 continue;
 				 }
-				 return choice;
+				 return noOfBooks;
 			 }
 			 catch(InputMismatchException ime) {
 				    showError("Enter a Valid Input : ");
@@ -113,7 +111,7 @@ public class PurchaseBookView extends Colors {
 
 	private void showError(String error) {
 		
-		System.err.println(error);
+		System.out.println(ANSI_BG_RED+ANSI_WHITE+ANSI_BOLD+error+ANSI_RESET);
 
 	}
 
@@ -123,8 +121,9 @@ public class PurchaseBookView extends Colors {
 		
 		do {
 			System.out.println(ANSI_GREEN+"+--------------------------"
-					+ "----------------------------------+"+ANSI_RESET+"\n"+
-							"you need to pay : "+money+" Rs");
+					+ "----------------------------------+"+ANSI_RESET+"\n\n"+
+					ANSI_PURPLE+"you need to pay : "+money+" Rs\n\n"
+									+ "Enter Amount to Pay"+ANSI_RESET);
 			System.out.println(ANSI_GREEN+"+--------------------------"
 					+ "----------------------------------+"+ANSI_RESET);
 			try {

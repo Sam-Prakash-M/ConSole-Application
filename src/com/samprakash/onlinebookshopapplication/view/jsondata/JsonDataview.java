@@ -4,7 +4,7 @@ import java.util.InputMismatchException;
 import java.util.Scanner;
 
 import com.samprakash.onlinebookshopapplication.colors.Colors;
-import com.samprakash.onlinebookshopapplication.dto.Admin;
+import com.samprakash.onlinebookshopapplication.dto.Persons;
 import com.samprakash.onlinebookshopapplication.view.availablebook.AvailableBooksView;
 import com.samprakash.onlinebookshopapplication.view.modifybooks.ModifyBooksView;
 import com.samprakash.onlinebookshopapplication.view.purchasebook.PurchaseBookView;
@@ -32,7 +32,7 @@ public class JsonDataview extends Colors {
 		userValidationView = new UserValidationView();
 		String userName;
 		System.out.println(ANSI_GREEN+"+---------------------------------------------------+"
-				+"\n|   "+ANSI_ITALIC+ANSI_BG_PURPLE+"Welcome to  "+Admin.OWNER
+				+"\n|   "+ANSI_ITALIC+ANSI_BG_PURPLE+"Welcome to  "+Persons.OWNER
 				+"'s Online Shopping App"+ANSI_RESET+ANSI_GREEN+"   |"
 				+"\n+---------------------------------------------------+\n"+ANSI_RESET);
 		int choice = 0;
@@ -115,7 +115,7 @@ public class JsonDataview extends Colors {
 					break;
 				}
 				default : {
-					showError("Enter a Number Between 1 to 3");
+					showError("Enter a Number Between 1 to 4");
 				}
 				}
 			}
@@ -130,7 +130,7 @@ public class JsonDataview extends Colors {
 	}
 	public void showError(String error) {
 		
-		System.err.println(error);
+		System.out.println(ANSI_BG_RED+ANSI_WHITE+ANSI_BOLD+error+ANSI_RESET);
 	}
 	
 	

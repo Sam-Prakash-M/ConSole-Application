@@ -26,7 +26,7 @@ public class ModifyBooksViewModel extends FileHandling {
 		
 		modifyBooksView.showStocks(currBook);
 		int newCount = modifyBooksView.getnewBookCount();
-		if((long)currBook.get("stock") == newCount) {
+		if(String.valueOf(currBook.get("stock")).equals(newCount+"")) {
 			modifyBooksView.showError("Current Stock count and new Stock Count is Same");
 			return;
 		}
@@ -46,8 +46,8 @@ public class ModifyBooksViewModel extends FileHandling {
 
 	public void modifyTheCurrentBookPrice(JSONObject currBook , String userName) {
 		modifyBooksView.showPrice(currBook);
-		long newPrice = modifyBooksView.getNewPrice();
-		if((long)currBook.get("price") == newPrice) {
+		int newPrice = modifyBooksView.getNewPrice();
+		if(String.valueOf(currBook.get("price")).equals(newPrice+"")) {
 			modifyBooksView.showError("Current Price and new Price is Same");
 			return;
 		}

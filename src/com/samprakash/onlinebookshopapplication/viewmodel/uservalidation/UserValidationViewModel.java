@@ -3,6 +3,7 @@ package com.samprakash.onlinebookshopapplication.viewmodel.uservalidation;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 
+import com.samprakash.onlinebookshopapplication.dto.Persons;
 import com.samprakash.onlinebookshopapplication.repository.OnlineBookPurchaseRepository;
 import com.samprakash.onlinebookshopapplication.util.FileHandling;
 import com.samprakash.onlinebookshopapplication.view.userValidation.UserValidationView;
@@ -32,11 +33,11 @@ public class UserValidationViewModel extends FileHandling {
 	public String createUserNameAndPasswordForUser(int choice) {
 		 
 		do {
-			String[] userNameAndPassword = userValidationView.getUserNameAndPassWord();
-				if(!isAdminAlreadyPresent(userNameAndPassword[0],choice) && !isUserAlreadyPresent(userNameAndPassword[0], choice)) {
+			Persons userNameAndPassword = userValidationView.getUserNameAndPassWord();
+				if(!isAdminAlreadyPresent(userNameAndPassword.getUserName(),choice) && !isUserAlreadyPresent(userNameAndPassword.getUserName(), choice)) {
 					writeNewUserInFile(userNameAndPassword);
 					userValidationView.showSuccess("New User Added SuccessFully");
-					return userNameAndPassword[0];
+					return userNameAndPassword.getUserName();
 				}
 				else {
 					userValidationView.showError("UserName is Already Exist");
@@ -71,10 +72,10 @@ public class UserValidationViewModel extends FileHandling {
 	public String userVerify(int choice) {
 		
 		do {
-			String[] userNameAndPassword = userValidationView.getUserNameAndPassWord();
-				if(isUserAlreadyPresent(userNameAndPassword[0],choice)) {
+			Persons userNameAndPassword = userValidationView.getUserNameAndPassWord();
+				if(isUserAlreadyPresent(userNameAndPassword.getUserName(),choice)) {
 					userValidationView.showSuccess("Sign in SuccessFully");
-					return userNameAndPassword[0];
+					return userNameAndPassword.getUserName();
 				}
 				else {
 					userValidationView.showError("User is not Exist");
@@ -88,11 +89,11 @@ public class UserValidationViewModel extends FileHandling {
 	public String createUserNameAndPasswordForAdmin(int choice) {
 		 
 		do {
-			String[] userNameAndPassword = userValidationView.getUserNameAndPassWord();
-				if(!isAdminAlreadyPresent(userNameAndPassword[0],choice) && !isUserAlreadyPresent(userNameAndPassword[0], choice)) {
+			Persons userNameAndPassword = userValidationView.getUserNameAndPassWord();
+				if(!isAdminAlreadyPresent(userNameAndPassword.getUserName(),choice) && !isUserAlreadyPresent(userNameAndPassword.getUserName(), choice)) {
 					writeNewAdminInFile(userNameAndPassword);
 					userValidationView.showSuccess("New Admin Added SuccessFully");
-					return userNameAndPassword[0];
+					return userNameAndPassword.getUserName();
 					
 				}
 				else {
@@ -106,10 +107,10 @@ public class UserValidationViewModel extends FileHandling {
 
 	public String adminVerify(int choice) {
 		do {
-			String[] userNameAndPassword = userValidationView.getUserNameAndPassWord();
-				if(isAdminAlreadyPresent(userNameAndPassword[0],choice)) {
+			Persons userNameAndPassword = userValidationView.getUserNameAndPassWord();
+				if(isAdminAlreadyPresent(userNameAndPassword.getUserName(),choice)) {
 					userValidationView.showSuccess("Sign in SuccessFully");
-					return userNameAndPassword[0];
+					return userNameAndPassword.getUserName();
 				}
 				else {
 					userValidationView.showError("Admin is not Exist");
@@ -122,9 +123,9 @@ public class UserValidationViewModel extends FileHandling {
 
 	public void deteteAdminAccount(int choice) {
 		do {
-			String[] userNameAndPassword = userValidationView.getUserNameAndPassWord();
-				if(isAdminAlreadyPresent(userNameAndPassword[0],choice)) {
-					deleteAdminInFile(userNameAndPassword[0]);
+			Persons userNameAndPassword = userValidationView.getUserNameAndPassWord();
+				if(isAdminAlreadyPresent(userNameAndPassword.getUserName(),choice)) {
+					deleteAdminInFile(userNameAndPassword.getUserName());
 					break;
 				}
 				else {
@@ -139,9 +140,9 @@ public class UserValidationViewModel extends FileHandling {
 
 	public void deleteUserAccount(int choice) {
 		do {
-			String[] userNameAndPassword = userValidationView.getUserNameAndPassWord();
-				if(isUserAlreadyPresent(userNameAndPassword[0],choice)) {
-					deleteUserInFile(userNameAndPassword[0]);
+			Persons userNameAndPassword = userValidationView.getUserNameAndPassWord();
+				if(isUserAlreadyPresent(userNameAndPassword.getUserName(),choice)) {
+					deleteUserInFile(userNameAndPassword.getUserName());
 					break;
 				}
 				else {
@@ -156,9 +157,9 @@ public class UserValidationViewModel extends FileHandling {
 
 	public void recoverDeletedUserAccount(int choice) {
 		do {
-			String[] userNameAndPassword = userValidationView.getUserNameAndPassWord();
-				if(isUserAlreadyPresent(userNameAndPassword[0],choice)) {
-					recoverUserInFile(userNameAndPassword[0]);
+			Persons userNameAndPassword = userValidationView.getUserNameAndPassWord();
+				if(isUserAlreadyPresent(userNameAndPassword.getUserName(),choice)) {
+					recoverUserInFile(userNameAndPassword.getUserName());
 					break;
 				}
 				else {
@@ -173,9 +174,9 @@ public class UserValidationViewModel extends FileHandling {
 
 	public void recoverDeletedAdminAccount(int choice) {
 		do {
-			String[] userNameAndPassword = userValidationView.getUserNameAndPassWord();
-				if(isAdminAlreadyPresent(userNameAndPassword[0],choice)) {
-					recoverAdminInFile(userNameAndPassword[0]);
+			Persons userNameAndPassword = userValidationView.getUserNameAndPassWord();
+				if(isAdminAlreadyPresent(userNameAndPassword.getUserName(),choice)) {
+					recoverAdminInFile(userNameAndPassword.getUserName());
 					break;
 				}
 				else {

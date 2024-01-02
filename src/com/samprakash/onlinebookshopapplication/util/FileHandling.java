@@ -9,6 +9,7 @@ import java.util.Set;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 
+import com.samprakash.onlinebookshopapplication.dto.Persons;
 import com.samprakash.onlinebookshopapplication.repository.OnlineBookPurchaseRepository;
 
 public class FileHandling {
@@ -213,7 +214,7 @@ public class FileHandling {
 		for (int i = 0; i < eachUser.size(); i++) {
 			JSONObject currUser = (JSONObject) eachUser.get(i);
 			if (((String) currUser.get("UserName")).equals(userName)) {
-				if ((Integer) currUser.get("ActiveStatus") == 0) {
+				if (String.valueOf(currUser.get("ActiveStatus")).equals("0")) {
 					if (choice == 4 || choice == 1) {
 						return true;
 					}
@@ -242,7 +243,7 @@ public class FileHandling {
 			JSONObject currUser = (JSONObject) eachUser.get(i);
 			if (((String) currUser.get("UserName")).equals(userName)) {
 				
-				if ((Integer) currUser.get("ActiveStatus") == 0) {
+				if (String.valueOf(currUser.get("ActiveStatus")).equals("0")) {
 					if (choice == 4 || choice == 1) {
 						System.out.println("Admin presents");
 						return true;
@@ -261,14 +262,14 @@ public class FileHandling {
 
 	}
 
-	protected void writeNewUserInFile(String[] userNameAndPassword) {
+	protected void writeNewUserInFile(Persons userNameAndPassword) {
 		JSONObject mainjsonObject = getJSONObjectOfPersonalDetails();
 		JSONArray eachUser = (JSONArray) mainjsonObject.get("Users");
 		JSONObject newUser = new JSONObject();
 		long userIDCount = (long) mainjsonObject.get("UserID");
 		newUser.put("ID", userIDCount + 1);
-		newUser.put("UserName", userNameAndPassword[0]);
-		newUser.put("PassWord", userNameAndPassword[1]);
+		newUser.put("UserName", userNameAndPassword.getUserName());
+		newUser.put("PassWord", userNameAndPassword.getPassWord());
 		newUser.put("JoinedDate", dateTimeFormatter.format(LocalDateTime.now()));
 		newUser.put("ActiveStatus", 1);
 		eachUser.add(newUser);
@@ -276,14 +277,14 @@ public class FileHandling {
 		writeinUserAndAdminPersonalFile(mainjsonObject);
 	}
 
-	protected void writeNewAdminInFile(String[] userNameAndPassword) {
+	protected void writeNewAdminInFile(Persons userNameAndPassword) {
 		JSONObject mainjsonObject = getJSONObjectOfPersonalDetails();
 		JSONArray eachAdmin = (JSONArray) mainjsonObject.get("Admins");
 		JSONObject newAdmin = new JSONObject();
 		long adminIDCount = (long) mainjsonObject.get("AdminID");
 		newAdmin.put("ID", adminIDCount + 1);
-		newAdmin.put("UserName", userNameAndPassword[0]);
-		newAdmin.put("PassWord", userNameAndPassword[1]);
+		newAdmin.put("UserName", userNameAndPassword.getUserName());
+		newAdmin.put("PassWord", userNameAndPassword.getPassWord());
 		newAdmin.put("JoinedDate", dateTimeFormatter.format(LocalDateTime.now()));
 		newAdmin.put("ActiveStatus", 1);
 		eachAdmin.add(newAdmin);

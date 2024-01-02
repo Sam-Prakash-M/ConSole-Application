@@ -5,7 +5,6 @@ import java.io.FileReader;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 
-import com.samprakash.onlinebookshopapplication.dto.Admin;
 import com.samprakash.onlinebookshopapplication.repository.OnlineBookPurchaseRepository;
 import com.samprakash.onlinebookshopapplication.util.FileHandling;
 import com.samprakash.onlinebookshopapplication.view.jsondata.JsonDataview;

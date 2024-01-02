@@ -63,7 +63,8 @@ public class AvailableBooksView extends Colors {
 	private void searchByGenre() {
 		
 		System.out.println(ANSI_GREEN+"+---------------------------------------------------+\n"
-				+"Enter a Genre Name : ");
+		+ANSI_RESET+ANSI_PURPLE
+				+"Enter a Genre Name : "+ANSI_RESET);
 		String key = scanner.nextLine();
 		availableBooksViewModel.findRelatedBookByGenre(key);
 		
@@ -71,7 +72,9 @@ public class AvailableBooksView extends Colors {
 	}
 	private void searchByAuthor() {
 		System.out.println(ANSI_GREEN+"+---------------------------------------------------+\n"
-				+"Enter a Author Name : ");
+				+ANSI_RESET+ANSI_PURPLE
+						+"Enter a Author Name : "+ANSI_RESET);
+		
 		String key = scanner.nextLine();
 		availableBooksViewModel.findRelatedBookByAuthor(key);
 		
@@ -80,7 +83,9 @@ public class AvailableBooksView extends Colors {
 	}
 	private void searchByTitle() {
 		System.out.println(ANSI_GREEN+"+---------------------------------------------------+\n"
-				+"Enter a title Name : ");
+				+ANSI_RESET+ANSI_PURPLE
+						+"Enter a title Name : "+ANSI_RESET);
+		
 		String key = scanner.nextLine();
 		availableBooksViewModel.findRelatedBookByTitle(key);
 		
@@ -89,23 +94,23 @@ public class AvailableBooksView extends Colors {
 	}
 	public void showError(String error) {
 		
-		System.err.println(error);
+		System.out.println(ANSI_BG_RED+ANSI_WHITE+ANSI_BOLD+error+ANSI_RESET);
 		
 	}
 	public void showTheMatchingTitle(String title) {
-		System.out.println(ANSI_GREEN+"+---------------------------------------------------+\n"
-				+"Book Title is : "+title+"\n"+"+---------------------------------------------------+"+ANSI_RESET);
+		System.out.println(ANSI_GREEN+"+---------------------------------------------------+\n"+ANSI_RESET+ANSI_PURPLE
+				+"Book Title is : "+title+ANSI_RESET+ANSI_GREEN+"\n"+"+---------------------------------------------------+"+ANSI_RESET);
 		
 	}
 	public void showTheMatchingAuthor(String author) {
-		System.out.println(ANSI_GREEN+"+---------------------------------------------------+\n"
-				+"Book Author is : "+author+"\n"+"+---------------------------------------------------+"+ANSI_RESET);
-		
+		System.out.println(ANSI_GREEN+"+---------------------------------------------------+\n"+ANSI_RESET+ANSI_PURPLE
+				+"Book Author is : "+author+ANSI_RESET+ANSI_GREEN+"\n"+"+---------------------------------------------------+"+ANSI_RESET);
 		
 	}
 	public void showTheMatchingGenre(String genre) {
-		System.out.println(ANSI_GREEN+"+---------------------------------------------------+\n"
-				+"Book Genre is : "+genre+"\n"+"+---------------------------------------------------+"+ANSI_RESET);
+		
+		System.out.println(ANSI_GREEN+"+---------------------------------------------------+\n"+ANSI_RESET+ANSI_PURPLE
+				+"Book Genre is : "+genre+ANSI_RESET+ANSI_GREEN+"\n"+"+---------------------------------------------------+"+ANSI_RESET);
 		
 		
 		

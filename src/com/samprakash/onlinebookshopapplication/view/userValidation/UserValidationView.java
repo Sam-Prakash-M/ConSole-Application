@@ -7,6 +7,7 @@ import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 
 import com.samprakash.onlinebookshopapplication.colors.Colors;
+import com.samprakash.onlinebookshopapplication.dto.Persons;
 import com.samprakash.onlinebookshopapplication.viewmodel.uservalidation.UserValidationViewModel;
 
 public class UserValidationView extends Colors {
@@ -72,21 +73,23 @@ public class UserValidationView extends Colors {
 
 	public void showError(String error) {
 
-		System.err.println(error);
+		System.out.println(ANSI_BG_RED+ANSI_WHITE+ANSI_BOLD+error+ANSI_RESET);
 	}
 
-	public String[] getUserNameAndPassWord() {
+	public Persons getUserNameAndPassWord() {
 		String userName, passWord;
 		boolean isCorrect = false;
 		do {
+			
 			System.out.println(ANSI_CYAN + "Enter a UserName --> " + ANSI_RESET);
 			userName = scanner.nextLine();
 			System.out.println(ANSI_CYAN + "Enter a PassWord --> " + ANSI_RESET);
 			passWord = scanner.nextLine();
 			isCorrect = userValidationViewModel.UserNameAndPasswordValidation(userName, passWord);
+			
 		} while (!isCorrect);
-		showSuccess("PassWord Verifies Successfully ");
-		return new String[] { userName, passWord };
+		//showSuccess("PassWord Verifies Successfully ");
+		return new Persons (userName,passWord);
 	}
 
 	public void showSuccess(String success) {
@@ -104,10 +107,10 @@ public class UserValidationView extends Colors {
 					+ "                                    |\n" + ANSI_RESET + ANSI_GREEN + "|" + ANSI_ITALIC
 					+ ANSI_YELLOW + "     2) Sign in" + ANSI_RESET + ANSI_GREEN + "                                   "
 					+ " |\n" + "|" + ANSI_ITALIC + ANSI_YELLOW + "     3) delete Account" + ANSI_RESET + ANSI_GREEN
-					+ "                             " + "|\n" + ANSI_RESET + ANSI_GREEN + "|" + ANSI_ITALIC
+					+ "                            " + " |\n" + ANSI_RESET + ANSI_GREEN + "|" + ANSI_ITALIC
 					+ ANSI_YELLOW + "     4) Recover Deleted Account" + ANSI_RESET + ANSI_GREEN
 					+ "                    |\n" + ANSI_RESET + ANSI_GREEN + "|" + ANSI_ITALIC + ANSI_YELLOW
-					+ "     5) Exit                                       " + ANSI_RESET + ANSI_GREEN + "|\n"
+					+ "     5) LogOut                                     " + ANSI_RESET + ANSI_GREEN + "|\n"
 					+ "+---------------------------------------------------+" + ANSI_RESET);
 			try {
 				choice = scanner.nextInt();
@@ -130,10 +133,10 @@ public class UserValidationView extends Colors {
 					break Outer;
 				}
 				case 5: {
-					break;
+					break Outer;
 				}
 				default: {
-					showError("Enter number between 1 to 3 !!!");
+					showError("Enter number between 1 to 5 !!!");
 				}
 				}
 			} catch (InputMismatchException ime) {
@@ -169,11 +172,11 @@ public class UserValidationView extends Colors {
 			System.out.printf("%3s  -> Genre Name : %s"," "
 					,(String) currDateHistory.get("BooksGenre")+ "\n\n");
 			System.out.printf("%3s  -> Book Price : %s"," "
-					,((Long) currDateHistory.get("BooksPrice")+"") + "\n\n");
+					,(String.valueOf(currDateHistory.get("BooksPrice")+"")) + "\n\n");
 			System.out.printf("%3s  -> Amount Payed : %s"," "
-					,((Double) currDateHistory.get("TotalPayment")+"") + "\n\n");
+					,(String.valueOf((Double) currDateHistory.get("TotalPayment")+"")) + "\n\n");
 			System.out.printf("%3s  -> No of Books Bought : %s"," "
-					,((Long) currDateHistory.get("NoOfBooksBought")+"") + "\n\n"+ANSI_RESET);
+					,(String.valueOf(currDateHistory.get("NoOfBooksBought")+"")) + "\n\n"+ANSI_RESET);
 		
 		System.out.println("\n"+ANSI_GREEN+"+--------------------------"
 				+ "----------------------------------+"+ANSI_RESET);
