@@ -1,1 +1,144 @@
-{"books":[{"author":"F. Scott Fitzgerald","price":799,"genre":"Fiction","title":"The Great Gatsby","stock":100},{"author":"Harper Lee","price":1000,"genre":"Fiction","title":"To Kill a Mockingbird","stock":28},{"author":"George Orwell","price":1999,"genre":"Dystopian","title":"1984","stock":23},{"author":"J.D. Salinger","price":2299,"genre":"Fiction","title":"The Catcher in the Rye","stock":36},{"author":"Jane Austen","price":500,"genre":"Romance","title":"Pride and Prejudice","stock":33},{"author":"J.R.R. Tolkien","price":1599,"genre":"Fantasy","title":"The Hobbit","stock":21},{"author":"Dan Brown","price":1235,"genre":"Mystery","title":"The Da Vinci Code","stock":30},{"author":"J.K. Rowling","price":1799,"genre":"Fantasy","title":"Harry Potter and the Sorcerer's Stone","stock":45},{"author":"Suzanne Collins","price":1275,"genre":"Sci-Fi","title":"The Hunger Games","stock":30},{"author":"J.R.R. Tolkien","price":1999,"genre":"Fantasy","title":"The Lord of the Rings","stock":9},{"author":"Paulo Coelho","price":1125,"genre":"Fiction","title":"The Alchemist","stock":7},{"author":"Margaret Mitchell","price":1645,"genre":"Historical","title":"Gone with the Wind","stock":50},{"author":"Stephen King","price":1999,"genre":"Horror","title":"The Shining","stock":25},{"author":"Paula Hawkins","price":1395,"genre":"Thriller","title":"The Girl on the Train","stock":30},{"author":"Cormac McCarthy","price":1259,"genre":"Post-Apocalyptic","title":"The Road","stock":30},{"author":"George R.R. Martin","price":3999,"genre":"Fantasy","title":"A Song of Ice and Fire (Boxed Set)","stock":10},{"author":"Alex Michaelides","price":1599,"genre":"Psychological","title":"The Silent Patient","stock":3},{"author":"Yuval Noah Harari","price":1858,"genre":"Non-Fiction","title":"Sapiens: A Brief History of Humankind","stock":30},{"author":"Tara Westover","price":989,"genre":"Memoir","title":"Educated","stock":60},{"author":"Charles Duhigg","price":999,"genre":"Self-Help","title":"The Power of Habit","stock":9}]}
+{
+	"books": [
+		{
+			"author": "F. Scott Fitzgerald",
+			"price": 799,
+			"genre": "Fiction",
+			"title": "The Great Gatsby",
+			"stock": 100
+		},
+		{
+			"author": "Harper Lee",
+			"price": 1000,
+			"genre": "Fiction",
+			"title": "To Kill a Mockingbird",
+			"stock": 28
+		},
+		{
+			"author": "George Orwell",
+			"price": 1999,
+			"genre": "Dystopian",
+			"title": "1984",
+			"stock": 23
+		},
+		{
+			"author": "J.D. Salinger",
+			"price": 2299,
+			"genre": "Fiction",
+			"title": "The Catcher in the Rye",
+			"stock": 36
+		},
+		{
+			"author": "Jane Austen",
+			"price": 500,
+			"genre": "Romance",
+			"title": "Pride and Prejudice",
+			"stock": 32
+		},
+		{
+			"author": "J.R.R. Tolkien",
+			"price": 1599,
+			"genre": "Fantasy",
+			"title": "The Hobbit",
+			"stock": 21
+		},
+		{
+			"author": "Dan Brown",
+			"price": 1235,
+			"genre": "Mystery",
+			"title": "The Da Vinci Code",
+			"stock": 30
+		},
+		{
+			"author": "J.K. Rowling",
+			"price": 1799,
+			"genre": "Fantasy",
+			"title": "Harry Potter and the Sorcerer's Stone",
+			"stock": 45
+		},
+		{
+			"author": "Suzanne Collins",
+			"price": 1275,
+			"genre": "Sci-Fi",
+			"title": "The Hunger Games",
+			"stock": 30
+		},
+		{
+			"author": "J.R.R. Tolkien",
+			"price": 1999,
+			"genre": "Fantasy",
+			"title": "The Lord of the Rings",
+			"stock": 9
+		},
+		{
+			"author": "Paulo Coelho",
+			"price": 1125,
+			"genre": "Fiction",
+			"title": "The Alchemist",
+			"stock": 7
+		},
+		{
+			"author": "Margaret Mitchell",
+			"price": 1645,
+			"genre": "Historical",
+			"title": "Gone with the Wind",
+			"stock": 50
+		},
+		{
+			"author": "Stephen King",
+			"price": 1999,
+			"genre": "Horror",
+			"title": "The Shining",
+			"stock": 25
+		},
+		{
+			"author": "Paula Hawkins",
+			"price": 1395,
+			"genre": "Thriller",
+			"title": "The Girl on the Train",
+			"stock": 30
+		},
+		{
+			"author": "Cormac McCarthy",
+			"price": 1259,
+			"genre": "Post-Apocalyptic",
+			"title": "The Road",
+			"stock": 30
+		},
+		{
+			"author": "George R.R. Martin",
+			"price": 3999,
+			"genre": "Fantasy",
+			"title": "A Song of Ice and Fire (Boxed Set)",
+			"stock": 10
+		},
+		{
+			"author": "Alex Michaelides",
+			"price": 1599,
+			"genre": "Psychological",
+			"title": "The Silent Patient",
+			"stock": 3
+		},
+		{
+			"author": "Yuval Noah Harari",
+			"price": 1858,
+			"genre": "Non-Fiction",
+			"title": "Sapiens: A Brief History of Humankind",
+			"stock": 30
+		},
+		{
+			"author": "Tara Westover",
+			"price": 989,
+			"genre": "Memoir",
+			"title": "Educated",
+			"stock": 60
+		},
+		{
+			"author": "Charles Duhigg",
+			"price": 999,
+			"genre": "Self-Help",
+			"title": "The Power of Habit",
+			"stock": 9
+		}
+	]
+}
