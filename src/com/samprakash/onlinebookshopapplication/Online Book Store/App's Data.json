@@ -23,10 +23,10 @@
 		},
 		{
 			"author": "J.D. Salinger",
-			"price": 2299,
+			"price": 700,
 			"genre": "Fiction",
 			"title": "The Catcher in the Rye",
-			"stock": 36
+			"stock": 16
 		},
 		{
 			"author": "Jane Austen",
@@ -40,7 +40,7 @@
 			"price": 1599,
 			"genre": "Fantasy",
 			"title": "The Hobbit",
-			"stock": 21
+			"stock": 56
 		},
 		{
 			"author": "Dan Brown",
@@ -124,7 +124,7 @@
 			"price": 1858,
 			"genre": "Non-Fiction",
 			"title": "Sapiens: A Brief History of Humankind",
-			"stock": 30
+			"stock": 25
 		},
 		{
 			"author": "Tara Westover",
@@ -135,10 +135,181 @@
 		},
 		{
 			"author": "Charles Duhigg",
-			"price": 999,
+			"price": 1566,
 			"genre": "Self-Help",
 			"title": "The Power of Habit",
 			"stock": 9
+		},
+		{
+			"author": "Kalki Krishnamurthy",
+			"price": 699,
+			"genre": "Historical Fiction",
+			"title": "Ponniyin Selvan",
+			"stock": 50
+		},
+		{
+			"author": "Sujatha Rangarajan",
+			"price": 899,
+			"genre": "Science Fiction",
+			"title": "En Iniya Iyanthira",
+			"stock": 32
+		},
+		{
+			"author": "Jayakanthan",
+			"price": 750,
+			"genre": "Social Realism",
+			"title": "Oru Manithan Oru Veedu Oru Ulagam",
+			"stock": 28
+		},
+		{
+			"author": "Ashokamitran",
+			"price": 599,
+			"genre": "Modern Fiction",
+			"title": "18-vadhu Atchakkodu",
+			"stock": 40
+		},
+		{
+			"author": "Perumal Murugan",
+			"price": 499,
+			"genre": "Social Drama",
+			"title": "Pookozhi",
+			"stock": 20
+		},
+		{
+			"author": "Subramania Bharati",
+			"price": 799,
+			"genre": "Poetry",
+			"title": "Kuyil Pattu",
+			"stock": 15
+		},
+		{
+			"author": "Balakumaran",
+			"price": 899,
+			"genre": "Mystery",
+			"title": "Mercury Pookal",
+			"stock": 30
+		},
+		{
+			"author": "Bharathiyar",
+			"price": 649,
+			"genre": "Philosophy",
+			"title": "Achamillai Achamillai",
+			"stock": 25
+		},
+		{
+			"author": "S. Ramakrishnan",
+			"price": 799,
+			"genre": "Historical Fiction",
+			"title": "Sivagamiyin Sabatham",
+			"stock": 22
+		},
+		{
+			"author": "R. K. Narayan",
+			"price": 599,
+			"genre": "Humor",
+			"title": "Malgudi Days",
+			"stock": 18
+		},
+		{
+			"author": "Kannadasan",
+			"price": 899,
+			"genre": "Philosophical Poetry",
+			"title": "Arthamulla Indhu Madham",
+			"stock": 35
+		},
+		{
+			"author": "Jeyamohan",
+			"price": 799,
+			"genre": "Philosophical Fiction",
+			"title": "Vishnupuram",
+			"stock": 10
+		},
+		{
+			"author": "S. Pattabiraman",
+			"price": 699,
+			"genre": "Crime Fiction",
+			"title": "Kaakkai Siraginile",
+			"stock": 27
+		},
+		{
+			"author": "A. Madhavan",
+			"price": 749,
+			"genre": "Social Drama",
+			"title": "Koonan Thoppu",
+			"stock": 24
+		},
+		{
+			"author": "Manian",
+			"price": 599,
+			"genre": "Satire",
+			"title": "Oru Nadigai Nadagam Paarkiral",
+			"stock": 12
+		},
+		{
+			"author": "J. R. Raja",
+			"price": 799,
+			"genre": "Historical Fiction",
+			"title": "Rani Mangammal",
+			"stock": 18
+		},
+		{
+			"author": "C. V. Subramaniam",
+			"price": 899,
+			"genre": "Thriller",
+			"title": "Vidiyalai Thedi",
+			"stock": 15
+		},
+		{
+			"author": "Akilan",
+			"price": 649,
+			"genre": "Historical Fiction",
+			"title": "Chithirapavai",
+			"stock": 20
+		},
+		{
+			"author": "Pudhumaipithan",
+			"price": 749,
+			"genre": "Short Stories",
+			"title": "Oru Kuppaik Kathai",
+			"stock": 30
+		},
+		{
+			"author": "R. Parthasarathy",
+			"price": 799,
+			"genre": "Drama",
+			"title": "Kuruthipunal",
+			"stock": 22
+		},
+		{
+			"author": "Joshua Bloch",
+			"price": 899,
+			"genre": "Programming",
+			"title": "Effective Java",
+			"stock": 50
+		},
+		{
+			"author": "Kathy Sierra, Bert Bates",
+			"price": 899,
+			"genre": "Programming",
+			"title": "Head First Java",
+			"stock": 28,
+			"BookAddedDate": "03\/Jan\/2024 08:06:49 am"
+		},
+		{
+			"author": "Adam Freeman",
+			"price": 999,
+			"genre": "Spring Framework",
+			"title": "Pro Spring 5: An In-Depth Guide to the Spring Framework",
+			"stock": 39,
+			"BookAddedDate": "03\/Jan\/2024 09:47:26 am"
+		},
+		{
+			"author": "Martin Fowler",
+			"price": 1499,
+			"genre": "Design Patterns",
+			"title": "Refactoring: Improving the Design of Existing Code",
+			"stock": 45,
+			"BookAddedDate": "03\/Jan\/2024 09:56:32 am"
 		}
 	]
 }

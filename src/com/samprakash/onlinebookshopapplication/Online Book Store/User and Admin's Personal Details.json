@@ -1,5 +1,5 @@
 {
-	"AdminID": 16,
+	"AdminID": 17,
 	"UserID": 12,
 	"Users": [
 		{
@@ -131,10 +131,11 @@
 		},
 		{
 			"UserName": "Sadhu_43",
+			"LeftDate": "03\/Jan\/2024 01:28:11 pm",
 			"ID": 7,
 			"JoinedDate": "01\/Jan\/2024 09:55:40 pm",
 			"PassWord": "SadhuSch@2001",
-			"ActiveStatus": 1
+			"ActiveStatus": 0
 		},
 		{
 			"UserName": "newOne#12",
@@ -198,6 +199,13 @@
 			"ID": 16,
 			"JoinedDate": "02\/Jan\/2024 02:55:30 pm",
 			"PassWord": "Veeriya$2001",
+			"ActiveStatus": 1
+		},
+		{
+			"UserName": "Prakash",
+			"ID": 17,
+			"JoinedDate": "02\/Jan\/2024 04:18:09 pm",
+			"PassWord": "Prakash@2024",
 			"ActiveStatus": 1
 		}
 	]

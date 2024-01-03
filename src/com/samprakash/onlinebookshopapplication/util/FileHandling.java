@@ -4,6 +4,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
+import java.util.List;
 import java.util.Set;
 
 import org.json.simple.JSONArray;
@@ -70,7 +71,7 @@ public class FileHandling {
 
 	protected void addAdminStatsOfStocksInFile(JSONObject currBook, String userName, int newCount) {
 
-		long currCount = (long) currBook.get("stock");
+		long currCount = Long.valueOf(currBook.get("stock")+"");
 		String Bookname = (String) currBook.get("title");
 		JSONObject jsonMainPersonalDetails = getJSONObjectOfPersonalDetails();
 
@@ -110,10 +111,83 @@ public class FileHandling {
 		writeinUserAndAdminStatsFile(jsonUserandAdminStats);
 
 	}
+     protected void writeAdminStatsOfNewBookInFile(String userName , JSONObject newBookDetails) {
+    	 JSONObject jsonMainPersonalDetails = getJSONObjectOfPersonalDetails();
 
+ 		JSONArray eachUser = (JSONArray) jsonMainPersonalDetails.get("Admins");
+
+ 		JSONObject jsonUserandAdminStats = getJSONObjectOfUsageStatsDetails();
+
+ 		JSONObject adminStats = (JSONObject) jsonUserandAdminStats.get("Admins");
+ 		long currUserId = 0;
+ 		for (int i = 0; i < eachUser.size(); i++) {
+ 			JSONObject currUser = (JSONObject) eachUser.get(i);
+ 			if (((String) currUser.get("UserName")).equals(userName)) {
+ 				currUserId = (long) currUser.get("ID");
+ 				break;
+ 			}
+ 		}
+ 		newBookDetails.put("BookAddedDate",dateTimeFormatter.format(LocalDateTime.now()));
+ 		if (adminStats.containsKey(String.valueOf(currUserId))) {
+			JSONArray currAdmin = (JSONArray) adminStats.get(String.valueOf(currUserId));
+			currAdmin.add(newBookDetails);
+
+		} else {
+			JSONArray currAdmin = new JSONArray();
+			currAdmin.add(newBookDetails);
+			JSONObject newAdmin = new JSONObject();
+			newAdmin.put(String.valueOf(currUserId), currAdmin);
+			adminStats.putAll(newAdmin);
+
+		}
+ 		writeinUserAndAdminStatsFile(jsonUserandAdminStats);
+		
+	}
+     
+     protected void writeAdminStatsOfDeleteBookInFile(String userName, JSONObject deletedBook) {
+    	 JSONObject jsonMainPersonalDetails = getJSONObjectOfPersonalDetails();
+
+  		JSONArray eachUser = (JSONArray) jsonMainPersonalDetails.get("Admins");
+
+  		JSONObject jsonUserandAdminStats = getJSONObjectOfUsageStatsDetails();
+
+  		JSONObject adminStats = (JSONObject) jsonUserandAdminStats.get("Admins");
+  		
+  		JSONObject newBookDetails = new JSONObject();
+  		long currUserId = 0;
+  		for (int i = 0; i < eachUser.size(); i++) {
+  			JSONObject currUser = (JSONObject) eachUser.get(i);
+  			if (((String) currUser.get("UserName")).equals(userName)) {
+  				currUserId = (long) currUser.get("ID");
+  				break;
+  			}
+  		}
+  		newBookDetails.put("RemovedBookDate",dateTimeFormatter.format(LocalDateTime.now()));
+  		newBookDetails.put("RemovedBookTitle",deletedBook.get("title"));
+  		newBookDetails.put("RemovedBookAuthor",deletedBook.get("author"));
+  		newBookDetails.put("RemovedBookGenre",deletedBook.get("genre"));
+  		newBookDetails.put("RemovedBookPrice",deletedBook.get("price"));
+  		newBookDetails.put("RemovedBookStocksCount",deletedBook.get("stock"));
+  		
+  		if (adminStats.containsKey(String.valueOf(currUserId))) {
+ 			JSONArray currAdmin = (JSONArray) adminStats.get(String.valueOf(currUserId));
+ 			currAdmin.add(newBookDetails);
+
+ 		} else {
+ 			JSONArray currAdmin = new JSONArray();
+ 			currAdmin.add(newBookDetails);
+ 			JSONObject newAdmin = new JSONObject();
+ 			newAdmin.put(String.valueOf(currUserId), currAdmin);
+ 			adminStats.putAll(newAdmin);
+
+ 		}
+  		writeinUserAndAdminStatsFile(jsonUserandAdminStats);
+ 		
+ 	}
+     
 	protected void addAdminStatsOfPriceInFile(JSONObject currBook, String userName, long newPrice) {
 
-		long currPrice = (long) currBook.get("price");
+		long currPrice = Long.valueOf(currBook.get("price")+"");   
 		String bookname = (String) currBook.get("title");
 		JSONObject jsonMainPersonalDetails = getJSONObjectOfPersonalDetails();
 
@@ -155,7 +229,7 @@ public class FileHandling {
 	}
 
 	protected void addUserStatsInFile(JSONObject currBook, long noOfBooks, double receivedMoney, String userName) {
-		long bookPrice = (long) currBook.get("price");
+		long bookPrice = Long.valueOf(currBook.get("price")+"");
 		String bookName = (String) currBook.get("title");
 
 		String bookAuthor = (String) currBook.get("author");

@@ -83,6 +83,15 @@
 				"NoOfBooksBought": 5,
 				"PurchasedTime": "01\/Jan\/2024 03:49:26 pm",
 				"BooksName": "The Great Gatsby"
+			},
+			{
+				"BooksAuthor": "Yuval Noah Harari",
+				"BooksGenre": "Non-Fiction",
+				"BooksPrice": 1858,
+				"TotalPayment": 9500.0,
+				"NoOfBooksBought": 5,
+				"PurchasedTime": "02\/Jan\/2024 04:32:30 pm",
+				"BooksName": "Sapiens: A Brief History of Humankind"
 			}
 		],
 		"12": [
@@ -94,6 +103,15 @@
 				"NoOfBooksBought": 1,
 				"PurchasedTime": "02\/Jan\/2024 03:54:57 pm",
 				"BooksName": "Pride and Prejudice"
+			},
+			{
+				"BooksAuthor": "R. Parthasarathy",
+				"BooksGenre": "Drama",
+				"BooksPrice": 799,
+				"TotalPayment": 2400.0,
+				"NoOfBooksBought": 3,
+				"PurchasedTime": "02\/Jan\/2024 05:45:48 pm",
+				"BooksName": "Kuruthipunal"
 			}
 		],
 		"2": [
@@ -291,6 +309,14 @@
 				"oldPrice": 1499,
 				"BookName": "The Shining",
 				"newPrice": 1799
+			},
+			{
+				"RemovedBookDate": "03\/Jan\/2024 01:29:12 pm",
+				"RemovedBookAuthor": "F. Scott Fitzgerald",
+				"RemovedBookPrice": 799,
+				"RemovedBookStocksCount": 100,
+				"RemovedBookGenre": "Fiction",
+				"RemovedBookTitle": "The Great Gatsby"
 			}
 		],
 		"1": [
@@ -305,6 +331,20 @@
 				"oldCount": 35,
 				"newCount": 36,
 				"BookName": "The Da Vinci Code"
+			},
+			{
+				"author": "Adam Freeman",
+				"price": 999,
+				"genre": "Spring Framework",
+				"title": "Pro Spring 5: An In-Depth Guide to the Spring Framework",
+				"stock": 37,
+				"BookAddedDate": "03\/Jan\/2024 09:47:26 am"
+			},
+			{
+				"modifiedTime": "03\/Jan\/2024 09:48:30 am",
+				"newCount": 39,
+				"oldCount": 37,
+				"BookName": "Pro Spring 5: An In-Depth Guide to the Spring Framework"
 			}
 		],
 		"2": [
@@ -327,6 +367,14 @@
 				"oldCount": 30,
 				"newCount": 58,
 				"BookName": "The Power of Habit"
+			},
+			{
+				"author": "Kathy Sierra, Bert Bates",
+				"price": 899,
+				"genre": "Programming",
+				"title": "Head First Java",
+				"stock": 28,
+				"BookAddedDate": "03\/Jan\/2024 08:06:49 am"
 			}
 		],
 		"15": [
@@ -343,6 +391,43 @@
 				"newCount": 31,
 				"oldCount": 50,
 				"BookName": "The Power of Habit"
+			},
+			{
+				"author": "Martin Fowler",
+				"price": 1499,
+				"genre": "Design Patterns",
+				"title": "Refactoring: Improving the Design of Existing Code",
+				"stock": 38,
+				"BookAddedDate": "03\/Jan\/2024 09:56:32 am"
+			},
+			{
+				"modifiedTime": "03\/Jan\/2024 09:59:14 am",
+				"oldPrice": 999,
+				"BookName": "The Power of Habit",
+				"newPrice": 1566
+			},
+			{
+				"modifiedTime": "03\/Jan\/2024 09:59:35 am",
+				"newCount": 45,
+				"oldCount": 38,
+				"BookName": "Refactoring: Improving the Design of Existing Code"
+			},
+			{
+				"author": "Adam Freeman",
+				"price": 1500,
+				"genre": "Spring Framework",
+				"title": "Pro Spring 5: An In-Depth Guide to the Spring Framework",
+				"stock": 30,
+				"BookAddedDate": "03\/Jan\/2024 01:12:38 pm"
+			},
+			
+			{
+				"RemovedBookDate": "03\/Jan\/2024 01:19:54 pm",
+				"RemovedBookAuthor": "Adam Freeman",
+				"RemovedBookPrice": 1500,
+				"RemovedBookStocksCount": 30,
+				"RemovedBookGenre": "Spring Framework",
+				"RemovedBookTitle": "Pro Spring 5: An In-Depth Guide to the Spring Framework"
 			}
 		],
 		"16": [
@@ -363,6 +448,26 @@
 				"oldPrice": 1500,
 				"BookName": "The Great Gatsby",
 				"newPrice": 799
+			}
+		],
+		"17": [
+			{
+				"modifiedTime": "02\/Jan\/2024 04:19:29 pm",
+				"newCount": 56,
+				"oldCount": 21,
+				"BookName": "The Hobbit"
+			},
+			{
+				"modifiedTime": "02\/Jan\/2024 04:25:27 pm",
+				"newCount": 16,
+				"oldCount": 36,
+				"BookName": "The Catcher in the Rye"
+			},
+			{
+				"modifiedTime": "02\/Jan\/2024 04:28:24 pm",
+				"oldPrice": 2299,
+				"BookName": "The Catcher in the Rye",
+				"newPrice": 700
 			}
 		]
 	}

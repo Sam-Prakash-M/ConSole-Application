@@ -1,6 +1,8 @@
 package com.samprakash.onlinebookshopapplication.view.modifybooks;
 
+import java.util.ArrayList;
 import java.util.InputMismatchException;
+import java.util.List;
 import java.util.Scanner;
 
 import org.json.simple.JSONArray;
@@ -22,37 +24,47 @@ public class ModifyBooksView extends Colors{
 		ModifyBooksView modifyBooksView = new ModifyBooksView();
 		int choice = 0;
 		do {
-			System.out.println(ANSI_GREEN + "+---------------------------------------------------+" +
-	                   "\n|   " + "  " + ANSI_ITALIC + ANSI_BG_BLUE + ANSI_YELLOW + "1) Modify Books Stocks" + ANSI_RESET + ANSI_GREEN + "                        |" +
-	                   "\n" + ANSI_RESET + ANSI_GREEN + "|" + "     " + ANSI_ITALIC + ANSI_BG_BLUE + ANSI_YELLOW + "2) Modify Books Price" + ANSI_RESET + ANSI_GREEN 
-	                   + "                         |" +
-	                   "\n" + ANSI_RESET + ANSI_GREEN +"|     "+ ANSI_ITALIC + ANSI_BG_BLUE+ ANSI_YELLOW +"3) Show History"+ANSI_RESET + ANSI_GREEN +"                               "
-	                   		+ "|\n" + ANSI_RESET + ANSI_GREEN + "|" 
-	                   + "     " + ANSI_ITALIC + ANSI_BG_BLUE + ANSI_YELLOW + "4) LogOut" + ANSI_RESET + ANSI_GREEN + "                                     |" +
-	                   "\n+---------------------------------------------------+" + ANSI_RESET);
-
-
+			System.out.println(ANSI_GREEN + "+---------------------------------------------------+" + "\n|   " + "  "
+					+ ANSI_ITALIC + ANSI_BG_BLUE + ANSI_YELLOW + "1) Add New Book" + ANSI_RESET + ANSI_GREEN
+					+ "                               |" + "\n|   " + "  " + ANSI_ITALIC + ANSI_BG_BLUE + ANSI_YELLOW
+					+ "2) Delete a Book" + ANSI_RESET + ANSI_GREEN + "                              |" + "\n" + ANSI_RESET
+					+ ANSI_GREEN + "|" + "     " + ANSI_ITALIC + ANSI_BG_BLUE + ANSI_YELLOW + "3) Modify Books Stocks"
+					+ ANSI_RESET + ANSI_GREEN + "                        |" + "\n" + ANSI_RESET + ANSI_GREEN + "|" + "     "
+					+ ANSI_ITALIC + ANSI_BG_BLUE + ANSI_YELLOW + "4) Modify Books Price" + ANSI_RESET + ANSI_GREEN
+					+ "                         |" + "\n" + ANSI_RESET + ANSI_GREEN + "|     " + ANSI_ITALIC + ANSI_BG_BLUE
+					+ ANSI_YELLOW + "5) Show History" + ANSI_RESET + ANSI_GREEN + "                               " + "|\n"
+					+ ANSI_RESET + ANSI_GREEN + "|" + "     " + ANSI_ITALIC + ANSI_BG_BLUE + ANSI_YELLOW + "6) LogOut"
+					+ ANSI_RESET + ANSI_GREEN + "                                     |"
+					+ "\n+---------------------------------------------------+" + ANSI_RESET);
 			try {
 				choice = scanner.nextInt();
 				scanner.nextLine();
 				switch(choice) {
 				case 1 : {
-					modifyBooksViewModel.modifyBooksInShop(userName);
+					modifyBooksViewModel.addNewBook(userName);
 					break;
 				}
 				case 2 : {
-					modifyBooksViewModel.modifyBooksPrice(userName);
+					modifyBooksViewModel.deleteABook(userName);
 					break;
 				}
 				case 3 : {
-					modifyBooksViewModel.showHistory(userName);
+					modifyBooksViewModel.modifyBooksInShop(userName);
 					break;
 				}
 				case 4 : {
+					modifyBooksViewModel.modifyBooksPrice(userName);
+					break;
+				}
+				case 5 : {
+					modifyBooksViewModel.showHistory(userName);
+					break;
+				}
+				case 6 : {
 					break;
 				}
 				default : {
-					showError("Enter a number Between 1 - 4");
+					showError("Enter a number Between 1 - 6");
 				}
 				}
 				
@@ -65,7 +77,7 @@ public class ModifyBooksView extends Colors{
 			
 			
 		}
-		while(choice != 4);
+		while(choice != 6);
 		
 		
 	}
@@ -74,12 +86,13 @@ public class ModifyBooksView extends Colors{
 		System.out.println(ANSI_BG_RED+ANSI_WHITE+ANSI_BOLD+error+ANSI_RESET);
 	}
 
-	public void showAllBooksToAddStockCount(JSONArray allBooks ,String userName) {
+	public void showAllBooksToModifyStockCount(JSONArray allBooks ,String userName) {
 		
 		int choice ;
 		do {
 		System.out.println(ANSI_GREEN +"+---------------------------------------------------+");
-		for(int i = 0 ; i < allBooks.size() ; i++) {
+		int i;
+		for(i = 0 ; i < allBooks.size() ; i++) {
 			System.out.println(ANSI_PURPLE);
 			System.out.printf("%3d ) Book Name : %s "
 					,(i+1),((JSONObject) allBooks.get(i)).get("title")+"\n\n");
@@ -91,7 +104,7 @@ public class ModifyBooksView extends Colors{
 			 try {
 				 choice = scanner.nextInt();
 				 scanner.nextLine();
-				 if(choice >= 1 && choice <= 20) {
+				 if(choice >= 1 && choice <= i) {
 					 modifyBooksViewModel.modifyTheCurrentBookStock((JSONObject)allBooks.get(choice-1) , userName);
 					 break;
 				 }
@@ -99,7 +112,7 @@ public class ModifyBooksView extends Colors{
 					 return;
 				 }
 				 else {
-					 showError("Enter a Number Between 0 to 20");
+					 showError("Enter a Number Between 0 to "+i);
 				 }
 			 }
 		     catch(InputMismatchException ime) {
@@ -148,7 +161,8 @@ public class ModifyBooksView extends Colors{
 		int choice ;
 		do {
 		System.out.println(ANSI_GREEN +"+---------------------------------------------------+");
-		for(int i = 0 ; i < allBooks.size() ; i++) {
+		int i;
+		for(i = 0 ; i < allBooks.size() ; i++) {
 			System.out.println(ANSI_PURPLE);
 			System.out.printf("%3d ) Book Name : %s "
 					,(i+1),((JSONObject) allBooks.get(i)).get("title")+"\n\n");
@@ -160,7 +174,7 @@ public class ModifyBooksView extends Colors{
 			 try {
 				 choice = scanner.nextInt();
 				 scanner.nextLine();
-				 if(choice >= 1 && choice <= 20) {
+				 if(choice >= 1 && choice <= i) {
 					 modifyBooksViewModel.modifyTheCurrentBookPrice((JSONObject)allBooks.get(choice-1) , userName);
 					 break;
 				 }
@@ -168,7 +182,7 @@ public class ModifyBooksView extends Colors{
 					 return;
 				 }
 				 else {
-					 showError("Enter a Number Between 0 to 20");
+					 showError("Enter a Number Between 0 to "+i);
 				 }
 			 }
 		     catch(InputMismatchException ime) {
@@ -226,27 +240,79 @@ public class ModifyBooksView extends Colors{
 	public void prinTheCurrentUserHistory(JSONObject currDateHistory) {
 		System.out.println(ANSI_GREEN+"-----------------------"
 				+ "--------------------------------------+"+ANSI_RESET);
-	
+	        
 			System.out.print(ANSI_PURPLE);
-			System.out.printf("%3s  -> Time of Change : %s"," "
-					,(String) currDateHistory.get("modifiedTime") + "\n\n");
-			System.out.printf("%3s  -> Book Name : %s"," "
-					,(String) currDateHistory.get("BookName") + "\n\n");
+			 if(currDateHistory.containsKey("RemovedBookDate")) {
+				 System.out.printf("%3s  -> Removed Book Date : %s"," "
+							,(String) currDateHistory.get("RemovedBookDate") + "\n\n");
+				}
+			 if(currDateHistory.containsKey("RemovedBookTitle")) {
+				 System.out.printf("%3s  -> Removed Book Name : %s"," "
+							,(String) currDateHistory.get("RemovedBookTitle") + "\n\n");
+				}
+			 if(currDateHistory.containsKey("RemovedBookAuthor")) {
+				 System.out.printf("%3s  -> Removed Book Author : %s"," "
+							,(String) currDateHistory.get("RemovedBookAuthor") + "\n\n");
+				}
+			 if(currDateHistory.containsKey("RemovedBookGenre")) {
+				 System.out.printf("%3s  -> Removed Book Genre : %s"," "
+							,(String) currDateHistory.get("RemovedBookGenre") + "\n\n");
+				}
+			 if(currDateHistory.containsKey("RemovedBookPrice")) {
+				 System.out.printf("%3s  -> Removed Book Price : %s"," "
+							,String.valueOf(currDateHistory.get("RemovedBookPrice")) + "\n\n");
+				}
+			 if(currDateHistory.containsKey("RemovedBookStocksCount")) {
+				 System.out.printf("%3s  -> Book Removed Stocks Count : %s"," "
+							,String.valueOf(currDateHistory.get("RemovedBookStocksCount")) + "\n\n");
+				}
+			 if(currDateHistory.containsKey("BookAddedDate")) {
+				 System.out.printf("%3s  -> Book Added Date : %s"," "
+							,(String) currDateHistory.get("BookAddedDate") + "\n\n");
+				}
+			if(currDateHistory.containsKey("title")) {
+				System.out.printf("%3s  -> Book Name : %s"," "
+						,(String) currDateHistory.get("title") + "\n\n");
+			}
+            if(currDateHistory.containsKey("author")) {
+            	System.out.printf("%3s  -> Book Author : %s"," "
+						,(String) currDateHistory.get("author") + "\n\n");
+			}
+            if(currDateHistory.containsKey("genre")) {
+            	System.out.printf("%3s  -> Book Genre : %s"," "
+						,(String) currDateHistory.get("genre") + "\n\n");
+			}
+            if(currDateHistory.containsKey("price")) {
+            	System.out.printf("%3s  -> Book Price : %s"," "
+						,(String.valueOf(currDateHistory.get("price"))) + "\n\n");
+             }
+            if(currDateHistory.containsKey("stock")) {
+            	System.out.printf("%3s  -> Book stock : %s"," "
+						,(String.valueOf(currDateHistory.get("stock"))) + "\n\n");
+            }
+			if(currDateHistory.containsKey("modifiedTime")) {
+				System.out.printf("%3s  -> Time of Change : %s"," "
+						,(String) currDateHistory.get("modifiedTime") + "\n\n");
+			}
+			if(currDateHistory.containsKey("BookName")) {
+				System.out.printf("%3s  -> Book Name : %s"," "
+						,(String) currDateHistory.get("BookName") + "\n\n");
+			}
 			if(currDateHistory.containsKey("oldCount")) {
 				System.out.printf("%3s  -> Old Books Count  : %s"," "
-						,(String.valueOf(currDateHistory.get("oldCount")+"")) + "\n\n");
+						,(String.valueOf(currDateHistory.get("oldCount"))) + "\n\n");
 			}
 			if(currDateHistory.containsKey("newCount")) {
 				System.out.printf("%3s  -> New Books Count : %s"," "
-						,(String.valueOf( currDateHistory.get("newCount")+"")) + "\n\n");
+						,(String.valueOf( currDateHistory.get("newCount"))) + "\n\n");
 			}
 			if(currDateHistory.containsKey("oldPrice")) {
 				System.out.printf("%3s  -> Old Price  : %s"," "
-						,(String.valueOf(currDateHistory.get("oldPrice")+"")) + "\n\n");
+						,(String.valueOf(currDateHistory.get("oldPrice"))) + "\n\n");
 			}
 			if(currDateHistory.containsKey("newPrice")) {
 				System.out.printf("%3s  -> New Price : %s"," "
-						,(String.valueOf(currDateHistory.get("newPrice")+"")) + "\n\n");
+						,(String.valueOf(currDateHistory.get("newPrice"))) + "\n\n");
 			}
 			
 			System.out.print(ANSI_RESET);
@@ -255,6 +321,90 @@ public class ModifyBooksView extends Colors{
 				+ "----------------------------------+"+ANSI_RESET);
 		
 		
+	}
+
+	public List getInputFromAdmin() {
+		String bookTitle;
+		System.out.println("\n"+ANSI_GREEN+"+--------------------------"
+				+ "----------------------------------+"+ANSI_RESET+ANSI_PURPLE);
+		while(true) {
+			System.out.println("Enter a Book Title Name  ");
+		       bookTitle = scanner.nextLine();
+		       if(!modifyBooksViewModel.isBookPresence(bookTitle)) {
+		    	   break;
+		       }
+		       else {
+		    	   showError("Book is Already Present");
+		    	   continue;
+		       }
+		      
+		}
+	
+		System.out.println("Enter a Book Author Name  ");
+		String bookAuthor = scanner.nextLine();
+		System.out.println("Enter a Book Genre Name  ");
+		String bookGenre = scanner.nextLine();
+		
+		long bookPrice , bookStock;
+		while(true) {
+			System.out.println("Enter a Book Price  ");
+			if(scanner.hasNextLong()) {
+				bookPrice = scanner.nextLong();
+				scanner.nextLine();
+				break;
+			}
+			else {
+				scanner.nextLine();
+				showError("Enter a Valid Input ");
+				continue;
+			}
+			
+		}
+		while(true) {
+			System.out.println("Enter a BookCount  ");
+			if(scanner.hasNextLong()) {
+				bookStock = scanner.nextLong();
+				scanner.nextLine();
+				break;
+			}
+			else {
+				scanner.nextLine();
+				showError("Enter a Valid Input ");
+				continue;
+			}
+			
+		}
+		
+		System.out.println(ANSI_RESET+"\n"+ANSI_GREEN+"+--------------------------"
+				+ "----------------------------------+"+ANSI_RESET);
+		List adminInput = new ArrayList();
+		adminInput.add(bookAuthor);
+		adminInput.add(bookPrice);
+		adminInput.add(bookGenre);
+		adminInput.add(bookTitle);
+		adminInput.add(bookStock);
+		return adminInput;
+	}
+
+	public String getInputBookNameForDelete() {
+		String bookTitle;
+		System.out.println("\n"+ANSI_GREEN+"+--------------------------"
+				+ "----------------------------------+"+ANSI_RESET+ANSI_PURPLE);
+		while(true) {
+			System.out.println("Enter a Book Title Name  ");
+		       bookTitle = scanner.nextLine();
+		       if(modifyBooksViewModel.isBookPresence(bookTitle)) {
+		    	   break;
+		       }
+		       else {
+		    	   showError("Book is Already Present");
+		    	   continue;
+		       }
+		      
+		}
+		System.out.println(ANSI_RESET+"\n"+ANSI_GREEN+"+--------------------------"
+				+ "----------------------------------+"+ANSI_RESET);
+		return bookTitle;
 	}
 
 }

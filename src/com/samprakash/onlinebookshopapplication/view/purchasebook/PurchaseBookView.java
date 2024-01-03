@@ -30,7 +30,8 @@ public class PurchaseBookView extends Colors {
 		do {
 			System.out.println(ANSI_GREEN+"-----------------------"
 					+ "--------------------------------------+"+ANSI_RESET);
-			for (int i = 0; i < allBooks.size(); i++) {
+			int i;
+			for (i = 0; i < allBooks.size(); i++) {
 				
 				System.out.println(ANSI_PURPLE);
 				System.out.printf("%3d  Book Name : %s", (i + 1),
@@ -53,7 +54,7 @@ public class PurchaseBookView extends Colors {
 			try {
 				choice = scanner.nextInt();
 				scanner.nextLine();
-				if (choice >= 1 && choice <= 20) {
+				if (choice >= 1 && choice <= i) {
 					   long noOfBooks = getNumberOfBooks();
 					   if(purchaseBookViewModel.bookHasNoOfBooks(choice-1,noOfBooks)) {
 						   purchaseBookViewModel.purchaseCurrentBooks(choice-1,noOfBooks , userName);
@@ -70,7 +71,7 @@ public class PurchaseBookView extends Colors {
 					return;
 				}
 				else {
-					showError("Enter a Number Between 0 to 20");
+					showError("Enter a Number Between 0 to "+i);
 				}
 				
 			} catch (InputMismatchException ime) {
