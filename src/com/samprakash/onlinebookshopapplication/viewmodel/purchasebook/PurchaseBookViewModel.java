@@ -13,19 +13,31 @@ public class PurchaseBookViewModel extends FileHandling{
 	public PurchaseBookViewModel(PurchaseBookView purchaseBookView) {
 		this.purchaseBookView = purchaseBookView;
 	}
+	 
+	/*
+	 * this method just check whether the user given books count is available or not
+	 */
 	public boolean bookHasNoOfBooks(int choice ,long noOfBooks) {
-		JSONArray allBooks = getJsonArray();
-		       
-		return (long)((JSONObject)allBooks.get(choice)).get("stock") >= noOfBooks ;
 		
-		 
-	}
+		JSONArray allBooks = getJsonArray();
+		return Long.valueOf(((JSONObject)allBooks.get(choice)).get("stock")+"") >= noOfBooks ;
+		
+	}  
+
+	/*
+	 * this method just return the jsonArray object of books in App's Data.json File
+	 */	
 	public JSONArray getJsonArray() {
 		JSONObject jsonObject = OnlineBookPurchaseRepository.getInstance().getJsonRetreiver();
 		JSONArray allBooks = (JSONArray) jsonObject.get("books");
 		return allBooks;
 		
 	}
+
+	/*
+	 * this method used to purchase books and write the details in both User and
+	 * Admin Usage stats.json App's Data.json
+	 */
 	public void purchaseCurrentBooks(int choice, long noOfBooks , String userName) {
 		JSONArray allBooks = getJsonArray();
 		double price = (long) ((JSONObject)allBooks.get(choice)).get("price");

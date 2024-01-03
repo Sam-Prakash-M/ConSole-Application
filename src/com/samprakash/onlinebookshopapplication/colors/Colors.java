@@ -1,6 +1,7 @@
 package com.samprakash.onlinebookshopapplication.colors;
 
 public class Colors {
+	// this is Console color code generator all view class is
 	public static final String ANSI_RESET = "\u001B[0m";
 	public static final String ANSI_BLACK = "\u001B[30m";
 	public static final String ANSI_RED = "\u001B[31m";

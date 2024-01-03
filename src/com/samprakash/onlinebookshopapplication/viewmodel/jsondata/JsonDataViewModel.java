@@ -14,6 +14,13 @@ public class JsonDataViewModel extends FileHandling {
 	public JsonDataViewModel(JsonDataview jsonDataview) {
 		this.jsonDataView = jsonDataview;
 	}
+	
+	/*
+	 * this method just given access to three files 
+	 * App's Data.json
+	 * User and Admin's Personal Details.json 
+	 * User and Admin Usage stats.json
+	 */
 	public void assignJsonobject() {
 	     
 		JSONObject jsonObjectMain = OnlineBookPurchaseRepository.getInstance().getJsonRetreiver();

@@ -12,6 +12,9 @@ public class AvailableBooksView extends Colors {
 
 	private AvailableBooksViewModel availableBooksViewModel;
 	private Scanner scanner = new Scanner(System.in);
+	
+	/* this constructor give connection to viewModel */
+	
 	 public AvailableBooksView() {
 		 availableBooksViewModel = new AvailableBooksViewModel(this);
 	 }

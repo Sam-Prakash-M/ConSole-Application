@@ -345,6 +345,18 @@
 				"newCount": 39,
 				"oldCount": 37,
 				"BookName": "Pro Spring 5: An In-Depth Guide to the Spring Framework"
+			},
+			{
+				"modifiedTime": "03\/Jan\/2024 04:12:30 pm",
+				"oldPrice": 1499,
+				"BookName": "Refactoring: Improving the Design of Existing Code",
+				"newPrice": 1299
+			},
+			{
+				"modifiedTime": "03\/Jan\/2024 04:15:58 pm",
+				"oldPrice": 1000,
+				"BookName": "To Kill a Mockingbird",
+				"newPrice": 999
 			}
 		],
 		"2": [

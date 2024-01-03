@@ -49,7 +49,7 @@ public class ModifyBooksView extends Colors{
 					break;
 				}
 				case 3 : {
-					modifyBooksViewModel.modifyBooksInShop(userName);
+					modifyBooksViewModel.modifyBooksStocks(userName);
 					break;
 				}
 				case 4 : {
@@ -57,7 +57,7 @@ public class ModifyBooksView extends Colors{
 					break;
 				}
 				case 5 : {
-					modifyBooksViewModel.showHistory(userName);
+					modifyBooksViewModel.showHistoryOfAdmin(userName);
 					break;
 				}
 				case 6 : {
@@ -105,7 +105,9 @@ public class ModifyBooksView extends Colors{
 				 choice = scanner.nextInt();
 				 scanner.nextLine();
 				 if(choice >= 1 && choice <= i) {
-					 modifyBooksViewModel.modifyTheCurrentBookStock((JSONObject)allBooks.get(choice-1) , userName);
+					 if(!modifyBooksViewModel.modifyTheCurrentBookStock((JSONObject)allBooks.get(choice-1) , userName)) {
+						 continue;
+					 }
 					 break;
 				 }
 				 else if(choice == 0) {
@@ -175,7 +177,9 @@ public class ModifyBooksView extends Colors{
 				 choice = scanner.nextInt();
 				 scanner.nextLine();
 				 if(choice >= 1 && choice <= i) {
-					 modifyBooksViewModel.modifyTheCurrentBookPrice((JSONObject)allBooks.get(choice-1) , userName);
+					 if(!modifyBooksViewModel.modifyTheCurrentBookPrice((JSONObject)allBooks.get(choice-1) , userName)) {
+						 continue;
+					 }
 					 break;
 				 }
 				 else if(choice == 0) {
@@ -199,9 +203,9 @@ public class ModifyBooksView extends Colors{
 
 	public void showPrice(JSONObject currBook) {
 		System.out.println(ANSI_GREEN+"+---------------------------------------------------+\n"+ANSI_RESET
-				+ANSI_BLUE+currBook.get("title")+" Book Current Price is : "
+				+ANSI_CYAN+currBook.get("title")+" Book Current Price is : "
 				+currBook.get("price")
-				+ANSI_BLUE+ANSI_GREEN+"\n+---------------------------------------------------+"+ANSI_RESET);	
+				+ANSI_RESET+ANSI_GREEN+"\n+---------------------------------------------------+"+ANSI_RESET);	
 		
 		
 	}
@@ -210,7 +214,7 @@ public class ModifyBooksView extends Colors{
 		int choice;
 		do {
 			System.out.println(ANSI_GREEN+"+---------------------------------------------------+\n"+ANSI_RESET
-					+ANSI_BLUE+"\n Enter a New Price  -> "
+					+ANSI_CYAN+"\n Enter a New Price  -> "
 							+ANSI_RESET+ANSI_GREEN+"\n+---------------------------------------------------+"+ANSI_RESET);	
 			try {
 				choice = scanner.nextInt();
@@ -237,7 +241,7 @@ public class ModifyBooksView extends Colors{
 		
 	}
 
-	public void prinTheCurrentUserHistory(JSONObject currDateHistory) {
+	public void prinTheCurrentHistoryOfAdmin(JSONObject currDateHistory) {
 		System.out.println(ANSI_GREEN+"-----------------------"
 				+ "--------------------------------------+"+ANSI_RESET);
 	        

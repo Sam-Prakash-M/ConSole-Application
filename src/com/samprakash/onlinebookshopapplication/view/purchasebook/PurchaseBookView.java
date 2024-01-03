@@ -61,7 +61,7 @@ public class PurchaseBookView extends Colors {
 					   }
 					  
 					   else {
-						   showError(ANSI_RESET+"Stocks are Low you can't by "+noOfBooks+" books\n"+ANSI_PURPLE);
+						   showError("Stocks are Low you can't by "+noOfBooks+" books\n");
 						   continue;
 					   }
 					   break;

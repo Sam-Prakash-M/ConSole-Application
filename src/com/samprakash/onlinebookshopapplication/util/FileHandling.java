@@ -18,7 +18,11 @@ public class FileHandling {
 	protected static final String PATH_PERSONAL_DETAILS = "src/com/samprakash/onlinebookshopapplication/Online Book Store/User and Admin's Personal Details.json";
 	protected static final String PATH_USER_STATS_DETAILS = "src/com/samprakash/onlinebookshopapplication/Online Book Store/User and Admin Usage stats.json";
 	private DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern("dd/MMM/yyyy hh:mm:ss a");
-
+     
+	/*
+	 * this Method writes the the APP's Data.json File
+	 * 
+	 */	
 	protected void writeMainFile(JSONObject jsonObject) {
 		FileWriter fileWriter;
 		try {
@@ -31,7 +35,10 @@ public class FileHandling {
 			e.printStackTrace();
 		}
 	}
-
+   
+	/*
+	 * this method Writes the User and Admin's Personal Details.json File
+	 */	
 	protected void writeinUserAndAdminPersonalFile(JSONObject jsonUserAndAdmin) {
 		FileWriter fileWriter;
 		try {
@@ -45,7 +52,9 @@ public class FileHandling {
 		}
 
 	}
-
+ 
+	/* this method Writes the User and Admin Usage stats.json File */
+	
 	private void writeinUserAndAdminStatsFile(JSONObject jsonUserandAdminStats) {
 
 		FileWriter fileWriter;
@@ -60,15 +69,26 @@ public class FileHandling {
 		}
 
 	}
-
+     
+	/*
+	 * this method returns the User and Admin's Personal Details.json File
+	 * JSONObject
+	 */
 	private JSONObject getJSONObjectOfPersonalDetails() {
 		return OnlineBookPurchaseRepository.getInstance().getJsonPersonalDetailsRetreiver();
 	}
-
+	/*
+	 * this method returns the User and Admin Usage stats.json  File
+	 * JSONObject
+	 */
 	private JSONObject getJSONObjectOfUsageStatsDetails() {
 		return OnlineBookPurchaseRepository.getInstance().getJsonUserStatsRetreiver();
 	}
-
+     
+	/*
+  	 * this method is added the what are all the changes made admin in the books
+  	 * Stocks and and the stats in User and Admin Usage stats.json file
+  	 */
 	protected void addAdminStatsOfStocksInFile(JSONObject currBook, String userName, int newCount) {
 
 		long currCount = Long.valueOf(currBook.get("stock")+"");
@@ -110,7 +130,11 @@ public class FileHandling {
 
 		writeinUserAndAdminStatsFile(jsonUserandAdminStats);
 
-	}
+	}  
+	/*
+  	 * this method is added the what are all the changes made admin in the books
+  	 * Count and and the stats in User and Admin Usage stats.json file
+  	 */
      protected void writeAdminStatsOfNewBookInFile(String userName , JSONObject newBookDetails) {
     	 JSONObject jsonMainPersonalDetails = getJSONObjectOfPersonalDetails();
 
@@ -120,6 +144,7 @@ public class FileHandling {
 
  		JSONObject adminStats = (JSONObject) jsonUserandAdminStats.get("Admins");
  		long currUserId = 0;
+ 		// get the current Persons userId
  		for (int i = 0; i < eachUser.size(); i++) {
  			JSONObject currUser = (JSONObject) eachUser.get(i);
  			if (((String) currUser.get("UserName")).equals(userName)) {
@@ -143,7 +168,10 @@ public class FileHandling {
  		writeinUserAndAdminStatsFile(jsonUserandAdminStats);
 		
 	}
-     
+     /*
+   	 * this method is added the what are all the changes made admin in the books
+   	 * Count and and the stats in User and Admin Usage stats.json file
+   	 */
      protected void writeAdminStatsOfDeleteBookInFile(String userName, JSONObject deletedBook) {
     	 JSONObject jsonMainPersonalDetails = getJSONObjectOfPersonalDetails();
 
@@ -154,6 +182,7 @@ public class FileHandling {
   		JSONObject adminStats = (JSONObject) jsonUserandAdminStats.get("Admins");
   		
   		JSONObject newBookDetails = new JSONObject();
+  	// get the current Persons userId
   		long currUserId = 0;
   		for (int i = 0; i < eachUser.size(); i++) {
   			JSONObject currUser = (JSONObject) eachUser.get(i);
@@ -183,7 +212,11 @@ public class FileHandling {
  		}
   		writeinUserAndAdminStatsFile(jsonUserandAdminStats);
  		
- 	}
+ 	} 
+     /*
+  	 * this method is added the what are all the changes made admin in the books
+  	 * price and and the stats in User and Admin Usage stats.json file
+  	 */
      
 	protected void addAdminStatsOfPriceInFile(JSONObject currBook, String userName, long newPrice) {
 
@@ -227,7 +260,10 @@ public class FileHandling {
 		writeinUserAndAdminStatsFile(jsonUserandAdminStats);
 
 	}
-
+	/*
+  	 * this method is added  what are all the books buy by Current User
+  	 * and add  the stats in User and Admin Usage stats.json file
+  	 */
 	protected void addUserStatsInFile(JSONObject currBook, long noOfBooks, double receivedMoney, String userName) {
 		long bookPrice = Long.valueOf(currBook.get("price")+"");
 		String bookName = (String) currBook.get("title");
@@ -276,24 +312,33 @@ public class FileHandling {
 		writeinUserAndAdminStatsFile(jsonUserandAdminStats);
 
 	}
-
+    
+	/* this method checks whether the user present in the database */
 	protected boolean isUserAlreadyPresent(String userName, int choice) {
 		JSONObject mainJsonObject = getJSONObjectOfPersonalDetails();
 		JSONArray eachUser = (JSONArray) mainJsonObject.get("Users");
 
 		if (eachUser.size() == 0) {
-			System.out.println("returns False : ");
+			
 			return false;
 		}
 		for (int i = 0; i < eachUser.size(); i++) {
 			JSONObject currUser = (JSONObject) eachUser.get(i);
 			if (((String) currUser.get("UserName")).equals(userName)) {
+				
+				/*
+				 * if active status is 0 User accout is deleted . but whenEver the user tries
+				 * to recover account or sign up then this method return true or given false
+				 * whenEver user tries  to delete  already deleted account or tries to sign in
+				 * already deleted Account
+				 */
 				if (String.valueOf(currUser.get("ActiveStatus")).equals("0")) {
 					if (choice == 4 || choice == 1) {
 						return true;
 					}
 					return false;
 				} else {
+					/* wheEver User tries to Recover active account it returns False */
 					if (choice == 4) {
 						return false;
 					}
@@ -304,7 +349,9 @@ public class FileHandling {
 		return false;
 
 	}
-
+        
+	/* This Method checks whether admin is the Already presented or not */
+	
 	protected boolean isAdminAlreadyPresent(String userName, int choice) {
 		JSONObject mainJsonObject = getJSONObjectOfPersonalDetails();
 		JSONArray eachUser = (JSONArray) mainJsonObject.get("Admins");
@@ -317,13 +364,20 @@ public class FileHandling {
 			JSONObject currUser = (JSONObject) eachUser.get(i);
 			if (((String) currUser.get("UserName")).equals(userName)) {
 				
+				/*
+				 * if active status is 0 admin accout is deleted . but whenEver the admin tries
+				 * to recover account or sign up then this method return true or given false
+				 * whenEver user tries  to delete  already deleted account or tries to sign in
+				 * already deleted Account
+				 */
 				if (String.valueOf(currUser.get("ActiveStatus")).equals("0")) {
 					if (choice == 4 || choice == 1) {
-						System.out.println("Admin presents");
+						
 						return true;
 					}
 					return false;
 				} else {
+					/* wheEver Admin tries to Recover active account it returns False */
 					if (choice == 4) {
 						return false;
 					}
@@ -336,6 +390,9 @@ public class FileHandling {
 
 	}
 
+	/*
+	 * write new user in User and Admin's Personal Details.json file
+	 */
 	protected void writeNewUserInFile(Persons userNameAndPassword) {
 		JSONObject mainjsonObject = getJSONObjectOfPersonalDetails();
 		JSONArray eachUser = (JSONArray) mainjsonObject.get("Users");
@@ -350,7 +407,10 @@ public class FileHandling {
 		mainjsonObject.put("UserID", userIDCount + 1);
 		writeinUserAndAdminPersonalFile(mainjsonObject);
 	}
-
+     
+	/*
+	 * write new Admin in User and Admin's Personal Details.json file
+	 */
 	protected void writeNewAdminInFile(Persons userNameAndPassword) {
 		JSONObject mainjsonObject = getJSONObjectOfPersonalDetails();
 		JSONArray eachAdmin = (JSONArray) mainjsonObject.get("Admins");
@@ -365,7 +425,9 @@ public class FileHandling {
 		mainjsonObject.put("AdminID", adminIDCount + 1);
 		writeinUserAndAdminPersonalFile(mainjsonObject);
 	}
-
+	/*
+	 * delete Admin in User and Admin's Personal Details.json file
+	 */
 	protected void deleteAdminInFile(String userName) {
 		JSONObject mainjsonObject = getJSONObjectOfPersonalDetails();
 		JSONArray eachAdmin = (JSONArray) mainjsonObject.get("Admins");
@@ -392,7 +454,9 @@ public class FileHandling {
 
 		writeinUserAndAdminPersonalFile(mainjsonObject);
 	}
-
+	/*
+	 * delete user in User and Admin's Personal Details.json file
+	 */
 	protected void deleteUserInFile(String userName) {
 		JSONObject mainjsonObject = getJSONObjectOfPersonalDetails();
 		JSONArray eachAdmin = (JSONArray) mainjsonObject.get("Users");
@@ -405,7 +469,7 @@ public class FileHandling {
 				Set<String> everyKey = (Set) currAdmin.keySet();
 
 				for (String object : everyKey) {
-					// removes if rejoined date
+					// removes if rejoined date presents
 					
 					if (object.equals("reJoinedDate")) {
 						System.out.println("Contains");
@@ -419,7 +483,9 @@ public class FileHandling {
 
 		writeinUserAndAdminPersonalFile(mainjsonObject);
 	}
-
+	/*
+	 * Recover user in User and Admin's Personal Details.json file
+	 */
 	protected void recoverUserInFile(String userName) {
 		JSONObject mainjsonObject = getJSONObjectOfPersonalDetails();
 		JSONArray eachAdmin = (JSONArray) mainjsonObject.get("Users");
@@ -445,7 +511,9 @@ public class FileHandling {
 
 		writeinUserAndAdminPersonalFile(mainjsonObject);
 	}
-
+	/*
+	 * Recover Admin in User and Admin's Personal Details.json file
+	 */
 	protected void recoverAdminInFile(String userName) {
 		JSONObject mainjsonObject = getJSONObjectOfPersonalDetails();
 		JSONArray eachAdmin = (JSONArray) mainjsonObject.get("Admins");

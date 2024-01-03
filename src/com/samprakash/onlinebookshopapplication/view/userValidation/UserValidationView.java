@@ -75,12 +75,26 @@ public class UserValidationView extends Colors {
 
 		System.out.println(ANSI_BG_RED+ANSI_WHITE+ANSI_BOLD+error+ANSI_RESET);
 	}
-
+  
+	/* This Method gets userName and Password of Persons
+	 * Also this Method Validate the UserName And password Which Matches Regex
+	 * pattern Only When the userName and Password is Matches the
+	 * userName and password is assigned in Persons Object
+	 * */
 	public Persons getUserNameAndPassWord() {
 		String userName, passWord;
 		boolean isCorrect = false;
 		do {
-			
+			showError("\n"
+					+ "Rules For UserName  : -->\n"
+					+ "Starts with either a lowercase or uppercase alphabet. Can contain any of the\r\n"
+					+ " characters '@', '#', '-', or '_'. Can include digits. The length must be\r\n"
+					+ " between 3 and 15 characters.\n\n"
+					+ "Rules For PassWord : -->\n"
+					+ "Starts with the specified conditions (at least one digit, one lowercase\r\n"
+					+ "letter, one uppercase letter, and one of the specified special characters).\r\n"
+					+ "Does not contain any whitespace characters. Has a total length between 8 and\r\n"
+					+ "15 characters.");
 			System.out.println(ANSI_CYAN + "Enter a UserName --> " + ANSI_RESET);
 			userName = scanner.nextLine();
 			System.out.println(ANSI_CYAN + "Enter a PassWord --> " + ANSI_RESET);
@@ -97,7 +111,8 @@ public class UserValidationView extends Colors {
 				+ ANSI_BG_PURPLE + success + ANSI_RESET + ANSI_GREEN
 				+ "\n+---------------------------------------------------+\n\n" + ANSI_RESET);
 	}
-
+     
+	//Its Shows The Admin View 
 	public String showAdminUI() {
 		int choice = 0;
 		String userName = null;
@@ -152,7 +167,7 @@ public class UserValidationView extends Colors {
 	public void showHistoryOfUser(String userName) {
 		JSONArray userJSONArray = userValidationViewModel.getUsersPersonalJsonArray();
 		JSONObject userAndAdminPeronsalDetails = userValidationViewModel.getUserStatsJsonObject();
-		userValidationViewModel.findAllHistories(userJSONArray,userAndAdminPeronsalDetails,userName);
+		userValidationViewModel.findAllHistoriesOfCurrentUser(userJSONArray,userAndAdminPeronsalDetails,userName);
 
 		
 

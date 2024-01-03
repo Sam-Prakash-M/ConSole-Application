@@ -16,60 +16,86 @@ public class ModifyBooksViewModel extends FileHandling {
 	public ModifyBooksViewModel(ModifyBooksView modifyBooksView) {
 		this.modifyBooksView = modifyBooksView;
 	}
-
-	public void modifyBooksInShop(String userName) {
+         
+	/*
+	 * this method get JSONArray Object of books in App's Data.json and Current
+	 * UserName to another method
+	 */
+	public void modifyBooksStocks(String userName) {
 		JSONObject jsonObject = OnlineBookPurchaseRepository.getInstance().getJsonRetreiver();
 		JSONArray allBooks = (JSONArray) jsonObject.get("books");
 		modifyBooksView.showAllBooksToModifyStockCount(allBooks,userName);
 		
 	}
-
-	public void modifyTheCurrentBookStock(JSONObject currBook , String userName) {
+        
+	/* its OverRide the current Book stock Count to User given Stock Counts 
+	 * if its Same count it won't change 
+	 * */
+	
+	public boolean modifyTheCurrentBookStock(JSONObject currBook , String userName) {
 		
 		modifyBooksView.showStocks(currBook);
 		int newCount = modifyBooksView.getnewBookCount();
 		if(String.valueOf(currBook.get("stock")).equals(newCount+"")) {
 			modifyBooksView.showError("Current Stock count and new Stock Count is Same");
-			return;
+			return false;
 		}
 		addAdminStatsOfStocksInFile(currBook , userName , newCount);
 		currBook.put("stock", newCount);
 		writeMainFile(OnlineBookPurchaseRepository.getInstance().getJsonRetreiver());
 	   modifyBooksView.showSuccess("Stock Count Changed SuccessFully to "+newCount);
-		
+		return true;
 	}
-	
+    
+	/*
+	 * this method get JSONArray Object of books in App's Data.json and Current
+	 * UserName to another method
+	 */
 	public void modifyBooksPrice(String userName) {
 		JSONObject jsonObject = OnlineBookPurchaseRepository.getInstance().getJsonRetreiver();
 		JSONArray allBooks = (JSONArray) jsonObject.get("books");
 		modifyBooksView.showAllBooksToChangePrice(allBooks , userName);
 		
 	}
-
-	public void modifyTheCurrentBookPrice(JSONObject currBook , String userName) {
+       
+	/* its OverRide the current Book Price  to User given Price 
+	 * If it same price it won't change 
+	 * */
+	public boolean modifyTheCurrentBookPrice(JSONObject currBook , String userName) {
 		modifyBooksView.showPrice(currBook);
 		int newPrice = modifyBooksView.getNewPrice();
 		if(String.valueOf(currBook.get("price")).equals(newPrice+"")) {
 			modifyBooksView.showError("Current Price and new Price is Same");
-			return;
+			return false;
 		}
 		
 		addAdminStatsOfPriceInFile(currBook,userName,newPrice);
 		currBook.put("price", newPrice);
 		writeMainFile(OnlineBookPurchaseRepository.getInstance().getJsonRetreiver());
 		modifyBooksView.showSuccess("Price Changed SuccessFully to "+newPrice);
-		
-	}
+		return true;
+	}   
+	
+	/*
+	 * this method get jsonArray object of admins in User and Admin's Personal
+	 * Details.json and get jsonObject of admins in User and Admin Usage stats.json
+	 * file and given to findFullHistory method.
+	 */
 
-	public void showHistory(String userName) {
+	public void showHistoryOfAdmin(String userName) {
 		JSONArray adminArray = (JSONArray) OnlineBookPurchaseRepository.getInstance().getJsonPersonalDetailsRetreiver().get("Admins");
 		JSONObject adminStats = (JSONObject) OnlineBookPurchaseRepository.getInstance().getJsonUserStatsRetreiver().get("Admins");
-		findFullHistory(adminArray,adminStats,userName);
+		findFullHistoryOfAdmin(adminArray,adminStats,userName);
 		
 		
-	}
+	}   
+	/*
+	 * if adminArray is empty then its shows an error or its finds the Current
+	 * userId for mapping into User and Admin Usage stats.json file then it find the
+	 * current user has any history then it given to view or return error message
+	 */
 
-	private void findFullHistory(JSONArray adminArray, JSONObject adminStats , String userName) {
+	private void findFullHistoryOfAdmin(JSONArray adminArray, JSONObject adminStats , String userName) {
 		if (adminArray.isEmpty()) {
 			modifyBooksView.showError("There is no history Was Saved as of Now!!!");
 			return;
@@ -89,7 +115,7 @@ public class ModifyBooksViewModel extends FileHandling {
 			
 			for(int i = 0 ; i < currUserHistory.size() ; i++) {
 				
-				modifyBooksView.prinTheCurrentUserHistory((JSONObject)currUserHistory.get(i));
+				modifyBooksView.prinTheCurrentHistoryOfAdmin((JSONObject)currUserHistory.get(i));
 				
 			}
 			
@@ -101,6 +127,10 @@ public class ModifyBooksViewModel extends FileHandling {
 		
 	}
 
+	/*
+	 * this method get input of new books from view class and added in the App's
+	 * Data.json file and writes the stats in User and Admin Usage stats.json
+	 */	
 	public void addNewBook(String userName) {
 		List newBookDetails = modifyBooksView.getInputFromAdmin();
 		JSONObject jsonObject = OnlineBookPurchaseRepository.getInstance().getJsonRetreiver();
@@ -132,6 +162,10 @@ public class ModifyBooksViewModel extends FileHandling {
 	}
 
 	
+	/*
+	 * this method get bookname to delete and writes the stats in User and Admin
+	 * Usage stats.json 
+	 */
 
 	public void deleteABook(String userName) {
 		String bookName = modifyBooksView.getInputBookNameForDelete();
@@ -155,6 +189,10 @@ public class ModifyBooksViewModel extends FileHandling {
 	}
 
 	
+	/*
+	 * this method find the book is already present or not this is prevent to add
+	 * the duplicate book
+	 */
 
 	public boolean isBookPresence(String bookTitle) {
 		JSONObject jsonObject = OnlineBookPurchaseRepository.getInstance().getJsonRetreiver();

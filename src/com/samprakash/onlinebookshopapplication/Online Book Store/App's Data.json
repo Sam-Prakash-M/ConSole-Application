@@ -9,7 +9,7 @@
 		},
 		{
 			"author": "Harper Lee",
-			"price": 1000,
+			"price": 999,
 			"genre": "Fiction",
 			"title": "To Kill a Mockingbird",
 			"stock": 28
@@ -298,7 +298,7 @@
 		},
 		{
 			"author": "Martin Fowler",
-			"price": 1499,
+			"price": 1299,
 			"genre": "Design Patterns",
 			"title": "Refactoring: Improving the Design of Existing Code",
 			"stock": 45,

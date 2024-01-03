@@ -30,7 +30,12 @@ public class UserValidationViewModel extends FileHandling {
 	 * 15 characters.
 	 */
 	  
-	public String createUserNameAndPasswordForUser(int choice) {
+	/*
+	 * this method get input from getUserNameAndPassWord() and checks both admin and
+	 * user are not already in the current userName once its verified this two
+	 * conditions next the details are written in User and Admin's Personal
+	 * Details.json
+	 */	public String createUserNameAndPasswordForUser(int choice) {
 		 
 		do {
 			Persons userNameAndPassword = userValidationView.getUserNameAndPassWord();
@@ -48,26 +53,24 @@ public class UserValidationViewModel extends FileHandling {
 	}
 
 	
+	/* This Method gets userName and Password from getUserNameAndPassWord() and 
+	 * Validate those userName and Password if it matches return true or false and
+	 * also tells the Error Message */
 	public boolean UserNameAndPasswordValidation(String userName, String passWord) {
 		
 		if(userName.matches(PATTERN_FOR_USERNAME) 
 				&& passWord.matches(PATTERN_FOR_PASSWORD)) {
 			return true;
 		}
-		userValidationView.showError("Your UserName or PassWord is not valid\n"
-				+ "Rules For UserName  : -->\n"
-				+ "Starts with either a lowercase or uppercase alphabet. Can contain any of the\r\n"
-				+ " characters '@', '#', '-', or '_'. Can include digits. The length must be\r\n"
-				+ " between 3 and 15 characters.\n\n"
-				+ "Rules For PassWord : -->\n"
-				+ "Starts with the specified conditions (at least one digit, one lowercase\r\n"
-				+ "letter, one uppercase letter, and one of the specified special characters).\r\n"
-				+ "Does not contain any whitespace characters. Has a total length between 8 and\r\n"
-				+ "15 characters.");
+		userValidationView.showError("Your UserName or PassWord is not valid");
 		return false;
 	}
 
-
+     
+	/*
+	 * this method verify the current user is already present if not it shows an
+	 * error like user is not exist
+	 */
 
 	public String userVerify(int choice) {
 		
@@ -85,7 +88,12 @@ public class UserValidationViewModel extends FileHandling {
 		
 	}
 
-
+             
+	/*
+	 * Its Creates the username and password and also it gets validate and write the
+	 * current Admin UserName and Password in file . This method returns the Current Admin UserName
+	 * Whenever the Admin Username is already exist it throws an error
+	 */
 	public String createUserNameAndPasswordForAdmin(int choice) {
 		 
 		do {
@@ -103,7 +111,12 @@ public class UserValidationViewModel extends FileHandling {
 		while(true);
 	
 	}
-
+    
+	
+	/*
+	 * Its get userName and PassWord if and only if admin presents then shows
+	 * message sign in successfully and returns the userName
+	 */
 
 	public String adminVerify(int choice) {
 		do {
@@ -119,13 +132,17 @@ public class UserValidationViewModel extends FileHandling {
 		while(true);
 		
 	}
-
-
+    
+	/*
+	 * this methods deletes the current admin Account only when the admin userName
+	 * is already present in database or its throws an Error admin is not present
+	 */
 	public void deteteAdminAccount(int choice) {
 		do {
 			Persons userNameAndPassword = userValidationView.getUserNameAndPassWord();
 				if(isAdminAlreadyPresent(userNameAndPassword.getUserName(),choice)) {
 					deleteAdminInFile(userNameAndPassword.getUserName());
+					userValidationView.showSuccess("Admin Deleted SuccessFully");
 					break;
 				}
 				else {
@@ -133,16 +150,20 @@ public class UserValidationViewModel extends FileHandling {
 				}
 		}
 		while(true);
-		userValidationView.showSuccess("Admin Deleted SuccessFully");
+		
 		
 	}
-
+	/*
+	 * this methods deletes the current User Account only when the User userName
+	 * is already present in database or its throws an Error User is not present
+	 */
 
 	public void deleteUserAccount(int choice) {
 		do {
 			Persons userNameAndPassword = userValidationView.getUserNameAndPassWord();
 				if(isUserAlreadyPresent(userNameAndPassword.getUserName(),choice)) {
 					deleteUserInFile(userNameAndPassword.getUserName());
+					userValidationView.showSuccess("User Deleted SuccessFully");
 					break;
 				}
 				else {
@@ -150,16 +171,20 @@ public class UserValidationViewModel extends FileHandling {
 				}
 		}
 		while(true);
-		userValidationView.showSuccess("User Deleted SuccessFully");
+		
 		
 	}
-
+	/*
+	 * this methods recovers the  deleted current User Account only when the User userName
+	 * is already present in database or its throws an Error User is not present
+	 */
 
 	public void recoverDeletedUserAccount(int choice) {
 		do {
 			Persons userNameAndPassword = userValidationView.getUserNameAndPassWord();
 				if(isUserAlreadyPresent(userNameAndPassword.getUserName(),choice)) {
 					recoverUserInFile(userNameAndPassword.getUserName());
+					userValidationView.showSuccess("User Account Recoverd SuccessFully");
 					break;
 				}
 				else {
@@ -167,41 +192,56 @@ public class UserValidationViewModel extends FileHandling {
 				}
 		}
 		while(true);
-		userValidationView.showSuccess("User Account Recoverd SuccessFully");
+		
 		
 	}
-
+	/*
+	 * this methods recovers the  deleted current Admin Account only when the Admin userName
+	 * is already present in database or its throws an Error Admin is not present
+	 */
 
 	public void recoverDeletedAdminAccount(int choice) {
 		do {
 			Persons userNameAndPassword = userValidationView.getUserNameAndPassWord();
 				if(isAdminAlreadyPresent(userNameAndPassword.getUserName(),choice)) {
 					recoverAdminInFile(userNameAndPassword.getUserName());
+					userValidationView.showSuccess("Admin Account Recoverd SuccessFully");
 					break;
 				}
 				else {
-					userValidationView.showError("User is not Present ");
+					userValidationView.showError("Admin is not Present ");
 				}
 		}
 		while(true);
-		userValidationView.showSuccess("Admin Account Recoverd SuccessFully");
+		
 		
 	}
 
-
+	/*
+	 * this method returns the JSONArray Object of Users in User and Admin's
+	 * Personal Details.json file
+	 */
 	public JSONArray getUsersPersonalJsonArray() {
 		
               return (JSONArray) OnlineBookPurchaseRepository.getInstance().getJsonPersonalDetailsRetreiver().get("Users");
 	}
 
-
+	/*
+	 * this method returns the JSONObject of Users in User and Admin's
+	 * User and Admin Usage stats.json file
+	 */
 	public JSONObject getUserStatsJsonObject() {
 		
 		return (JSONObject) OnlineBookPurchaseRepository.getInstance().getJsonUserStatsRetreiver().get("Users");
 	}
+        
+	/*
+	 * this method first find the current user user id and find whether the current
+	 * user has any buying history if the user has histories it gives to view or its
+	 * shows an error message
+	 */
 
-
-	public void findAllHistories(JSONArray userJSONArray, JSONObject userAndAdminPeronsalDetails,String userName) {
+	public void findAllHistoriesOfCurrentUser(JSONArray userJSONArray, JSONObject userAndAdminPeronsalDetails,String userName) {
 		if (userJSONArray.isEmpty()) {
 			userValidationView.showError("There is no history Was Saved as of Now!!!");
 			return;

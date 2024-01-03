@@ -24,10 +24,11 @@ public class JsonDataview extends Colors {
 	
 	
 	public void startTheApp() {
-		jsonDataViewModel.assignJsonobject();
+		jsonDataViewModel.assignJsonobject();//It Assigns json object
 		showMenu();
 		
 	}
+	// Show the First menu
 	private void showMenu() {
 		userValidationView = new UserValidationView();
 		String userName;
