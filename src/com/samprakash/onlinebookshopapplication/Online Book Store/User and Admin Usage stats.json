@@ -420,7 +420,6 @@
 				"stock": 30,
 				"BookAddedDate": "03\/Jan\/2024 01:12:38 pm"
 			},
-			
 			{
 				"RemovedBookDate": "03\/Jan\/2024 01:19:54 pm",
 				"RemovedBookAuthor": "Adam Freeman",
@@ -468,6 +467,16 @@
 				"oldPrice": 2299,
 				"BookName": "The Catcher in the Rye",
 				"newPrice": 700
+			}
+		],
+		"8": [
+			{
+				"RemovedBookDate": "03\/Jan\/2024 01:38:55 pm",
+				"RemovedBookAuthor": "George Orwell",
+				"RemovedBookPrice": 1999,
+				"RemovedBookStocksCount": 23,
+				"RemovedBookGenre": "Dystopian",
+				"RemovedBookTitle": "1984"
 			}
 		]
 	}

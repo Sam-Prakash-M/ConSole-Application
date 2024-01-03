@@ -326,9 +326,9 @@ public class ModifyBooksView extends Colors{
 	public List getInputFromAdmin() {
 		String bookTitle;
 		System.out.println("\n"+ANSI_GREEN+"+--------------------------"
-				+ "----------------------------------+"+ANSI_RESET+ANSI_PURPLE);
+				+ "----------------------------------+"+ANSI_RESET);
 		while(true) {
-			System.out.println("Enter a Book Title Name  ");
+			System.out.println(ANSI_PURPLE+"Enter a Book Title Name  "+ANSI_RESET);
 		       bookTitle = scanner.nextLine();
 		       if(!modifyBooksViewModel.isBookPresence(bookTitle)) {
 		    	   break;
@@ -340,14 +340,14 @@ public class ModifyBooksView extends Colors{
 		      
 		}
 	
-		System.out.println("Enter a Book Author Name  ");
+		System.out.println(ANSI_PURPLE+"Enter a Book Author Name  "+ANSI_RESET);
 		String bookAuthor = scanner.nextLine();
-		System.out.println("Enter a Book Genre Name  ");
+		System.out.println(ANSI_PURPLE+"Enter a Book Genre Name  "+ANSI_RESET);
 		String bookGenre = scanner.nextLine();
 		
 		long bookPrice , bookStock;
 		while(true) {
-			System.out.println("Enter a Book Price  ");
+			System.out.println(ANSI_PURPLE+"Enter a Book Price  "+ANSI_RESET);
 			if(scanner.hasNextLong()) {
 				bookPrice = scanner.nextLong();
 				scanner.nextLine();
@@ -355,13 +355,13 @@ public class ModifyBooksView extends Colors{
 			}
 			else {
 				scanner.nextLine();
-				showError("Enter a Valid Input ");
+				showError(ANSI_PURPLE+"Enter a Valid Input "+ANSI_RESET);
 				continue;
 			}
 			
 		}
 		while(true) {
-			System.out.println("Enter a BookCount  ");
+			System.out.println(ANSI_PURPLE+"Enter a BookCount  "+ANSI_RESET);
 			if(scanner.hasNextLong()) {
 				bookStock = scanner.nextLong();
 				scanner.nextLine();
@@ -389,9 +389,9 @@ public class ModifyBooksView extends Colors{
 	public String getInputBookNameForDelete() {
 		String bookTitle;
 		System.out.println("\n"+ANSI_GREEN+"+--------------------------"
-				+ "----------------------------------+"+ANSI_RESET+ANSI_PURPLE);
+				+ "----------------------------------+"+ANSI_RESET);
 		while(true) {
-			System.out.println("Enter a Book Title Name  ");
+			System.out.println(ANSI_PURPLE+"Enter a Book Title Name  "+ANSI_RESET);
 		       bookTitle = scanner.nextLine();
 		       if(modifyBooksViewModel.isBookPresence(bookTitle)) {
 		    	   break;
