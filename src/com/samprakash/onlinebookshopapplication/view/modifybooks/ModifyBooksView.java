@@ -95,7 +95,7 @@ public class ModifyBooksView extends Colors{
 		for(i = 0 ; i < allBooks.size() ; i++) {
 			System.out.println(ANSI_PURPLE);
 			System.out.printf("%3d ) Book Name : %s "
-					,(i+1),((JSONObject) allBooks.get(i)).get("title")+"\n\n");
+					,(i+1),(ANSI_BOLD+ANSI_YELLOW+((JSONObject) allBooks.get(i)).get("title")+ANSI_RESET)+"\n\n");
 			
 		}
 		
@@ -167,7 +167,7 @@ public class ModifyBooksView extends Colors{
 		for(i = 0 ; i < allBooks.size() ; i++) {
 			System.out.println(ANSI_PURPLE);
 			System.out.printf("%3d ) Book Name : %s "
-					,(i+1),((JSONObject) allBooks.get(i)).get("title")+"\n\n");
+					,(i+1),(ANSI_YELLOW+ANSI_BOLD+((JSONObject) allBooks.get(i)).get("title")+ANSI_RESET)+"\n\n");
 			
 		}
 		System.out.printf(ANSI_RESET+ANSI_BG_RED+ANSI_BOLD+"\n%3d Exit <-- ",0);
