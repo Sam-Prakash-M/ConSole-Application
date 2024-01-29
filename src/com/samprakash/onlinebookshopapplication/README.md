@@ -54,9 +54,9 @@
 - view
 - viewmodel
 
-class Diagram :
+### class Diagram :
 
-
+```
 +-----------------------------------------------------------------+
 |                       Bookshop                                  |
 +-----------------------------------------------------------------+
@@ -188,7 +188,7 @@ class Diagram :
 | + userVerify(choice: int): String                                             |
 | + createUserNameAndPasswordForAdmin(choice: int): String                      |  
 +-------------------------------------------------------------------------------+
-
+```
 
 
 
