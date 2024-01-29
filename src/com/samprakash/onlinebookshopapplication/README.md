@@ -87,12 +87,12 @@
 | + setJsonUserStatsRetreiver(jsonObject: JSONObject): void       |
 +-----------------------------------------------------------------+
 
-+-----------------------------------------------------+
-|                   FileHandling                      |
-+-----------------------------------------------------+
-| - PATH_MAIN: String                                 |
-| - PATH_PERSONAL_DETAILS: String                     |
-| - PATH_USER_STATS_DETAILS: String                   |
++------------------------------------------------------------------------------------------------------------+
+|                                       FileHandling                                                         |
++------------------------------------------------------------------------------------------------------------+
+| - PATH_MAIN: String                                                                                        |
+| - PATH_PERSONAL_DETAILS: String                                                                            |
+| - PATH_USER_STATS_DETAILS: String                                                                          |
 +------------------------------------------------------------------------------------------------------------+
 | + writeMainFile(jsonObject: JSONObject): void                                                              |
 | + writeAdminStatsOfStocksInFile(currBook: JSONObject, userName: String, newCount: int): void               |
