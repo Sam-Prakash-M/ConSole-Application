@@ -40,7 +40,7 @@ public class PurchaseBookViewModel extends FileHandling{
 	 */
 	public void purchaseCurrentBooks(int choice, long noOfBooks , String userName) {
 		JSONArray allBooks = getJsonArray();
-		double price = (long) ((JSONObject)allBooks.get(choice)).get("price");
+		double price = Long.valueOf(((JSONObject)allBooks.get(choice)).get("price")+"");
 		double receivedMoney = purchaseBookView.initiatePayment(price*noOfBooks);
 		purchaseBookView.SuccessStatus("Payment Successfully Completed");
 		purchaseBookView.SuccessStatus("SuccessFully all the Books are Purchased");
@@ -52,7 +52,7 @@ public class PurchaseBookViewModel extends FileHandling{
 		  
 		    addUserStatsInFile(currBook,noOfBooks,receivedMoney ,userName);
 		    
-			currBook.put("stock", (long)currBook.get("stock") - noOfBooks );
+			currBook.put("stock", Long.valueOf(currBook.get("stock")+"") - noOfBooks );
 			
 			writeMainFile(OnlineBookPurchaseRepository.getInstance().getJsonRetreiver());
 				

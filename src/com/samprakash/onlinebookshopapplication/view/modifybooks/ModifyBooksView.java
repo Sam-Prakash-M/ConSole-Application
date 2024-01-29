@@ -93,7 +93,7 @@ public class ModifyBooksView extends Colors{
 		System.out.println(ANSI_GREEN +"+---------------------------------------------------+");
 		int i;
 		for(i = 0 ; i < allBooks.size() ; i++) {
-			System.out.println(ANSI_PURPLE);
+			System.out.println(ANSI_BOLD+ANSI_CYAN);
 			System.out.printf("%3d ) Book Name : %s "
 					,(i+1),(ANSI_BOLD+ANSI_YELLOW+((JSONObject) allBooks.get(i)).get("title")+ANSI_RESET)+"\n\n");
 			
@@ -132,7 +132,7 @@ public class ModifyBooksView extends Colors{
 		System.out.println(ANSI_GREEN+"+---------------------------------------------------+\n"+ANSI_RESET
 				+ANSI_CYAN+currBook.get("title")+" Book Current Stock Count is : "
 				+currBook.get("stock")
-				+ANSI_BLUE+ANSI_GREEN+"\n+---------------------------------------------------+"+ANSI_RESET);	
+				+ANSI_RESET+ANSI_GREEN+"\n+---------------------------------------------------+"+ANSI_RESET);	
 		
 	}
 
@@ -165,7 +165,7 @@ public class ModifyBooksView extends Colors{
 		System.out.println(ANSI_GREEN +"+---------------------------------------------------+");
 		int i;
 		for(i = 0 ; i < allBooks.size() ; i++) {
-			System.out.println(ANSI_PURPLE);
+			System.out.println(ANSI_BOLD+ANSI_CYAN);
 			System.out.printf("%3d ) Book Name : %s "
 					,(i+1),(ANSI_YELLOW+ANSI_BOLD+((JSONObject) allBooks.get(i)).get("title")+ANSI_RESET)+"\n\n");
 			
@@ -234,7 +234,7 @@ public class ModifyBooksView extends Colors{
 
 	public void showSuccess(String success) {
 		System.out.println(ANSI_GREEN+"+---------------------------------------------------+"
-				+"\n   "+ANSI_ITALIC+ANSI_BG_PURPLE+success+
+				+"\n   "+ANSI_ITALIC+ ANSI_ITALIC+ANSI_BG_WHITE+ANSI_BLUE+success+
 				ANSI_RESET+ANSI_GREEN
 				+"\n+---------------------------------------------------+\n\n"+ANSI_RESET);
 		
@@ -245,7 +245,7 @@ public class ModifyBooksView extends Colors{
 		System.out.println(ANSI_GREEN+"-----------------------"
 				+ "--------------------------------------+"+ANSI_RESET);
 	        
-			System.out.print(ANSI_PURPLE);
+			System.out.print(ANSI_BOLD+ANSI_CYAN);
 			 if(currDateHistory.containsKey("RemovedBookDate")) {
 				 System.out.printf("%3s  -> Removed Book Date : %s"," "
 							,(String) currDateHistory.get("RemovedBookDate") + "\n\n");
@@ -332,7 +332,7 @@ public class ModifyBooksView extends Colors{
 		System.out.println("\n"+ANSI_GREEN+"+--------------------------"
 				+ "----------------------------------+"+ANSI_RESET);
 		while(true) {
-			System.out.println(ANSI_PURPLE+"Enter a Book Title Name  "+ANSI_RESET);
+			System.out.println(ANSI_BOLD+ANSI_CYAN+"Enter a Book Title Name  "+ANSI_RESET);
 		       bookTitle = scanner.nextLine();
 		       if(!modifyBooksViewModel.isBookPresence(bookTitle)) {
 		    	   break;
@@ -344,14 +344,14 @@ public class ModifyBooksView extends Colors{
 		      
 		}
 	
-		System.out.println(ANSI_PURPLE+"Enter a Book Author Name  "+ANSI_RESET);
+		System.out.println(ANSI_BOLD+ANSI_CYAN+"Enter a Book Author Name  "+ANSI_RESET);
 		String bookAuthor = scanner.nextLine();
-		System.out.println(ANSI_PURPLE+"Enter a Book Genre Name  "+ANSI_RESET);
+		System.out.println(ANSI_BOLD+ANSI_CYAN+"Enter a Book Genre Name  "+ANSI_RESET);
 		String bookGenre = scanner.nextLine();
 		
 		long bookPrice , bookStock;
 		while(true) {
-			System.out.println(ANSI_PURPLE+"Enter a Book Price  "+ANSI_RESET);
+			System.out.println(ANSI_BOLD+ANSI_CYAN+"Enter a Book Price  "+ANSI_RESET);
 			if(scanner.hasNextLong()) {
 				bookPrice = scanner.nextLong();
 				scanner.nextLine();
@@ -359,13 +359,13 @@ public class ModifyBooksView extends Colors{
 			}
 			else {
 				scanner.nextLine();
-				showError(ANSI_PURPLE+"Enter a Valid Input "+ANSI_RESET);
+				showError(ANSI_BOLD+ANSI_CYAN+"Enter a Valid Input "+ANSI_RESET);
 				continue;
 			}
 			
 		}
 		while(true) {
-			System.out.println(ANSI_PURPLE+"Enter a BookCount  "+ANSI_RESET);
+			System.out.println(ANSI_BOLD+ANSI_CYAN+"Enter a BookCount  "+ANSI_RESET);
 			if(scanner.hasNextLong()) {
 				bookStock = scanner.nextLong();
 				scanner.nextLine();
@@ -387,6 +387,7 @@ public class ModifyBooksView extends Colors{
 		adminInput.add(bookGenre);
 		adminInput.add(bookTitle);
 		adminInput.add(bookStock);
+		showSuccess("New Book Added SuccessFully");
 		return adminInput;
 	}
 
@@ -395,13 +396,13 @@ public class ModifyBooksView extends Colors{
 		System.out.println("\n"+ANSI_GREEN+"+--------------------------"
 				+ "----------------------------------+"+ANSI_RESET);
 		while(true) {
-			System.out.println(ANSI_PURPLE+"Enter a Book Title Name  "+ANSI_RESET);
+			System.out.println(ANSI_BOLD+ANSI_CYAN+"Enter a Book Title Name  "+ANSI_RESET);
 		       bookTitle = scanner.nextLine();
 		       if(modifyBooksViewModel.isBookPresence(bookTitle)) {
 		    	   break;
 		       }
 		       else {
-		    	   showError("Book is Already Present");
+		    	   showError("Book is Not Present");
 		    	   continue;
 		       }
 		      

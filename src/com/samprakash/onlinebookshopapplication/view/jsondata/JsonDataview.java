@@ -33,7 +33,7 @@ public class JsonDataview extends Colors {
 		userValidationView = new UserValidationView();
 		String userName;
 		System.out.println(ANSI_GREEN+"+---------------------------------------------------+"
-				+"\n|   "+ANSI_ITALIC+ANSI_BG_PURPLE+"Welcome to  "+Persons.OWNER
+				+"\n|   "+ANSI_ITALIC+ANSI_BG_WHITE+ANSI_BLUE+"Welcome to  "+Persons.OWNER
 				+"'s Online Shopping App"+ANSI_RESET+ANSI_GREEN+"   |"
 				+"\n+---------------------------------------------------+\n"+ANSI_RESET);
 		int choice = 0;

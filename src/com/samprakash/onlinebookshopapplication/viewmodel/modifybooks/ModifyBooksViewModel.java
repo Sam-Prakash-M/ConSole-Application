@@ -180,6 +180,7 @@ public class ModifyBooksViewModel extends FileHandling {
 				if(((String)currBook.get("title")).equals(bookName)) {
 					deletedBook = currBook;
 					allBooks.remove(currBook);
+					modifyBooksView.showSuccess("Succefully Book Was Deleted");
 					break;
 				}
 			}

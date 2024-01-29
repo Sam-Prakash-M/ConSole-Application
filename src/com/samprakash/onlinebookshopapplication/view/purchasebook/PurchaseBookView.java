@@ -33,7 +33,7 @@ public class PurchaseBookView extends Colors {
 			int i;
 			for (i = 0; i < allBooks.size(); i++) {
 				
-				System.out.println(ANSI_PURPLE);
+				System.out.println(ANSI_BOLD+ANSI_CYAN);
 				System.out.printf("%3d  Book Name : %s", (i + 1),
 						((JSONObject) allBooks.get(i)).get("title") + "\n");
 				System.out.println(ANSI_RESET+ANSI_YELLOW);
@@ -123,7 +123,7 @@ public class PurchaseBookView extends Colors {
 		do {
 			System.out.println(ANSI_GREEN+"+--------------------------"
 					+ "----------------------------------+"+ANSI_RESET+"\n\n"+
-					ANSI_PURPLE+"you need to pay : "+money+" Rs\n\n"
+					ANSI_BOLD+ANSI_CYAN+"you need to pay : "+money+" Rs\n\n"
 									+ "Enter Amount to Pay"+ANSI_RESET);
 			System.out.println(ANSI_GREEN+"+--------------------------"
 					+ "----------------------------------+"+ANSI_RESET);
@@ -151,7 +151,7 @@ public class PurchaseBookView extends Colors {
 
 	public void SuccessStatus(String success) {
 		System.out.println(ANSI_GREEN+"+---------------------------------------------------+"
-				+"\n   "+ANSI_ITALIC+ANSI_BG_PURPLE+success+
+				+"\n   "+ANSI_ITALIC+ANSI_ITALIC+ANSI_BG_WHITE+ANSI_BLUE+success+
 				ANSI_RESET+ANSI_GREEN
 				+"\n+---------------------------------------------------+\n\n"+ANSI_RESET);
 		

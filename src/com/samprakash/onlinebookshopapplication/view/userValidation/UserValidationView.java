@@ -108,7 +108,7 @@ public class UserValidationView extends Colors {
 
 	public void showSuccess(String success) {
 		System.out.println(ANSI_GREEN + "+---------------------------------------------------+" + "\n   " + ANSI_ITALIC
-				+ ANSI_BG_PURPLE + success + ANSI_RESET + ANSI_GREEN
+				+ ANSI_ITALIC+ANSI_BG_WHITE+ANSI_BLUE + success + ANSI_RESET + ANSI_GREEN
 				+ "\n+---------------------------------------------------+\n\n" + ANSI_RESET);
 	}
      
@@ -177,7 +177,7 @@ public class UserValidationView extends Colors {
 		System.out.println(ANSI_GREEN+"-----------------------"
 				+ "--------------------------------------+"+ANSI_RESET);
 	
-			System.out.println(ANSI_PURPLE);
+			System.out.println(ANSI_BOLD+ANSI_CYAN);
 			System.out.printf("%3s  -> Purchase Time : %s"," "
 					,(String) currDateHistory.get("PurchasedTime") + "\n\n");
 			System.out.printf("%3s  -> Book Title : %s"," "
