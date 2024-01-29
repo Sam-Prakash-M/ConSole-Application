@@ -1,1 +1,796 @@
-{"Users":{"11":[{"BooksAuthor":"J.R.R. Tolkien","BooksGenre":"Fantasy","BooksPrice":1999,"TotalPayment":2000.0,"NoOfBooksBought":1,"PurchasedTime":"02\/Jan\/2024 02:14:58 pm","BooksName":"The Lord of the Rings"},{"BooksAuthor":"Charles Duhigg","BooksGenre":"Self-Help","BooksPrice":999,"TotalPayment":1.0E38,"NoOfBooksBought":1,"PurchasedTime":"02\/Jan\/2024 02:15:51 pm","BooksName":"The Power of Habit"},{"BooksAuthor":"Charles Duhigg","BooksGenre":"Self-Help","BooksPrice":999,"TotalPayment":20979.0,"NoOfBooksBought":21,"PurchasedTime":"02\/Jan\/2024 02:17:00 pm","BooksName":"The Power of Habit"},{"BooksAuthor":"Stephen King","BooksGenre":"Horror","BooksPrice":1999,"TotalPayment":10000.0,"NoOfBooksBought":5,"PurchasedTime":"02\/Jan\/2024 03:09:50 pm","BooksName":"The Shining"},{"BooksAuthor":"Harper Lee","BooksGenre":"Fiction","BooksPrice":1000,"TotalPayment":5000.0,"NoOfBooksBought":4,"PurchasedTime":"02\/Jan\/2024 03:26:38 pm","BooksName":"To Kill a Mockingbird"},{"BooksAuthor":"Jane Austen","BooksGenre":"Romance","BooksPrice":500,"TotalPayment":2500.0,"NoOfBooksBought":4,"PurchasedTime":"02\/Jan\/2024 03:29:44 pm","BooksName":"Pride and Prejudice"},{"BooksAuthor":"Jane Austen","BooksGenre":"Romance","BooksPrice":500,"TotalPayment":1500.0,"NoOfBooksBought":3,"PurchasedTime":"02\/Jan\/2024 03:36:50 pm","BooksName":"Pride and Prejudice"}],"12":[{"BooksAuthor":"Jane Austen","BooksGenre":"Romance","BooksPrice":500,"TotalPayment":1000.0,"NoOfBooksBought":1,"PurchasedTime":"02\/Jan\/2024 03:54:57 pm","BooksName":"Pride and Prejudice"},{"BooksAuthor":"R. Parthasarathy","BooksGenre":"Drama","BooksPrice":799,"TotalPayment":2400.0,"NoOfBooksBought":3,"PurchasedTime":"02\/Jan\/2024 05:45:48 pm","BooksName":"Kuruthipunal"}],"13":[{"BooksAuthor":"New User","BooksGenre":"Don't Know","BooksPrice":299,"TotalPayment":2000.0,"NoOfBooksBought":4,"PurchasedTime":"04\/Jan\/2024 10:30:57 pm","BooksName":"Hello World"}],"15":[{"BooksAuthor":"Stephen King","BooksGenre":"Horror","BooksPrice":344,"TotalPayment":2000.0,"NoOfBooksBought":5,"PurchasedTime":"04\/Jan\/2024 10:44:49 pm","BooksName":"The Shining"},{"BooksAuthor":"dasa","BooksGenre":"sadas","BooksPrice":91,"TotalPayment":1100.0,"NoOfBooksBought":12,"PurchasedTime":"04\/Jan\/2024 10:45:28 pm","BooksName":"1984"}],"16":[{"BooksAuthor":"New User","BooksGenre":"Don't Know","BooksPrice":299,"TotalPayment":2393.0,"NoOfBooksBought":8,"PurchasedTime":"05\/Jan\/2024 09:45:26 am","BooksName":"Hello World"},{"BooksAuthor":"S. Pattabiraman","BooksGenre":"Crime Fiction","BooksPrice":699,"TotalPayment":3000.0,"NoOfBooksBought":4,"PurchasedTime":"05\/Jan\/2024 10:34:39 am","BooksName":"Kaakkai Siraginile"}],"17":[{"BooksAuthor":"Sam praKASH","BooksGenre":"Study","BooksPrice":399,"TotalPayment":2000.0,"NoOfBooksBought":5,"PurchasedTime":"05\/Jan\/2024 10:49:33 am","BooksName":"JAVA New Book"},{"BooksAuthor":"dasa","BooksGenre":"sadas","BooksPrice":91,"TotalPayment":455.0,"NoOfBooksBought":5,"PurchasedTime":"05\/Jan\/2024 10:50:04 am","BooksName":"1984"}],"1":[{"BooksAuthor":"Charles Duhigg","BooksGenre":"Self-Help","BooksPrice":999,"TotalPayment":8000.0,"NoOfBooksBought":8,"PurchasedTime":"01\/Jan\/2024 03:47:32 pm","BooksName":"The Power of Habit"},{"BooksAuthor":"F. Scott Fitzgerald","BooksGenre":"Fiction","BooksPrice":1500,"TotalPayment":8000.0,"NoOfBooksBought":5,"PurchasedTime":"01\/Jan\/2024 03:49:26 pm","BooksName":"The Great Gatsby"},{"BooksAuthor":"Yuval Noah Harari","BooksGenre":"Non-Fiction","BooksPrice":1858,"TotalPayment":9500.0,"NoOfBooksBought":5,"PurchasedTime":"02\/Jan\/2024 04:32:30 pm","BooksName":"Sapiens: A Brief History of Humankind"}],"2":[{"BooksAuthor":"J.R.R. Tolkien","BooksGenre":"Fantasy","BooksPrice":1999,"TotalPayment":10000.0,"NoOfBooksBought":5,"PurchasedTime":"01\/Jan\/2024 07:48:57 pm","BooksName":"The Lord of the Rings"}],"4":[{"BooksAuthor":"Alex Michaelides","BooksGenre":"Psychological","BooksPrice":1599,"TotalPayment":35200.0,"NoOfBooksBought":22,"PurchasedTime":"01\/Jan\/2024 03:52:47 pm","BooksName":"The Silent Patient"},{"BooksAuthor":"Tara Westover","BooksGenre":"Memoir","BooksPrice":989,"TotalPayment":6925.0,"NoOfBooksBought":7,"PurchasedTime":"01\/Jan\/2024 03:53:11 pm","BooksName":"Educated"}],"5":[{"BooksAuthor":"Paulo Coelho","BooksGenre":"Fiction","BooksPrice":1125,"TotalPayment":5625.0,"NoOfBooksBought":5,"PurchasedTime":"01\/Jan\/2024 10:00:47 pm","BooksName":"The Alchemist"},{"BooksAuthor":"Harper Lee","BooksGenre":"Fiction","BooksPrice":1000,"TotalPayment":5000.0,"NoOfBooksBought":5,"PurchasedTime":"01\/Jan\/2024 10:06:03 pm","BooksName":"To Kill a Mockingbird"}],"6":[{"BooksAuthor":"Stephen King","BooksGenre":"Horror","BooksPrice":1799,"TotalPayment":15000.0,"NoOfBooksBought":8,"PurchasedTime":"01\/Jan\/2024 10:15:02 pm","BooksName":"The Shining"}],"7":[{"BooksAuthor":"George Orwell","BooksGenre":"Dystopian","BooksPrice":1999,"TotalPayment":4000.0,"NoOfBooksBought":2,"PurchasedTime":"02\/Jan\/2024 09:41:11 am","BooksName":"1984"}],"8":[{"BooksAuthor":"Yuval Noah Harari","BooksGenre":"Non-Fiction","BooksPrice":1858,"TotalPayment":10000.0,"NoOfBooksBought":5,"PurchasedTime":"02\/Jan\/2024 10:14:04 am","BooksName":"Sapiens: A Brief History of Humankind"},{"BooksAuthor":"F. Scott Fitzgerald","BooksGenre":"Fiction","BooksPrice":1500,"TotalPayment":3000.0,"NoOfBooksBought":2,"PurchasedTime":"02\/Jan\/2024 10:15:01 am","BooksName":"The Great Gatsby"}],"9":[{"BooksAuthor":"J.D. Salinger","BooksGenre":"Fiction","BooksPrice":2299,"TotalPayment":10000.0,"NoOfBooksBought":4,"PurchasedTime":"02\/Jan\/2024 12:30:18 pm","BooksName":"The Catcher in the Rye"},{"BooksAuthor":"Margaret Mitchell","BooksGenre":"Historical","BooksPrice":1645,"TotalPayment":5000.0,"NoOfBooksBought":3,"PurchasedTime":"02\/Jan\/2024 01:08:40 pm","BooksName":"Gone with the Wind"},{"BooksAuthor":"Paulo Coelho","BooksGenre":"Fiction","BooksPrice":1125,"TotalPayment":12000.0,"NoOfBooksBought":10,"PurchasedTime":"02\/Jan\/2024 01:09:33 pm","BooksName":"The Alchemist"},{"BooksAuthor":"Paulo Coelho","BooksGenre":"Fiction","BooksPrice":1125,"TotalPayment":12000.0,"NoOfBooksBought":9,"PurchasedTime":"02\/Jan\/2024 01:09:48 pm","BooksName":"The Alchemist"},{"BooksAuthor":"Paulo Coelho","BooksGenre":"Fiction","BooksPrice":1125,"TotalPayment":1125.0,"NoOfBooksBought":1,"PurchasedTime":"02\/Jan\/2024 01:10:25 pm","BooksName":"The Alchemist"},{"BooksAuthor":"Paulo Coelho","BooksGenre":"Fiction","BooksPrice":1125,"TotalPayment":16999.0,"NoOfBooksBought":14,"PurchasedTime":"02\/Jan\/2024 01:12:14 pm","BooksName":"The Alchemist"},{"BooksAuthor":"Dan Brown","BooksGenre":"Mystery","BooksPrice":1235,"TotalPayment":6175.0,"NoOfBooksBought":5,"PurchasedTime":"02\/Jan\/2024 01:12:56 pm","BooksName":"The Da Vinci Code"}],"10":[{"BooksAuthor":"Dan Brown","BooksGenre":"Mystery","BooksPrice":1235,"TotalPayment":1250.0,"NoOfBooksBought":1,"PurchasedTime":"02\/Jan\/2024 12:40:08 pm","BooksName":"The Da Vinci Code"},{"BooksAuthor":"Cormac McCarthy","BooksGenre":"Post-Apocalyptic","BooksPrice":1259,"TotalPayment":6300.0,"NoOfBooksBought":5,"PurchasedTime":"02\/Jan\/2024 12:54:37 pm","BooksName":"The Road"},{"BooksAuthor":"Paulo Coelho","BooksGenre":"Fiction","BooksPrice":1125,"TotalPayment":10125.0,"NoOfBooksBought":9,"PurchasedTime":"02\/Jan\/2024 12:55:29 pm","BooksName":"The Alchemist"}]},"Admins":{"11":[{"modifiedTime":"01\/Jan\/2024 10:12:36 pm","oldPrice":1499,"BookName":"The Shining","newPrice":1799},{"RemovedBookDate":"03\/Jan\/2024 01:29:12 pm","RemovedBookAuthor":"F. Scott Fitzgerald","RemovedBookPrice":799,"RemovedBookStocksCount":100,"RemovedBookGenre":"Fiction","RemovedBookTitle":"The Great Gatsby"}],"22":[{"author":"Sam praKASH","price":399,"genre":"Study","title":"JAVA New Book","stock":34,"BookAddedDate":"05\/Jan\/2024 09:42:06 am"},{"modifiedTime":"05\/Jan\/2024 09:42:25 am","newCount":37,"oldCount":433,"BookName":"1984"},{"modifiedTime":"05\/Jan\/2024 09:42:40 am","oldPrice":799,"BookName":"Kuruthipunal","newPrice":1499},{"RemovedBookDate":"05\/Jan\/2024 09:43:14 am","RemovedBookAuthor":"R. Parthasarathy","RemovedBookPrice":1499,"RemovedBookStocksCount":22,"RemovedBookGenre":"Drama","RemovedBookTitle":"Kuruthipunal"},{"modifiedTime":"05\/Jan\/2024 09:43:47 am","newCount":89,"oldCount":56,"BookName":"Effective Java"}],"23":[{"author":"Sam prakash","price":599,"genre":"Love","title":"NEw Nook","stock":34,"BookAddedDate":"05\/Jan\/2024 10:45:33 am"},{"modifiedTime":"05\/Jan\/2024 10:45:52 am","newCount":34,"oldCount":87,"BookName":"NEw Nook"},{"modifiedTime":"05\/Jan\/2024 10:46:06 am","oldPrice":399,"BookName":"NEw Nook","newPrice":599},{"RemovedBookDate":"05\/Jan\/2024 10:46:20 am","RemovedBookAuthor":"Sam prakash","RemovedBookPrice":599,"RemovedBookStocksCount":34,"RemovedBookGenre":"Love","RemovedBookTitle":"NEw Nook"}],"15":[{"modifiedTime":"02\/Jan\/2024 12:45:39 pm","newCount":21,"oldCount":20,"BookName":"The Hobbit"}],"16":[{"modifiedTime":"02\/Jan\/2024 02:56:24 pm","oldPrice":1799,"BookName":"The Shining","newPrice":1999},{"modifiedTime":"02\/Jan\/2024 03:07:08 pm","newCount":50,"oldCount":36,"BookName":"Gone with the Wind"},{"modifiedTime":"02\/Jan\/2024 03:07:42 pm","oldPrice":1500,"BookName":"The Great Gatsby","newPrice":799}],"17":[{"modifiedTime":"02\/Jan\/2024 04:19:29 pm","newCount":56,"oldCount":21,"BookName":"The Hobbit"},{"modifiedTime":"02\/Jan\/2024 04:25:27 pm","newCount":16,"oldCount":36,"BookName":"The Catcher in the Rye"},{"modifiedTime":"02\/Jan\/2024 04:28:24 pm","oldPrice":2299,"BookName":"The Catcher in the Rye","newPrice":700}],"18":[{"author":"New User","price":299,"genre":"Don't Know","title":"Hello World","stock":12,"BookAddedDate":"04\/Jan\/2024 10:23:36 pm"},{"modifiedTime":"04\/Jan\/2024 10:24:21 pm","newCount":34,"oldCount":25,"BookName":"The Shining"},{"modifiedTime":"04\/Jan\/2024 10:24:37 pm","newCount":55,"oldCount":40,"BookName":"18-vadhu Atchakkodu"}],"19":[{"author":"Ram","price":899,"genre":"Love","title":"Ram Book","stock":32,"BookAddedDate":"04\/Jan\/2024 10:28:23 pm"},{"modifiedTime":"04\/Jan\/2024 10:28:57 pm","newCount":55,"oldCount":50,"BookName":"Effective Java"},{"modifiedTime":"04\/Jan\/2024 10:29:17 pm","oldPrice":599,"BookName":"Ram Book","newPrice":899},{"RemovedBookDate":"04\/Jan\/2024 10:29:36 pm","RemovedBookAuthor":"Ram","RemovedBookPrice":899,"RemovedBookStocksCount":32,"RemovedBookGenre":"Love","RemovedBookTitle":"Ram Book"}],"1":[{"modifiedTime":"01\/Jan\/2024 03:04:28 pm","oldCount":50,"newCount":35,"BookName":"The Road"},{"modifiedTime":"01\/Jan\/2024 03:08:15 pm","oldCount":35,"newCount":36,"BookName":"The Da Vinci Code"},{"author":"Adam Freeman","price":999,"genre":"Spring Framework","title":"Pro Spring 5: An In-Depth Guide to the Spring Framework","stock":37,"BookAddedDate":"03\/Jan\/2024 09:47:26 am"},{"modifiedTime":"03\/Jan\/2024 09:48:30 am","newCount":39,"oldCount":37,"BookName":"Pro Spring 5: An In-Depth Guide to the Spring Framework"},{"modifiedTime":"03\/Jan\/2024 04:12:30 pm","oldPrice":1499,"BookName":"Refactoring: Improving the Design of Existing Code","newPrice":1299},{"modifiedTime":"03\/Jan\/2024 04:15:58 pm","oldPrice":1000,"BookName":"To Kill a Mockingbird","newPrice":999},{"author":"New Author","price":120,"genre":"Nothing","title":"NewOne","stock":5,"BookAddedDate":"05\/Jan\/2024 10:32:42 am"},{"RemovedBookDate":"05\/Jan\/2024 10:33:18 am","RemovedBookAuthor":"New Author","RemovedBookPrice":120,"RemovedBookStocksCount":5,"RemovedBookGenre":"Nothing","RemovedBookTitle":"NewOne"},{"modifiedTime":"05\/Jan\/2024 10:33:41 am","newCount":35,"oldCount":34,"BookName":"JAVA New Book"},{"modifiedTime":"05\/Jan\/2024 10:34:02 am","oldPrice":699,"BookName":"Ponniyin Selvan","newPrice":999},{"author":"Sam","price":999,"genre":"Love","title":"Just NEw","stock":45,"BookAddedDate":"05\/Jan\/2024 10:40:57 am"},{"RemovedBookDate":"05\/Jan\/2024 10:41:33 am","RemovedBookAuthor":"Sam","RemovedBookPrice":999,"RemovedBookStocksCount":45,"RemovedBookGenre":"Love","RemovedBookTitle":"Just NEw"}],"2":[{"modifiedTime":"01\/Jan\/2024 03:12:38 pm","newCount":107,"oldCount":50,"BookName":"The Great Gatsby"},{"modifiedTime":"01\/Jan\/2024 03:24:20 pm","oldPrice":2499,"BookName":"1984","newPrice":1999}],"3":[{"modifiedTime":"01\/Jan\/2024 03:07:06 pm","oldCount":30,"newCount":58,"BookName":"The Power of Habit"},{"author":"Kathy Sierra, Bert Bates","price":899,"genre":"Programming","title":"Head First Java","stock":28,"BookAddedDate":"03\/Jan\/2024 08:06:49 am"}],"5":[{"modifiedTime":"01\/Jan\/2024 07:01:33 pm","newCount":31,"oldCount":50,"BookName":"The Power of Habit"},{"author":"Martin Fowler","price":1499,"genre":"Design Patterns","title":"Refactoring: Improving the Design of Existing Code","stock":38,"BookAddedDate":"03\/Jan\/2024 09:56:32 am"},{"modifiedTime":"03\/Jan\/2024 09:59:14 am","oldPrice":999,"BookName":"The Power of Habit","newPrice":1566},{"modifiedTime":"03\/Jan\/2024 09:59:35 am","newCount":45,"oldCount":38,"BookName":"Refactoring: Improving the Design of Existing Code"},{"author":"Adam Freeman","price":1500,"genre":"Spring Framework","title":"Pro Spring 5: An In-Depth Guide to the Spring Framework","stock":30,"BookAddedDate":"03\/Jan\/2024 01:12:38 pm"},{"RemovedBookDate":"03\/Jan\/2024 01:19:54 pm","RemovedBookAuthor":"Adam Freeman","RemovedBookPrice":1500,"RemovedBookStocksCount":30,"RemovedBookGenre":"Spring Framework","RemovedBookTitle":"Pro Spring 5: An In-Depth Guide to the Spring Framework"}],"8":[{"RemovedBookDate":"03\/Jan\/2024 01:38:55 pm","RemovedBookAuthor":"George Orwell","RemovedBookPrice":1999,"RemovedBookStocksCount":23,"RemovedBookGenre":"Dystopian","RemovedBookTitle":"1984"}],"20":[{"author":"dasa","price":90,"genre":"sadas","title":"1984","stock":445,"BookAddedDate":"04\/Jan\/2024 10:36:31 pm"},{"author":"Sam","price":1788,"genre":"Love","title":"check","stock":13,"BookAddedDate":"04\/Jan\/2024 10:37:19 pm"},{"RemovedBookDate":"04\/Jan\/2024 10:37:35 pm","RemovedBookAuthor":"Sam","RemovedBookPrice":1788,"RemovedBookStocksCount":13,"RemovedBookGenre":"Love","RemovedBookTitle":"check"},{"modifiedTime":"04\/Jan\/2024 10:38:02 pm","newCount":56,"oldCount":55,"BookName":"Effective Java"},{"modifiedTime":"04\/Jan\/2024 10:38:20 pm","oldPrice":90,"BookName":"1984","newPrice":91}],"21":[{"author":"Sam","price":134,"genre":"Program","title":"Java","stock":54,"BookAddedDate":"04\/Jan\/2024 10:43:01 pm"},{"modifiedTime":"04\/Jan\/2024 10:43:16 pm","newCount":54,"oldCount":12,"BookName":"Java"},{"modifiedTime":"04\/Jan\/2024 10:43:32 pm","oldPrice":1999,"BookName":"The Shining","newPrice":344},{"RemovedBookDate":"04\/Jan\/2024 10:43:55 pm","RemovedBookAuthor":"Sam","RemovedBookPrice":134,"RemovedBookStocksCount":54,"RemovedBookGenre":"Program","RemovedBookTitle":"Java"}]}}
+{
+	"Users": {
+		"11": [
+			{
+				"BooksAuthor": "J.R.R. Tolkien",
+				"BooksGenre": "Fantasy",
+				"BooksPrice": 1999,
+				"TotalPayment": 2000.0,
+				"NoOfBooksBought": 1,
+				"PurchasedTime": "02\/Jan\/2024 02:14:58 pm",
+				"BooksName": "The Lord of the Rings"
+			},
+			{
+				"BooksAuthor": "Charles Duhigg",
+				"BooksGenre": "Self-Help",
+				"BooksPrice": 999,
+				"TotalPayment": 1.0E38,
+				"NoOfBooksBought": 1,
+				"PurchasedTime": "02\/Jan\/2024 02:15:51 pm",
+				"BooksName": "The Power of Habit"
+			},
+			{
+				"BooksAuthor": "Charles Duhigg",
+				"BooksGenre": "Self-Help",
+				"BooksPrice": 999,
+				"TotalPayment": 20979.0,
+				"NoOfBooksBought": 21,
+				"PurchasedTime": "02\/Jan\/2024 02:17:00 pm",
+				"BooksName": "The Power of Habit"
+			},
+			{
+				"BooksAuthor": "Stephen King",
+				"BooksGenre": "Horror",
+				"BooksPrice": 1999,
+				"TotalPayment": 10000.0,
+				"NoOfBooksBought": 5,
+				"PurchasedTime": "02\/Jan\/2024 03:09:50 pm",
+				"BooksName": "The Shining"
+			},
+			{
+				"BooksAuthor": "Harper Lee",
+				"BooksGenre": "Fiction",
+				"BooksPrice": 1000,
+				"TotalPayment": 5000.0,
+				"NoOfBooksBought": 4,
+				"PurchasedTime": "02\/Jan\/2024 03:26:38 pm",
+				"BooksName": "To Kill a Mockingbird"
+			},
+			{
+				"BooksAuthor": "Jane Austen",
+				"BooksGenre": "Romance",
+				"BooksPrice": 500,
+				"TotalPayment": 2500.0,
+				"NoOfBooksBought": 4,
+				"PurchasedTime": "02\/Jan\/2024 03:29:44 pm",
+				"BooksName": "Pride and Prejudice"
+			},
+			{
+				"BooksAuthor": "Jane Austen",
+				"BooksGenre": "Romance",
+				"BooksPrice": 500,
+				"TotalPayment": 1500.0,
+				"NoOfBooksBought": 3,
+				"PurchasedTime": "02\/Jan\/2024 03:36:50 pm",
+				"BooksName": "Pride and Prejudice"
+			}
+		],
+		"12": [
+			{
+				"BooksAuthor": "Jane Austen",
+				"BooksGenre": "Romance",
+				"BooksPrice": 500,
+				"TotalPayment": 1000.0,
+				"NoOfBooksBought": 1,
+				"PurchasedTime": "02\/Jan\/2024 03:54:57 pm",
+				"BooksName": "Pride and Prejudice"
+			},
+			{
+				"BooksAuthor": "R. Parthasarathy",
+				"BooksGenre": "Drama",
+				"BooksPrice": 799,
+				"TotalPayment": 2400.0,
+				"NoOfBooksBought": 3,
+				"PurchasedTime": "02\/Jan\/2024 05:45:48 pm",
+				"BooksName": "Kuruthipunal"
+			}
+		],
+		"13": [
+			{
+				"BooksAuthor": "New User",
+				"BooksGenre": "Don't Know",
+				"BooksPrice": 299,
+				"TotalPayment": 2000.0,
+				"NoOfBooksBought": 4,
+				"PurchasedTime": "04\/Jan\/2024 10:30:57 pm",
+				"BooksName": "Hello World"
+			}
+		],
+		"15": [
+			{
+				"BooksAuthor": "Stephen King",
+				"BooksGenre": "Horror",
+				"BooksPrice": 344,
+				"TotalPayment": 2000.0,
+				"NoOfBooksBought": 5,
+				"PurchasedTime": "04\/Jan\/2024 10:44:49 pm",
+				"BooksName": "The Shining"
+			},
+			{
+				"BooksAuthor": "dasa",
+				"BooksGenre": "sadas",
+				"BooksPrice": 91,
+				"TotalPayment": 1100.0,
+				"NoOfBooksBought": 12,
+				"PurchasedTime": "04\/Jan\/2024 10:45:28 pm",
+				"BooksName": "1984"
+			}
+		],
+		"16": [
+			{
+				"BooksAuthor": "New User",
+				"BooksGenre": "Don't Know",
+				"BooksPrice": 299,
+				"TotalPayment": 2393.0,
+				"NoOfBooksBought": 8,
+				"PurchasedTime": "05\/Jan\/2024 09:45:26 am",
+				"BooksName": "Hello World"
+			},
+			{
+				"BooksAuthor": "S. Pattabiraman",
+				"BooksGenre": "Crime Fiction",
+				"BooksPrice": 699,
+				"TotalPayment": 3000.0,
+				"NoOfBooksBought": 4,
+				"PurchasedTime": "05\/Jan\/2024 10:34:39 am",
+				"BooksName": "Kaakkai Siraginile"
+			}
+		],
+		"17": [
+			{
+				"BooksAuthor": "Sam praKASH",
+				"BooksGenre": "Study",
+				"BooksPrice": 399,
+				"TotalPayment": 2000.0,
+				"NoOfBooksBought": 5,
+				"PurchasedTime": "05\/Jan\/2024 10:49:33 am",
+				"BooksName": "JAVA New Book"
+			},
+			{
+				"BooksAuthor": "dasa",
+				"BooksGenre": "sadas",
+				"BooksPrice": 91,
+				"TotalPayment": 455.0,
+				"NoOfBooksBought": 5,
+				"PurchasedTime": "05\/Jan\/2024 10:50:04 am",
+				"BooksName": "1984"
+			}
+		],
+		"1": [
+			{
+				"BooksAuthor": "Charles Duhigg",
+				"BooksGenre": "Self-Help",
+				"BooksPrice": 999,
+				"TotalPayment": 8000.0,
+				"NoOfBooksBought": 8,
+				"PurchasedTime": "01\/Jan\/2024 03:47:32 pm",
+				"BooksName": "The Power of Habit"
+			},
+			{
+				"BooksAuthor": "F. Scott Fitzgerald",
+				"BooksGenre": "Fiction",
+				"BooksPrice": 1500,
+				"TotalPayment": 8000.0,
+				"NoOfBooksBought": 5,
+				"PurchasedTime": "01\/Jan\/2024 03:49:26 pm",
+				"BooksName": "The Great Gatsby"
+			},
+			{
+				"BooksAuthor": "Yuval Noah Harari",
+				"BooksGenre": "Non-Fiction",
+				"BooksPrice": 1858,
+				"TotalPayment": 9500.0,
+				"NoOfBooksBought": 5,
+				"PurchasedTime": "02\/Jan\/2024 04:32:30 pm",
+				"BooksName": "Sapiens: A Brief History of Humankind"
+			}
+		],
+		"2": [
+			{
+				"BooksAuthor": "J.R.R. Tolkien",
+				"BooksGenre": "Fantasy",
+				"BooksPrice": 1999,
+				"TotalPayment": 10000.0,
+				"NoOfBooksBought": 5,
+				"PurchasedTime": "01\/Jan\/2024 07:48:57 pm",
+				"BooksName": "The Lord of the Rings"
+			}
+		],
+		"4": [
+			{
+				"BooksAuthor": "Alex Michaelides",
+				"BooksGenre": "Psychological",
+				"BooksPrice": 1599,
+				"TotalPayment": 35200.0,
+				"NoOfBooksBought": 22,
+				"PurchasedTime": "01\/Jan\/2024 03:52:47 pm",
+				"BooksName": "The Silent Patient"
+			},
+			{
+				"BooksAuthor": "Tara Westover",
+				"BooksGenre": "Memoir",
+				"BooksPrice": 989,
+				"TotalPayment": 6925.0,
+				"NoOfBooksBought": 7,
+				"PurchasedTime": "01\/Jan\/2024 03:53:11 pm",
+				"BooksName": "Educated"
+			}
+		],
+		"5": [
+			{
+				"BooksAuthor": "Paulo Coelho",
+				"BooksGenre": "Fiction",
+				"BooksPrice": 1125,
+				"TotalPayment": 5625.0,
+				"NoOfBooksBought": 5,
+				"PurchasedTime": "01\/Jan\/2024 10:00:47 pm",
+				"BooksName": "The Alchemist"
+			},
+			{
+				"BooksAuthor": "Harper Lee",
+				"BooksGenre": "Fiction",
+				"BooksPrice": 1000,
+				"TotalPayment": 5000.0,
+				"NoOfBooksBought": 5,
+				"PurchasedTime": "01\/Jan\/2024 10:06:03 pm",
+				"BooksName": "To Kill a Mockingbird"
+			}
+		],
+		"6": [
+			{
+				"BooksAuthor": "Stephen King",
+				"BooksGenre": "Horror",
+				"BooksPrice": 1799,
+				"TotalPayment": 15000.0,
+				"NoOfBooksBought": 8,
+				"PurchasedTime": "01\/Jan\/2024 10:15:02 pm",
+				"BooksName": "The Shining"
+			}
+		],
+		"7": [
+			{
+				"BooksAuthor": "George Orwell",
+				"BooksGenre": "Dystopian",
+				"BooksPrice": 1999,
+				"TotalPayment": 4000.0,
+				"NoOfBooksBought": 2,
+				"PurchasedTime": "02\/Jan\/2024 09:41:11 am",
+				"BooksName": "1984"
+			}
+		],
+		"8": [
+			{
+				"BooksAuthor": "Yuval Noah Harari",
+				"BooksGenre": "Non-Fiction",
+				"BooksPrice": 1858,
+				"TotalPayment": 10000.0,
+				"NoOfBooksBought": 5,
+				"PurchasedTime": "02\/Jan\/2024 10:14:04 am",
+				"BooksName": "Sapiens: A Brief History of Humankind"
+			},
+			{
+				"BooksAuthor": "F. Scott Fitzgerald",
+				"BooksGenre": "Fiction",
+				"BooksPrice": 1500,
+				"TotalPayment": 3000.0,
+				"NoOfBooksBought": 2,
+				"PurchasedTime": "02\/Jan\/2024 10:15:01 am",
+				"BooksName": "The Great Gatsby"
+			}
+		],
+		"9": [
+			{
+				"BooksAuthor": "J.D. Salinger",
+				"BooksGenre": "Fiction",
+				"BooksPrice": 2299,
+				"TotalPayment": 10000.0,
+				"NoOfBooksBought": 4,
+				"PurchasedTime": "02\/Jan\/2024 12:30:18 pm",
+				"BooksName": "The Catcher in the Rye"
+			},
+			{
+				"BooksAuthor": "Margaret Mitchell",
+				"BooksGenre": "Historical",
+				"BooksPrice": 1645,
+				"TotalPayment": 5000.0,
+				"NoOfBooksBought": 3,
+				"PurchasedTime": "02\/Jan\/2024 01:08:40 pm",
+				"BooksName": "Gone with the Wind"
+			},
+			{
+				"BooksAuthor": "Paulo Coelho",
+				"BooksGenre": "Fiction",
+				"BooksPrice": 1125,
+				"TotalPayment": 12000.0,
+				"NoOfBooksBought": 10,
+				"PurchasedTime": "02\/Jan\/2024 01:09:33 pm",
+				"BooksName": "The Alchemist"
+			},
+			{
+				"BooksAuthor": "Paulo Coelho",
+				"BooksGenre": "Fiction",
+				"BooksPrice": 1125,
+				"TotalPayment": 12000.0,
+				"NoOfBooksBought": 9,
+				"PurchasedTime": "02\/Jan\/2024 01:09:48 pm",
+				"BooksName": "The Alchemist"
+			},
+			{
+				"BooksAuthor": "Paulo Coelho",
+				"BooksGenre": "Fiction",
+				"BooksPrice": 1125,
+				"TotalPayment": 1125.0,
+				"NoOfBooksBought": 1,
+				"PurchasedTime": "02\/Jan\/2024 01:10:25 pm",
+				"BooksName": "The Alchemist"
+			},
+			{
+				"BooksAuthor": "Paulo Coelho",
+				"BooksGenre": "Fiction",
+				"BooksPrice": 1125,
+				"TotalPayment": 16999.0,
+				"NoOfBooksBought": 14,
+				"PurchasedTime": "02\/Jan\/2024 01:12:14 pm",
+				"BooksName": "The Alchemist"
+			},
+			{
+				"BooksAuthor": "Dan Brown",
+				"BooksGenre": "Mystery",
+				"BooksPrice": 1235,
+				"TotalPayment": 6175.0,
+				"NoOfBooksBought": 5,
+				"PurchasedTime": "02\/Jan\/2024 01:12:56 pm",
+				"BooksName": "The Da Vinci Code"
+			}
+		],
+		"10": [
+			{
+				"BooksAuthor": "Dan Brown",
+				"BooksGenre": "Mystery",
+				"BooksPrice": 1235,
+				"TotalPayment": 1250.0,
+				"NoOfBooksBought": 1,
+				"PurchasedTime": "02\/Jan\/2024 12:40:08 pm",
+				"BooksName": "The Da Vinci Code"
+			},
+			{
+				"BooksAuthor": "Cormac McCarthy",
+				"BooksGenre": "Post-Apocalyptic",
+				"BooksPrice": 1259,
+				"TotalPayment": 6300.0,
+				"NoOfBooksBought": 5,
+				"PurchasedTime": "02\/Jan\/2024 12:54:37 pm",
+				"BooksName": "The Road"
+			},
+			{
+				"BooksAuthor": "Paulo Coelho",
+				"BooksGenre": "Fiction",
+				"BooksPrice": 1125,
+				"TotalPayment": 10125.0,
+				"NoOfBooksBought": 9,
+				"PurchasedTime": "02\/Jan\/2024 12:55:29 pm",
+				"BooksName": "The Alchemist"
+			}
+		]
+	},
+	"Admins": {
+		"11": [
+			{
+				"modifiedTime": "01\/Jan\/2024 10:12:36 pm",
+				"oldPrice": 1499,
+				"BookName": "The Shining",
+				"newPrice": 1799
+			},
+			{
+				"RemovedBookDate": "03\/Jan\/2024 01:29:12 pm",
+				"RemovedBookAuthor": "F. Scott Fitzgerald",
+				"RemovedBookPrice": 799,
+				"RemovedBookStocksCount": 100,
+				"RemovedBookGenre": "Fiction",
+				"RemovedBookTitle": "The Great Gatsby"
+			}
+		],
+		"22": [
+			{
+				"author": "Sam praKASH",
+				"price": 399,
+				"genre": "Study",
+				"title": "JAVA New Book",
+				"stock": 34,
+				"BookAddedDate": "05\/Jan\/2024 09:42:06 am"
+			},
+			{
+				"modifiedTime": "05\/Jan\/2024 09:42:25 am",
+				"newCount": 37,
+				"oldCount": 433,
+				"BookName": "1984"
+			},
+			{
+				"modifiedTime": "05\/Jan\/2024 09:42:40 am",
+				"oldPrice": 799,
+				"BookName": "Kuruthipunal",
+				"newPrice": 1499
+			},
+			{
+				"RemovedBookDate": "05\/Jan\/2024 09:43:14 am",
+				"RemovedBookAuthor": "R. Parthasarathy",
+				"RemovedBookPrice": 1499,
+				"RemovedBookStocksCount": 22,
+				"RemovedBookGenre": "Drama",
+				"RemovedBookTitle": "Kuruthipunal"
+			},
+			{
+				"modifiedTime": "05\/Jan\/2024 09:43:47 am",
+				"newCount": 89,
+				"oldCount": 56,
+				"BookName": "Effective Java"
+			}
+		],
+		"23": [
+			{
+				"author": "Sam prakash",
+				"price": 599,
+				"genre": "Love",
+				"title": "NEw Nook",
+				"stock": 34,
+				"BookAddedDate": "05\/Jan\/2024 10:45:33 am"
+			},
+			{
+				"modifiedTime": "05\/Jan\/2024 10:45:52 am",
+				"newCount": 34,
+				"oldCount": 87,
+				"BookName": "NEw Nook"
+			},
+			{
+				"modifiedTime": "05\/Jan\/2024 10:46:06 am",
+				"oldPrice": 399,
+				"BookName": "NEw Nook",
+				"newPrice": 599
+			},
+			{
+				"RemovedBookDate": "05\/Jan\/2024 10:46:20 am",
+				"RemovedBookAuthor": "Sam prakash",
+				"RemovedBookPrice": 599,
+				"RemovedBookStocksCount": 34,
+				"RemovedBookGenre": "Love",
+				"RemovedBookTitle": "NEw Nook"
+			}
+		],
+		"15": [
+			{
+				"modifiedTime": "02\/Jan\/2024 12:45:39 pm",
+				"newCount": 21,
+				"oldCount": 20,
+				"BookName": "The Hobbit"
+			}
+		],
+		"16": [
+			{
+				"modifiedTime": "02\/Jan\/2024 02:56:24 pm",
+				"oldPrice": 1799,
+				"BookName": "The Shining",
+				"newPrice": 1999
+			},
+			{
+				"modifiedTime": "02\/Jan\/2024 03:07:08 pm",
+				"newCount": 50,
+				"oldCount": 36,
+				"BookName": "Gone with the Wind"
+			},
+			{
+				"modifiedTime": "02\/Jan\/2024 03:07:42 pm",
+				"oldPrice": 1500,
+				"BookName": "The Great Gatsby",
+				"newPrice": 799
+			}
+		],
+		"17": [
+			{
+				"modifiedTime": "02\/Jan\/2024 04:19:29 pm",
+				"newCount": 56,
+				"oldCount": 21,
+				"BookName": "The Hobbit"
+			},
+			{
+				"modifiedTime": "02\/Jan\/2024 04:25:27 pm",
+				"newCount": 16,
+				"oldCount": 36,
+				"BookName": "The Catcher in the Rye"
+			},
+			{
+				"modifiedTime": "02\/Jan\/2024 04:28:24 pm",
+				"oldPrice": 2299,
+				"BookName": "The Catcher in the Rye",
+				"newPrice": 700
+			}
+		],
+		"18": [
+			{
+				"author": "New User",
+				"price": 299,
+				"genre": "Don't Know",
+				"title": "Hello World",
+				"stock": 12,
+				"BookAddedDate": "04\/Jan\/2024 10:23:36 pm"
+			},
+			{
+				"modifiedTime": "04\/Jan\/2024 10:24:21 pm",
+				"newCount": 34,
+				"oldCount": 25,
+				"BookName": "The Shining"
+			},
+			{
+				"modifiedTime": "04\/Jan\/2024 10:24:37 pm",
+				"newCount": 55,
+				"oldCount": 40,
+				"BookName": "18-vadhu Atchakkodu"
+			}
+		],
+		"19": [
+			{
+				"author": "Ram",
+				"price": 899,
+				"genre": "Love",
+				"title": "Ram Book",
+				"stock": 32,
+				"BookAddedDate": "04\/Jan\/2024 10:28:23 pm"
+			},
+			{
+				"modifiedTime": "04\/Jan\/2024 10:28:57 pm",
+				"newCount": 55,
+				"oldCount": 50,
+				"BookName": "Effective Java"
+			},
+			{
+				"modifiedTime": "04\/Jan\/2024 10:29:17 pm",
+				"oldPrice": 599,
+				"BookName": "Ram Book",
+				"newPrice": 899
+			},
+			{
+				"RemovedBookDate": "04\/Jan\/2024 10:29:36 pm",
+				"RemovedBookAuthor": "Ram",
+				"RemovedBookPrice": 899,
+				"RemovedBookStocksCount": 32,
+				"RemovedBookGenre": "Love",
+				"RemovedBookTitle": "Ram Book"
+			}
+		],
+		"1": [
+			{
+				"modifiedTime": "01\/Jan\/2024 03:04:28 pm",
+				"oldCount": 50,
+				"newCount": 35,
+				"BookName": "The Road"
+			},
+			{
+				"modifiedTime": "01\/Jan\/2024 03:08:15 pm",
+				"oldCount": 35,
+				"newCount": 36,
+				"BookName": "The Da Vinci Code"
+			},
+			{
+				"author": "Adam Freeman",
+				"price": 999,
+				"genre": "Spring Framework",
+				"title": "Pro Spring 5: An In-Depth Guide to the Spring Framework",
+				"stock": 37,
+				"BookAddedDate": "03\/Jan\/2024 09:47:26 am"
+			},
+			{
+				"modifiedTime": "03\/Jan\/2024 09:48:30 am",
+				"newCount": 39,
+				"oldCount": 37,
+				"BookName": "Pro Spring 5: An In-Depth Guide to the Spring Framework"
+			},
+			{
+				"modifiedTime": "03\/Jan\/2024 04:12:30 pm",
+				"oldPrice": 1499,
+				"BookName": "Refactoring: Improving the Design of Existing Code",
+				"newPrice": 1299
+			},
+			{
+				"modifiedTime": "03\/Jan\/2024 04:15:58 pm",
+				"oldPrice": 1000,
+				"BookName": "To Kill a Mockingbird",
+				"newPrice": 999
+			},
+			{
+				"author": "New Author",
+				"price": 120,
+				"genre": "Nothing",
+				"title": "NewOne",
+				"stock": 5,
+				"BookAddedDate": "05\/Jan\/2024 10:32:42 am"
+			},
+			{
+				"RemovedBookDate": "05\/Jan\/2024 10:33:18 am",
+				"RemovedBookAuthor": "New Author",
+				"RemovedBookPrice": 120,
+				"RemovedBookStocksCount": 5,
+				"RemovedBookGenre": "Nothing",
+				"RemovedBookTitle": "NewOne"
+			},
+			{
+				"modifiedTime": "05\/Jan\/2024 10:33:41 am",
+				"newCount": 35,
+				"oldCount": 34,
+				"BookName": "JAVA New Book"
+			},
+			{
+				"modifiedTime": "05\/Jan\/2024 10:34:02 am",
+				"oldPrice": 699,
+				"BookName": "Ponniyin Selvan",
+				"newPrice": 999
+			},
+			{
+				"author": "Sam",
+				"price": 999,
+				"genre": "Love",
+				"title": "Just NEw",
+				"stock": 45,
+				"BookAddedDate": "05\/Jan\/2024 10:40:57 am"
+			},
+			{
+				"RemovedBookDate": "05\/Jan\/2024 10:41:33 am",
+				"RemovedBookAuthor": "Sam",
+				"RemovedBookPrice": 999,
+				"RemovedBookStocksCount": 45,
+				"RemovedBookGenre": "Love",
+				"RemovedBookTitle": "Just NEw"
+			}
+		],
+		"2": [
+			{
+				"modifiedTime": "01\/Jan\/2024 03:12:38 pm",
+				"newCount": 107,
+				"oldCount": 50,
+				"BookName": "The Great Gatsby"
+			},
+			{
+				"modifiedTime": "01\/Jan\/2024 03:24:20 pm",
+				"oldPrice": 2499,
+				"BookName": "1984",
+				"newPrice": 1999
+			}
+		],
+		"3": [
+			{
+				"modifiedTime": "01\/Jan\/2024 03:07:06 pm",
+				"oldCount": 30,
+				"newCount": 58,
+				"BookName": "The Power of Habit"
+			},
+			{
+				"author": "Kathy Sierra, Bert Bates",
+				"price": 899,
+				"genre": "Programming",
+				"title": "Head First Java",
+				"stock": 28,
+				"BookAddedDate": "03\/Jan\/2024 08:06:49 am"
+			}
+		],
+		"5": [
+			{
+				"modifiedTime": "01\/Jan\/2024 07:01:33 pm",
+				"newCount": 31,
+				"oldCount": 50,
+				"BookName": "The Power of Habit"
+			},
+			{
+				"author": "Martin Fowler",
+				"price": 1499,
+				"genre": "Design Patterns",
+				"title": "Refactoring: Improving the Design of Existing Code",
+				"stock": 38,
+				"BookAddedDate": "03\/Jan\/2024 09:56:32 am"
+			},
+			{
+				"modifiedTime": "03\/Jan\/2024 09:59:14 am",
+				"oldPrice": 999,
+				"BookName": "The Power of Habit",
+				"newPrice": 1566
+			},
+			{
+				"modifiedTime": "03\/Jan\/2024 09:59:35 am",
+				"newCount": 45,
+				"oldCount": 38,
+				"BookName": "Refactoring: Improving the Design of Existing Code"
+			},
+			{
+				"author": "Adam Freeman",
+				"price": 1500,
+				"genre": "Spring Framework",
+				"title": "Pro Spring 5: An In-Depth Guide to the Spring Framework",
+				"stock": 30,
+				"BookAddedDate": "03\/Jan\/2024 01:12:38 pm"
+			},
+			{
+				"RemovedBookDate": "03\/Jan\/2024 01:19:54 pm",
+				"RemovedBookAuthor": "Adam Freeman",
+				"RemovedBookPrice": 1500,
+				"RemovedBookStocksCount": 30,
+				"RemovedBookGenre": "Spring Framework",
+				"RemovedBookTitle": "Pro Spring 5: An In-Depth Guide to the Spring Framework"
+			}
+		],
+		"8": [
+			{
+				"RemovedBookDate": "03\/Jan\/2024 01:38:55 pm",
+				"RemovedBookAuthor": "George Orwell",
+				"RemovedBookPrice": 1999,
+				"RemovedBookStocksCount": 23,
+				"RemovedBookGenre": "Dystopian",
+				"RemovedBookTitle": "1984"
+			}
+		],
+		"20": [
+			{
+				"author": "dasa",
+				"price": 90,
+				"genre": "sadas",
+				"title": "1984",
+				"stock": 445,
+				"BookAddedDate": "04\/Jan\/2024 10:36:31 pm"
+			},
+			{
+				"author": "Sam",
+				"price": 1788,
+				"genre": "Love",
+				"title": "check",
+				"stock": 13,
+				"BookAddedDate": "04\/Jan\/2024 10:37:19 pm"
+			},
+			{
+				"RemovedBookDate": "04\/Jan\/2024 10:37:35 pm",
+				"RemovedBookAuthor": "Sam",
+				"RemovedBookPrice": 1788,
+				"RemovedBookStocksCount": 13,
+				"RemovedBookGenre": "Love",
+				"RemovedBookTitle": "check"
+			},
+			{
+				"modifiedTime": "04\/Jan\/2024 10:38:02 pm",
+				"newCount": 56,
+				"oldCount": 55,
+				"BookName": "Effective Java"
+			},
+			{
+				"modifiedTime": "04\/Jan\/2024 10:38:20 pm",
+				"oldPrice": 90,
+				"BookName": "1984",
+				"newPrice": 91
+			}
+		],
+		"21": [
+			{
+				"author": "Sam",
+				"price": 134,
+				"genre": "Program",
+				"title": "Java",
+				"stock": 54,
+				"BookAddedDate": "04\/Jan\/2024 10:43:01 pm"
+			},
+			{
+				"modifiedTime": "04\/Jan\/2024 10:43:16 pm",
+				"newCount": 54,
+				"oldCount": 12,
+				"BookName": "Java"
+			},
+			{
+				"modifiedTime": "04\/Jan\/2024 10:43:32 pm",
+				"oldPrice": 1999,
+				"BookName": "The Shining",
+				"newPrice": 344
+			},
+			{
+				"RemovedBookDate": "04\/Jan\/2024 10:43:55 pm",
+				"RemovedBookAuthor": "Sam",
+				"RemovedBookPrice": 134,
+				"RemovedBookStocksCount": 54,
+				"RemovedBookGenre": "Program",
+				"RemovedBookTitle": "Java"
+			}
+		]
+	}
+}
