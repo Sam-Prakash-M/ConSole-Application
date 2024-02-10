@@ -110,12 +110,13 @@ public class CancelTicketsViewModel {
 			return;
 		}
 		for (Passengers passenger : PassengerAddedStatus) {
-			reAddtheTicketsInFile(passenger);
+			removeTicketsInFile(passenger);
+			
 
 		}
 		for (Passengers passenger : PassengerCancelledStatus) {
-			removeTicketsInFile(passenger);
-
+			
+			reAddtheTicketsInFile(passenger);
 		}
 
 	}
