@@ -88,8 +88,11 @@ public class FlightRoutesViewModel {
 			JSONObject jsonObject = (JSONObject) jsonRetreiver.get((String) date);
 			Set flightKeys = jsonObject.keySet();
 			for (Object flight : flightKeys) {
-
 				JSONObject flightDetails = (JSONObject) jsonObject.get(flight.toString());
+				if(!flightDetails.containsKey("FlightRoutes"))
+				{
+					continue;
+				}
 				JSONArray flightRoutes = (JSONArray) flightDetails.get("FlightRoutes");
 				flightRoutesView.showFlightRoutes(flightRoutes);
 
@@ -123,24 +126,30 @@ public class FlightRoutesViewModel {
 
 	public void searchByToStation(String toStation, String date) {
 		JSONObject jsonObject = FlightRepository.getInstance().jsonRetreiver;
-		int minimimOneTime = 0;
+		int minimumOneTime = 0;
 		if (jsonObject.containsKey(date)) {
-
 			JSONObject flightDates = (JSONObject) jsonObject.get(date);
 			Set flights = flightDates.keySet();
 			for (Object flight : flights) {
-
 				JSONObject currFlight = (JSONObject) flightDates.get(String.valueOf(flight));
-				if (flightRoutesView.showToStationDetails(toStation, String.valueOf(flight), currFlight)) {
-					minimimOneTime++;
+				if(!currFlight.containsKey("FlightRoutes"))
+				{
+					continue;
 				}
+				JSONArray flightRoutes = (JSONArray) currFlight.get("FlightRoutes");
+				if( flightRoutes.size()>0 && flightRoutes.contains(toStation) && !flightRoutes.get(0).toString().equals(toStation));
+				{
+					flightRoutesView.showStatus(String.valueOf(flight),currFlight);
+					minimumOneTime++;
+				}
+				
 
 			}
 		} else {
 			flightRoutesView.showStatus("In The Date There is No Flights Available : ");
 
 		}
-		if (minimimOneTime == 0) {
+		if (minimumOneTime == 0) {
 			flightRoutesView.showStatus("No Flights Available For The Stations : ");
 		}
 
@@ -169,14 +178,8 @@ public class FlightRoutesViewModel {
 	public boolean isCorrectToStation(String toStation, String flightNo, JSONObject currFlight) {
 
 		JSONArray flightRoutes = (JSONArray) currFlight.get("FlightRoutes");
-
-		for (int i = 1; i < flightRoutes.size(); i++) {
-
-			if (((String) (flightRoutes.get(i))).equals(toStation)) {
-				return true;
-			}
-		}
-		return false;
+		return flightRoutes.contains(toStation) && flightRoutes.get(0).toString().equals(toStation);
+		
 	}
 
 	public boolean isCorrectFromStation(String fromStation, String flightNo, JSONObject currFlight) {

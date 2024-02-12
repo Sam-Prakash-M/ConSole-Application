@@ -22,15 +22,14 @@ public class BaseViewModel {
 	}
 
 	public void fileLoader() {
+		FileWriter fw=null;
 		try {
 			if (Files.size(Path.of("src/com/samprakash/flightbookapplication/FlightDetails.json")) == 0) {
 				
-				FileWriter fw = new FileWriter("src/com/samprakash/flightbookapplication/FlightDetails.json");
+				fw = new FileWriter("src/com/samprakash/flightbookapplication/FlightDetails.json");
 
 	
 				fw.write(new JSONObject().toJSONString());
-				fw.flush();
-				fw.close();
 				FileWriting.readFile(new JSONObject());
 				
 
@@ -43,6 +42,21 @@ public class BaseViewModel {
 		} catch (IOException e) {
 
 			e.printStackTrace();
+		}
+		finally
+		{
+			try
+			{
+				if(fw!=null)
+				{
+					fw.flush();
+					fw.close();
+				}
+			}
+			catch (Exception e) {
+				// TODO: handle exception
+				e.printStackTrace();
+			}
 		}
 
 	}

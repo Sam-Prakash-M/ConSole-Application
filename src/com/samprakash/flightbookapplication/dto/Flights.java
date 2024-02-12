@@ -5,7 +5,7 @@ import java.util.List;
 public class Flights {
 	
 	private int flightNo , seats,fare;
-	private String flightName , departureTime , ArrivalTime,date;
+	private String flightName , departureTime , arrivalTime,date;
 	private List<String> flightRoutes;
 	
 	public Flights(String date,int flightNo, int seats, int fare, String flightName, String departureTime, String arrivalTime,
@@ -16,7 +16,7 @@ public class Flights {
 		this.fare = fare;
 		this.flightName = flightName;
 		this.departureTime = departureTime;
-		ArrivalTime = arrivalTime;
+		this.arrivalTime = arrivalTime;
 		this.flightRoutes = flightRoutes;
 	}
 	public int getFlightNo() {
@@ -44,10 +44,10 @@ public class Flights {
 		this.departureTime = departureTime;
 	}
 	public String getArrivalTime() {
-		return ArrivalTime;
+		return arrivalTime;
 	}
 	public void setArrivalTime(String arrivalTime) {
-		ArrivalTime = arrivalTime;
+		this.arrivalTime = arrivalTime;
 	}
 	public List<String> getFlightRoutes() {
 		return flightRoutes;

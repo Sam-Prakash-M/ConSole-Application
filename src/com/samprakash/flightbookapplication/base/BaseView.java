@@ -26,7 +26,7 @@ public class BaseView {
 
 	public void init() {
 
-		baseViewModel.fileLoader();
+		baseViewModel.fileLoader();//loadFiles
 		int choice;
 		do {
 
@@ -45,7 +45,7 @@ public class BaseView {
 
 			choice = scanner.nextInt();
 			scanner.nextLine();
-			switch (choice) {
+			switch (choice) { 
 
 			case 1 -> {
 				flightRoutesView.createFlightRoutes();
@@ -56,7 +56,7 @@ public class BaseView {
 
 			}
 			case 3 -> {
-				System.out.println("Enter a Date To Search : ");
+				System.out.println("Enter a Date(YYYY-MM-DD) To Search : ");
 				searchFlights(scanner.nextLine());
 
 			}

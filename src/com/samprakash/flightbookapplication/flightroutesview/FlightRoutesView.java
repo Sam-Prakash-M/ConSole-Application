@@ -135,11 +135,11 @@ public class FlightRoutesView {
 
 	public boolean showToStationDetails(String toStation, String flightNo, JSONObject currFlight) {
 		
-		if(flightRoutesViewModel.isCorrectToStation(toStation,flightNo,currFlight)) {
+		JSONArray flightRoutes = (JSONArray) currFlight.get("FlightRoutes");
+		if( flightRoutes.contains(toStation) && flightRoutes.get(0).toString().equals(toStation));
+		{
 			showStatus(flightNo,currFlight);
-			return true;
 		}
-		
 		return false;
 	}
 
